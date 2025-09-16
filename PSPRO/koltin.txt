@@ -1,0 +1,72 @@
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+fun main() {
+    val este:String = "Hola"
+    var marruecos = 0
+    marruecos += 7
+    val explicita:Int = 9
+    val casa = if (marruecos>=10) "si" else explicita
+    println(casa)
+    hola(este, mul(2,4))
+    println(guen(5))
+    val gay = when(este) {
+        "Hola" -> "Gay"
+        else -> "No gay"
+    }
+    println(gay)
+    val peruanos = listOf("peru1", "peru2", "peru3")
+    for (item in peruanos) {
+        println (item)
+    }
+    val peruanosCambiaFormas = mutableListOf("peru1", "peru2", "peru3")
+    peruanosCambiaFormas.add("peru4")
+    peruanosCambiaFormas.add("peru4")
+    println(peruanosCambiaFormas)
+    val conjuntoMutable = mutableSetOf("6","2","3")
+    conjuntoMutable.add("4")
+    conjuntoMutable.add("4")
+    println(conjuntoMutable.sorted())
+    val listaNumeros = listOf(1,2,3,4,5,6,7,8,9,10)
+    val pares = listaNumeros.filter(::esPar)
+    println(pares)
+    val pares2 = listaNumeros.filter({
+        a -> a%2==0
+    })
+    println(pares2)
+    val impares = listaNumeros.filter {
+        it%2!=0
+    }
+    println(impares)
+    for (elemento in listaNumeros) {
+        println(elemento)
+    }
+    var indice:Int = 0
+    while(indice<listaNumeros.size) {
+        print("El numero es ${listaNumeros.get(indice)}\n")
+        indice++
+    }
+    val x=10
+    if (x in 1..11) {
+        print("$x esta en el rango")
+    }
+}
+
+fun esPar(a:Int):Boolean {
+    return a%2==0
+}
+
+fun hola(a: String, b: Int) {
+    println("$a $b veces")
+}
+
+fun mul(a:Int, b:Int) = a*b
+
+fun guen(x: Int):String {
+    when {
+        x>5 -> return "Hola"
+        x<5 -> return "Adios"
+        else -> return "Como?"
+    }
+}
