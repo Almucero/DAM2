@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "command": "tsc",
+      "args": ["-p", "${workspaceFolder}/tsconfig.json", "--watch"],
+      "group": "build",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "isBackground": true,
+      "problemMatcher": ["$tsc-watch"],
+      "label": "build"
+    }
+  ]
+} 
