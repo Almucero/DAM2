@@ -3,11 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TypeScript Web App</title>
+  <title>Calculadora Typescript Web</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1 id="greeting">Hola Mundo</h1>
+  <div class="numero">
+    <input type="text" id="numero" readonly>
+  </div>
+  <div class="caja">
+    <button class="botonOperador" data-action="porcentaje">%</button>
+    <button class="botonOperador" data-action="CE">CE</button>
+    <button class="botonOperador" data-action="C">C</button>
+    <button class="botonOperador" data-action="borrar">⌫</button>
+
+    <button class="botonOperador" data-action="1/x">1/x</button>
+    <button class="botonOperador" data-action="x²">x²</button>
+    <button class="botonOperador" data-action="²√x">²√x</button>
+    <button class="botonOperador" data-action="÷">÷</button>
+
+    <button class="botonNumero" data-action="7">7</button>
+    <button class="botonNumero" data-action="8">8</button>
+    <button class="botonNumero" data-action="9">9</button>
+    <button class="botonOperador" data-action="x">x</button>
+  </div>
   <script src="index.js"></script>
 </body>
 </html>
