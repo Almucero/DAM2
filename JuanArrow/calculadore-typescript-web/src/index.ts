@@ -1,1 +1,0 @@
-//añadir reloj: rxjs, innerhtml, interval, Date, getelementbyid
