@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DivideBillsApp</string>
+    <string name="quantity_label">Quantity</string>
+    <string name="people_label">People</string>
+    <string name="tip_label">Round tip</string>
+    <string name="valoration_label">Valoration</string>
+    <string name="calculate_label">Calculate</string>
+    <string name="totalQuantity_label">Total quantity</string>
+    <string name="eachOne_label">Each one</string>
+</resources>

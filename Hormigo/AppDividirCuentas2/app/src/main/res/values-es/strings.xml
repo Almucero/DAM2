@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppDividirCuentas</string>
+    <string name="quantity_label">Cantidad</string>
+    <string name="people_label">Comensales</string>
+    <string name="tip_label">Redondear propina</string>
+    <string name="valoration_label">Valoración</string>
+    <string name="calculate_label">Calcular</string>
+    <string name="totalQuantity_label">Cantidad total</string>
+    <string name="eachOne_label">Cada uno</string>
+</resources>
