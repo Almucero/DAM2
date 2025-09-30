@@ -17,7 +17,11 @@
   "license": "MIT",
   "description": "Calculadora web con typescript, replica de la de windows 11",
   "devDependencies": {
+    "@types/node": "^24.6.0",
     "typescript": "^5.0.0",
     "vite": "^5.4.20"
+  },
+  "dependencies": {
+    "rxjs": "^7.8.2"
   }
 }

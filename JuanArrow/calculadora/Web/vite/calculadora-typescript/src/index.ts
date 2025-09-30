@@ -1,3 +1,5 @@
+import { interval, tap } from "rxjs";
+
 let numeroActual: string = "0";
 let numeroPrevio: string = "";
 let operador: string = "";
@@ -115,6 +117,7 @@ function calcular(): void {
 document.addEventListener("DOMContentLoaded", () => {
     actualizarParteSuperior();
     setUpEventListeners();
+    mostrarReloj();
 });
 
 function setUpEventListeners(): void {
@@ -145,7 +148,6 @@ function setUpEventListeners(): void {
     }
 }
 
-/*
 function mostrarReloj(): void {
     interval(1000).pipe(
         tap(() => {
@@ -156,4 +158,3 @@ function mostrarReloj(): void {
         })
     ).subscribe();
 }
-*/
