@@ -7,4 +7,5 @@
     <string name="calculate_label">Calculate</string>
     <string name="totalQuantity_label">Total quantity</string>
     <string name="eachOne_label">Each one</string>
+    <string name="error_label">Error</string>
 </resources>

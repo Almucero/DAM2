@@ -33,6 +33,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.appdividircuentas.ui.theme.AppTheme
+import java.text.DecimalFormat
+import java.util.Locale
 import kotlin.math.roundToInt
 
 class MainActivity : ComponentActivity() {
@@ -53,11 +55,12 @@ class MainActivity : ComponentActivity() {
 fun Screen(modifier: Modifier = Modifier) {
     var quantity by remember { mutableStateOf("") }
     var people by remember { mutableStateOf("") }
-    var checked by remember { mutableStateOf(true) }
+    var checked by remember { mutableStateOf(false) }
     var sliderPosition by remember { mutableFloatStateOf(0f) }
     var totalQuantity by remember { mutableStateOf("") }
     var eachOne by remember { mutableStateOf("") }
     var done by remember { mutableStateOf(false) }
+    var error by remember { mutableStateOf(false) }
     Column(
         modifier = Modifier.fillMaxWidth().padding(horizontal = 10.dp)
     ) {
@@ -88,9 +91,15 @@ fun Screen(modifier: Modifier = Modifier) {
                 }
             )
         }
-        Text(
-            text = stringResource(R.string.valoration_label)
-        )
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),
+            horizontalArrangement = Arrangement.Center
+        ) {
+            Text(
+                text = stringResource(R.string.valoration_label) + ": " + sliderPosition.roundToInt().toString(),
+                textAlign = TextAlign.Center
+            )
+        }
         Slider(
             value = sliderPosition,
             onValueChange = { sliderPosition = it },
@@ -103,32 +112,34 @@ fun Screen(modifier: Modifier = Modifier) {
             valueRange = 0f..5f,
             modifier = Modifier.fillMaxWidth()
         )
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),
-            horizontalArrangement = Arrangement.Center
-        ) {
-            Text(text = sliderPosition.roundToInt().toString())
-        }
         Button(onClick = {
-            var doubleQuantity: Double = quantity.toDouble()
-            val peopleInt: Int = people.toInt()
-            when (sliderPosition.roundToInt()) {
-                1 -> doubleQuantity += doubleQuantity*0.05
-                2 -> doubleQuantity += doubleQuantity*0.1
-                3 -> doubleQuantity += doubleQuantity*0.15
-                4 -> doubleQuantity += doubleQuantity*0.2
-                5 ->  doubleQuantity += doubleQuantity*0.25
-            }
-            if (checked) {
-                totalQuantity = doubleQuantity.roundToInt().toString()
-                eachOne = (doubleQuantity.roundToInt()/peopleInt).toString()
+            var quantityDouble: Double? = quantity.toDoubleOrNull()
+            val peopleInt: Int? = people.toIntOrNull()
+            val df = DecimalFormat("#.###")
+            if (quantityDouble !== null && quantityDouble > 0 && peopleInt !== null && peopleInt > 0) {
+                when (sliderPosition.roundToInt()) {
+                    1 -> quantityDouble += quantityDouble * 0.05
+                    2 -> quantityDouble += quantityDouble * 0.1
+                    3 -> quantityDouble += quantityDouble * 0.15
+                    4 -> quantityDouble += quantityDouble * 0.2
+                    5 ->  quantityDouble += quantityDouble * 0.25
+                }
+                if (checked) {
+                    totalQuantity = quantityDouble.roundToInt().toString()
+                    eachOne = df.format(quantityDouble.roundToInt().toDouble()/peopleInt)
+                }
+                else {
+                    totalQuantity = df.format(quantityDouble)
+                    eachOne = df.format(quantityDouble/peopleInt)
+                }
+                done = true
+                error = false
             }
             else {
-                totalQuantity = doubleQuantity.toString()
-                eachOne = (doubleQuantity.toInt()/peopleInt).toString()
+                done = false
+                error = true
             }
-            done = true
-        }, modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)) {
+        }, modifier = Modifier.fillMaxWidth().padding(vertical = 14.dp)) {
             Row(
                 Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
@@ -149,13 +160,27 @@ fun Screen(modifier: Modifier = Modifier) {
                 Column {
                     Text(
                         text = stringResource(R.string.totalQuantity_label)+": $totalQuantity",
-                        textAlign = TextAlign.Center
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
                     )
                     Text(
                         text = stringResource(R.string.eachOne_label)+": $eachOne",
-                        textAlign = TextAlign.Center
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
                     )
                 }
+            }
+        }
+        if (error) {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Text(
+                    text = stringResource(R.string.error_label),
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth()
+                )
             }
         }
     }

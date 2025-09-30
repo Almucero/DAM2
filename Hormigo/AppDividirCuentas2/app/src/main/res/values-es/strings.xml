@@ -8,4 +8,5 @@
     <string name="calculate_label">Calcular</string>
     <string name="totalQuantity_label">Cantidad total</string>
     <string name="eachOne_label">Cada uno</string>
+    <string name="error_label">Error</string>
 </resources>
