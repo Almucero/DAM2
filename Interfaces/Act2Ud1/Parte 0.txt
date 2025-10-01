@@ -1,0 +1,19 @@
+Las fuentes más apropiadas para usar en la web son principalmente:
+
+
+Algunas web safe fonts podrían ser: Arial, Verdana, Times New Roman, Georgia, Courier New, Trebuchet MS, etc.
+
+Motivo: están instaladas en prácticamente todos los sistemas operativos y navegadores, por lo que se garantiza la visualización sin necesidad de descargas externas. 
+Son rápidas de cargar y evitan problemas de compatibilidad.
+
+
+Google Fonts y otros catálogos online (Open Sans, Roboto, Lato, Montserrat, etc.)
+
+Motivo: permiten una gran variedad tipográfica gratuita y optimizada para la web. Google Fonts está muy extendido, se sirve desde CDN, 
+se adapta a diferentes resoluciones y soporta muchos idiomas. Son recomendadas cuando se quiere un diseño más atractivo o personalizado.
+
+
+Fuentes autoalojadas en el servidor (archivos .woff / .woff2 generados a partir de .ttf o .otf).
+
+Motivo: se usan cuando se necesita una fuente concreta que no está en Google Fonts o para proyectos donde se quiere independencia de proveedores externos. 
+Los formatos .woff y .woff2 están optimizados para la web y se cargan más rápido que .ttf.

@@ -1,0 +1,66 @@
+body {
+    text-align: center;
+    background-color: white;
+}
+
+h1 {
+    margin-top: 40px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.safe-font {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: blue;
+}
+
+.safe-font2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    color: blue;
+}
+
+.safe-font3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+    color: blue;
+}
+
+@font-face {
+    font-family: "Bitecount";
+    src: url("./fonts/BitcountPropSingleInk-Regular.woff2") format("woff2"),
+         url("./fonts/BitcountPropSingleInk-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bitecount {
+    color: green;
+    font-family: "Bitecount", monospace;
+    font-size: 1.5rem;
+}
+
+.google-font1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: blueviolet;
+}
+
+.google-font2 {
+    font-family: "Almendra Display", serif;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: blueviolet;
+}
+
+.google-font3 {
+    font-family: "Princess Sofia", cursive;
+    font-size: 1.2rem;
+    color: blueviolet;
+    font-style: normal;
+}
