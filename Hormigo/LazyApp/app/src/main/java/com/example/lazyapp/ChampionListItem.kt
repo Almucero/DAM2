@@ -49,9 +49,3 @@ fun ChampionListItem(
         }
     }
 }
-
-@Composable
-@Preview(showBackground = true)
-fun ChampionListItem() {
-    ChampionListItem(R.drawable.annie, "Annie", "La hija de la Oscuridad")
-}

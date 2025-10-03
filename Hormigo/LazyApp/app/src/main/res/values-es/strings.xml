@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App perezosa</string>
+
+    <string name="annie_label">Annie</string>
+    <string name="annie_description">La hija de la oscuridad</string>
+
+    <string name="diana_label">Diana</string>
+    <string name="diana_description">El desdén de la luna</string>
+
+    <string name="fizz_label">Fizz</string>
+    <string name="fizz_description">El bromista de las mareas</string>
+
+    <string name="irelia_label">Irelia</string>
+    <string name="irelia_description">La cuchilla danzante</string>
+
+    <string name="leona_label">Leona</string>
+    <string name="leona_description">El amanecer radiante</string>
+
+    <string name="mordekaiser_label">Mordekaiser</string>
+    <string name="mordekaiser_description">El revenante de hierro</string>
+
+    <string name="neeko_label">Neeko</string>
+    <string name="neeko_description">La camaleona curiosa</string>
+
+    <string name="senna_label">Senna</string>
+    <string name="senna_description">La redentora</string>
+
+    <string name="taric_label">Taric</string>
+    <string name="taric_description">El escudo de Valoran</string>
+
+    <string name="teemo_label">Teemo</string>
+    <string name="teemo_description">El explorador veloz</string>
+
+    <string name="vi_label">Vi</string>
+    <string name="vi_description">La defensora de Piltover</string>
+
+    <string name="ziggs_label">Ziggs</string>
+    <string name="ziggs_description">El experto en explosivos</string>
+</resources>
