@@ -3,38 +3,50 @@
     <string name="app_name">Lazy App</string>
 
     <string name="annie_label">Annie</string>
-    <string name="annie_description">The dark child daughter</string>
+    <string name="annie_title">The dark child daughter</string>
+    <string name="annie_description">A young girl with immense fire magic and her bear Tibbers.</string>
 
     <string name="diana_label">Diana</string>
-    <string name="diana_description">The scorn of the moon</string>
+    <string name="diana_title">The scorn of the moon</string>
+    <string name="diana_description">A warrior of the moon who defies the sun’s order.</string>
 
     <string name="fizz_label">Fizz</string>
-    <string name="fizz_description">The trickster of the tides</string>
+    <string name="fizz_title">The trickster of the tides</string>
+    <string name="fizz_description">A mischievous sea dweller who thrives in the ocean depths.</string>
 
     <string name="irelia_label">Irelia</string>
-    <string name="irelia_description">The blade dancer</string>
+    <string name="irelia_title">The blade dancer</string>
+    <string name="irelia_description">A master of blade dancing and defender of Ionia.</string>
 
     <string name="leona_label">Leona</string>
-    <string name="leona_description">The radiant dawn</string>
+    <string name="leona_title">The radiant dawn</string>
+    <string name="leona_description">A solar warrior wielding the shield and sword of the Solari.</string>
 
     <string name="mordekaiser_label">Mordekaiser</string>
-    <string name="mordekaiser_description">The iron revenant</string>
+    <string name="mordekaiser_title">The iron revenant</string>
+    <string name="mordekaiser_description">An armored revenant who commands both death and souls.</string>
 
     <string name="neeko_label">Neeko</string>
-    <string name="neeko_description">The curious chameleon</string>
+    <string name="neeko_title">The curious chameleon</string>
+    <string name="neeko_description">A chameleon vastaya with the power to mimic others.</string>
 
     <string name="senna_label">Senna</string>
-    <string name="senna_description">The redeemer</string>
+    <string name="senna_title">The redeemer</string>
+    <string name="senna_description">A fighter cursed by the Mist, carrying light against darkness.</string>
 
     <string name="taric_label">Taric</string>
-    <string name="taric_description">The shield of Valoran</string>
+    <string name="taric_title">The shield of Valoran</string>
+    <string name="taric_description">The protector of Valoran, blessed with celestial power.</string>
 
     <string name="teemo_label">Teemo</string>
-    <string name="teemo_description">The swift scout</string>
+    <string name="teemo_title">The swift scout</string>
+    <string name="teemo_description">A fast scout from Bandle City, expert in stealth and traps.</string>
 
     <string name="vi_label">Vi</string>
-    <string name="vi_description">The enforcer of Piltover</string>
+    <string name="vi_title">The enforcer of Piltover</string>
+    <string name="vi_description">A tough enforcer from Piltover with mechanical gauntlets.</string>
 
     <string name="ziggs_label">Ziggs</string>
-    <string name="ziggs_description">The explosive expert</string>
+    <string name="ziggs_title">The explosive expert</string>
+    <string name="ziggs_description">A yordle who loves bombs, chaos, and blowing things up.</string>
 </resources>
