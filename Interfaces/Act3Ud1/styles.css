@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+nav, footer {
+    background-color: lightgrey;
+    padding: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    margin-right: 20px;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+footer img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+footer a {
+    cursor: pointer;
+}
+
+footer h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+pre {
+    flex: 1;
+}
