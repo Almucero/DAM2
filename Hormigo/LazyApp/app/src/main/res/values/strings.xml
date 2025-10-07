@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Lazy App</string>
+    <string name="create_label">New champion</string>
 
     <string name="annie_label">Annie</string>
     <string name="annie_title">The dark child daughter</string>

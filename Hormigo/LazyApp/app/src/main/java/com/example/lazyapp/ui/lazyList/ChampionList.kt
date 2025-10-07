@@ -11,12 +11,12 @@ import androidx.compose.ui.unit.dp
 import com.example.lazyapp.data.champions
 
 @Composable
-fun Screen(modifier: Modifier = Modifier) {
+fun ChampionListScreen(modifier: Modifier = Modifier) {
     LazyColumn(
         modifier = modifier.fillMaxSize().padding(vertical = 8.dp, horizontal = 10.dp)
     ) {
-        items(items = champions) { champion ->
-            ChampionListItem(
+        items(champions, { it.id }) { champion -> // { champions -> champion.id }
+            ChampionListItemScreen(
                 imageUrl = champion.imageUrl,
                 name = stringResource(id = champion.name),
                 title = stringResource(id = champion.title),

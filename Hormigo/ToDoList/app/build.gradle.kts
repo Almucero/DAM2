@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.lazyapp"
+    namespace = "com.example.todolist"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.lazyapp"
+        applicationId = "com.example.todolist"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -49,7 +49,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-    implementation(libs.androidx.compose.ui.text.google.fonts)
+    implementation(libs.androidx.navigation.compose)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -57,7 +57,4 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
-    implementation(libs.coil.compose)
-    implementation(libs.coil.network.okhttp)
-    implementation(libs.androidx.compose.material.icons.extended)
 }

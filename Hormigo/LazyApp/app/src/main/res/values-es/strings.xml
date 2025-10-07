@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">App perezosa</string>
+    <string name="create_label">Nuevo campeón</string>
 
     <string name="annie_label">Annie</string>
     <string name="annie_title">La hija de la oscuridad</string>
