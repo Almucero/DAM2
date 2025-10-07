@@ -32,7 +32,7 @@ fun ChampionListItemScreen(
     )
     Row(
         modifier = Modifier.fillMaxWidth().clickable(enabled = true, onClick = {
-            
+
         }),
         verticalAlignment = Alignment.CenterVertically
     ) {
