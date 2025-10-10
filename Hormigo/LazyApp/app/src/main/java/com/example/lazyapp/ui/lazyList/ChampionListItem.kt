@@ -1,4 +1,4 @@
-package com.example.lazyapp.lazyList
+package com.example.lazyapp.ui.lazyList
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -21,18 +21,20 @@ import coil3.compose.AsyncImage
 
 @Composable
 fun ChampionListItemScreen(
+    id: Int,
     imageUrl: String,
     name: String,
     title: String,
-    description: String
+    description: String,
+    onClickItem: (Int) -> Unit
 ) {
     HorizontalDivider(
         thickness = 1.dp,
         modifier = Modifier.padding(horizontal = 10.dp)
     )
     Row(
-        modifier = Modifier.fillMaxWidth().clickable(enabled = true, onClick = {
-
+        modifier = Modifier.fillMaxWidth().clickable(true, onClick = {
+            onClickItem(id)
         }),
         verticalAlignment = Alignment.CenterVertically
     ) {
