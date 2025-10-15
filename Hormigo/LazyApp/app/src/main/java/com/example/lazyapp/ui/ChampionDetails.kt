@@ -46,7 +46,6 @@ fun ChampionDetailsScreen(
         is LocalizedString.Res -> stringResource(ls.resId)
         is LocalizedString.Plain -> ls.text
     }
-
     Surface(
         modifier = modifier.fillMaxSize()
     ) {

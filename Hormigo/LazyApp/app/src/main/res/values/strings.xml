@@ -21,7 +21,41 @@
     <string name="stat_mr_label">Magic resistance</string>
     <string name="stat_as_label">Attack speed</string>
     <string name="stat_ms_label">Speed</string>
-    <string name="stat_range_label">Reach</string>
+    <string name="stat_range_label">Range</string>
+
+    <string name="create_text_1">Introduce champion fields:</string>
+    <string name="create_text_2">Image Url</string>
+    <string name="create_text_3">Name</string>
+    <string name="create_text_4">Title</string>
+    <string name="create_text_5">Description</string>
+    <string name="create_text_6">Splash image Url</string>
+    <string name="create_text_7">Long description</string>
+
+    <string name="create_text_8">Stats</string>
+    <string name="create_text_9">Base health points</string>
+    <string name="create_text_10">Health points per level</string>
+    <string name="create_text_11">Base mana points</string>
+    <string name="create_text_12">Mana points per level</string>
+    <string name="create_text_13">Base attack damage</string>
+    <string name="create_text_14">Attack damage per level</string>
+    <string name="create_text_15">Base armor</string>
+    <string name="create_text_16">Armor per level</string>
+    <string name="create_text_17">Base magic resistance</string>
+    <string name="create_text_18">Magic resistance per level</string>
+    <string name="create_text_19">Base attack speed</string>
+    <string name="create_text_20">Attack speed per level</string>
+    <string name="create_text_21">Movement speed</string>
+    <string name="create_text_22">Reach</string>
+
+    <string name="create_text_23">Skill</string>
+    <string name="create_text_24">Image Url</string>
+    <string name="create_text_25">Name</string>
+    <string name="create_text_26">Description</string>
+    <string name="create_text_27">Cooldowns - ex. \'10s / 20s / 30s'</string>
+    <string name="create_text_28">Costs - ex. \'10 / 20 / 30'</string>
+    <string name="create_text_29">Effects</string>
+
+    <string name="create_text_30">Effects</string>
 
     <string name="annie_label">Annie</string>
     <string name="annie_title">The dark child\'s daughter</string>

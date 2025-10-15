@@ -185,21 +185,98 @@ paths:
                       image: "https://dragonball-api.com/characters/Vegeta.webp"
                       affiliation: "Z Fighter"
                       deletedAt: null
-  
+  /api/characters/{id}:
+    get:
+      summary: Get single character with extra parameters by providing an specific id
+      tags: [Characters]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Character id
+          schema: { type: number }
+      responses:
+        "200":
+          description: Character Information
+          content:
+            application/json:
+              schema:
+              examples:
+  /api/planets:
+    get:
+      summary: Get all planets if no params are provided, limit to 10 by default
+      tags: [Planets]
+      parameters:
+        - name: Page
+          in: query
+          description: Page number
+          schema: { type: number }
+        - name: Limit
+          in: query
+          description: Number of items per page
+          schema: { type: number }
+        - name: Name
+          in: query
+          description: Character name
+          schema: { type: string }
+        - name: isDestroyed
+          in: query
+          description: Wether or not the planet is destroyed
+          schema: { type: boolean, nullable: true }
+      responses:
+        "200":
+          description: Planet List
+          content:
+            application/json:
+              schema:
+              examples:
+  /api/planets/{id}:
+    get:
+      summary: Get single planet with extra parameters by providing an specific id
+      tags: [Planets]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Planet id
+          schema: { type: number }
+      responses:
+        "200":
+          description: Planet Information
+          content:
+            application/json:
+              schema:
+              examples:
 components:
   schemas:
     Character:
       type: object
       properties:
+        id: { type: number, example: 1 }
+        name: { type: string, example: "Goku" }
+        ki: { type: string, example: "60.000.000" }
+        maxKi: { type: string, example: "90 Septillion" }
+        race: { type: string, example: Saiyan }
+        gender: { type: string, example: Male }
+        description: { type: string, example: "Description Goku" }
+        image: { type: string, example: "urlImageGoku" }
+        affiliation: { type: string, example: "Z Fighter" }
+        deletedAt: { type: boolean, nullable: true, example: null }
+    Planet:
+      type: object
+      properties:
+        id: { type: number, example: 1 }
+        name: { type: string, example: "Planet Vegeta" }
+        description: { type: string, example: "Description Planet Vegeta" }
+        image: { type: string, example: "" }
+    Transformation:
+      type: object
+      properties:
         id: { type: number }
         name: { type: string }
-        ki: { type: string }
-        maxKi: { type: string }
-        race: { type: string }
-        gender: { type: string }
-        description: { type: string }
         image: { type: string }
-        affiliation: { type: string }
-        deletedAt: { type: boolean, nullable: true }
-    PaginatedCharacter:
+        ki: { type: number }
+        deletedAt: { type: boolean }
+    PaginatedCharacters:
       type: object
+    

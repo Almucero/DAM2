@@ -23,6 +23,38 @@
     <string name="stat_ms_label">Velocidad</string>
     <string name="stat_range_label">Alcance</string>
 
+    <string name="create_text_1">Introduce los campos del campeón:</string>
+    <string name="create_text_2">Url de imagen del campeón</string>
+    <string name="create_text_3">Nombre</string>
+    <string name="create_text_4">Título</string>
+    <string name="create_text_5">Descripcción</string>
+    <string name="create_text_6">Url de imagen splash del campeón</string>
+    <string name="create_text_7">Descripción larga</string>
+
+    <string name="create_text_8">Estadísticas</string>
+    <string name="create_text_9">Puntos de vida base</string>
+    <string name="create_text_10">Puntos de vida por nivel</string>
+    <string name="create_text_11">Puntos de mana base</string>
+    <string name="create_text_12">Puntos de mana por nivel</string>
+    <string name="create_text_13">Daño de ataque base</string>
+    <string name="create_text_14">Daño de ataque por nivel</string>
+    <string name="create_text_15">Armadura base</string>
+    <string name="create_text_16">Armadura por nivel</string>
+    <string name="create_text_17">Resistencia mágica base</string>
+    <string name="create_text_18">Resistencia mágica por nivel</string>
+    <string name="create_text_19">Velocidad de ataque base</string>
+    <string name="create_text_20">Velocidad de atauqe por nivel</string>
+    <string name="create_text_21">Velocidad de movimiento</string>
+    <string name="create_text_22">Alcance</string>
+
+    <string name="create_text_23">Habilidad</string>
+    <string name="create_text_24">Url de imagen de habilidad</string>
+    <string name="create_text_25">Nombre</string>
+    <string name="create_text_26">Descripción</string>
+    <string name="create_text_27">Cooldowns - p.ej. \'10s / 20s / 30s'</string>
+    <string name="create_text_28">Costes - p.ej. \'10 / 20 / 30'</string>
+    <string name="create_text_29">Efectos</string>
+
     <string name="annie_label">Annie</string>
     <string name="annie_title">La hija de la oscuridad</string>
     <string name="annie_description">Una niña con gran poder de fuego y su inseparable oso Tibbers.</string>

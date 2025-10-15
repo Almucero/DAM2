@@ -20,7 +20,6 @@ fun ChampionListScreen(
         is LocalizedString.Res -> stringResource(ls.resId)
         is LocalizedString.Plain -> ls.text
     }
-
     LazyColumn(
         modifier = modifier.padding(bottom = 73.dp)
     ) {

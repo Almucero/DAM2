@@ -26,7 +26,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -43,25 +42,20 @@ fun CreateChampionScreen(
     onCreateItem: (Champion) -> Unit,
     onCancel: () -> Unit
 ) {
-    val context = LocalContext.current
-
-    Surface(modifier = modifier) {
+    Surface(
+        modifier = modifier
+    ) {
         Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .verticalScroll(rememberScrollState())
-                .padding(12.dp),
+            modifier = Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(12.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            // --- Champion core fields (sin pedir id) ---
             val imageUrl = remember { mutableStateOf("") }
-            val nameText = remember { mutableStateOf("") } // plain text
-            val titleText = remember { mutableStateOf("") }
-            val descriptionText = remember { mutableStateOf("") }
+            val name = remember { mutableStateOf("") }
+            val title = remember { mutableStateOf("") }
+            val description = remember { mutableStateOf("") }
             val splashUrl = remember { mutableStateOf("") }
-            val longDescriptionText = remember { mutableStateOf("") }
-            val deletableFixed = true // fijo
-
+            val longDescription = remember { mutableStateOf("") }
+            val deletable = true
             Text("Campos obligatorios del campeón", fontSize = 16.sp)
             OutlinedTextField(
                 value = imageUrl.value,
@@ -70,20 +64,20 @@ fun CreateChampionScreen(
                 modifier = Modifier.fillMaxWidth()
             )
             OutlinedTextField(
-                value = nameText.value,
-                onValueChange = { nameText.value = it },
-                label = { Text("name (texto plano)") },
+                value = name.value,
+                onValueChange = { name.value = it },
+                label = { Text("name (String)") },
                 modifier = Modifier.fillMaxWidth()
             )
             OutlinedTextField(
-                value = titleText.value,
-                onValueChange = { titleText.value = it },
+                value = title.value,
+                onValueChange = { title.value = it },
                 label = { Text("title (texto plano)") },
                 modifier = Modifier.fillMaxWidth()
             )
             OutlinedTextField(
-                value = descriptionText.value,
-                onValueChange = { descriptionText.value = it },
+                value = description.value,
+                onValueChange = { description.value = it },
                 label = { Text("description (texto plano)") },
                 modifier = Modifier.fillMaxWidth()
             )
@@ -94,8 +88,8 @@ fun CreateChampionScreen(
                 modifier = Modifier.fillMaxWidth()
             )
             OutlinedTextField(
-                value = longDescriptionText.value,
-                onValueChange = { longDescriptionText.value = it },
+                value = longDescription.value,
+                onValueChange = { longDescription.value = it },
                 label = { Text("longDescription (texto plano)") },
                 modifier = Modifier.fillMaxWidth()
             )
@@ -205,10 +199,10 @@ fun CreateChampionScreen(
                 // checks básicos
                 if (imageUrl.value.isBlank()) { errorMsg = "imageUrl vacío"; return }
                 if (splashUrl.value.isBlank()) { errorMsg = "splashImageUrl vacío"; return }
-                if (nameText.value.isBlank()) { errorMsg = "name vacío"; return }
-                if (titleText.value.isBlank()) { errorMsg = "title vacío"; return }
-                if (descriptionText.value.isBlank()) { errorMsg = "description vacío"; return }
-                if (longDescriptionText.value.isBlank()) { errorMsg = "longDescription vacío"; return }
+                if (name.value.isBlank()) { errorMsg = "name vacío"; return }
+                if (title.value.isBlank()) { errorMsg = "title vacío"; return }
+                if (description.value.isBlank()) { errorMsg = "description vacío"; return }
+                if (longDescription.value.isBlank()) { errorMsg = "longDescription vacío"; return }
 
                 // parse stats (mínimo esfuerzo)
                 val stats = try {
@@ -257,14 +251,14 @@ fun CreateChampionScreen(
                 val champion = Champion(
                     id = nextId,
                     imageUrl = imageUrl.value,
-                    name = LocalizedString.Plain(nameText.value),
-                    title = LocalizedString.Plain(titleText.value),
-                    description = LocalizedString.Plain(descriptionText.value),
+                    name = LocalizedString.Plain(name.value),
+                    title = LocalizedString.Plain(title.value),
+                    description = LocalizedString.Plain(description.value),
                     splashImageUrl = splashUrl.value,
-                    longDescription = LocalizedString.Plain(longDescriptionText.value),
+                    longDescription = LocalizedString.Plain(longDescription.value),
                     stats = stats,
                     abilities = parsedAbilities,
-                    deletable = deletableFixed
+                    deletable = deletable
                 )
 
                 onCreateItem(champion)
