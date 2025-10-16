@@ -1,0 +1,19 @@
+meta {
+  name: modify a post partially
+  type: http
+  seq: 7
+}
+
+patch {
+  url: http://localhost:3000/posts/1?views_lt=1000
+  body: none
+  auth: inherit
+}
+
+params:query {
+  views_lt: 1000
+}
+
+settings {
+  encodeUrl: true
+}
