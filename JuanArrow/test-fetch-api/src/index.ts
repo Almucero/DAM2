@@ -2,33 +2,52 @@ import { fromFetch } from "rxjs/fetch"
 import { switchMap, of } from "rxjs";
 
 const contenedor = document.querySelector(".contenedor");
+const botonPersonajes = document.querySelector(".botonPersonajes");
+const botonPlanetas = document.querySelector(".botonPlanetas");
 
-const data = fromFetch("https://dragonball-api.com/api/characters").pipe(
-  switchMap(response => {
-    if (response.ok) {
-      return response.json();
-    }
-    else {
-      return of({message: `Error ${response.status}`})
-    }
-  })
+const characterData = fromFetch("http://localhost:3000/characters").pipe(
+  switchMap(response => response.ok ? response.json() : of({ message: `Error ${response.status}` }))
 );
 
-data.subscribe(response => {
-  const personajes = response.items;
-  mostrarPersonajes(personajes);
-});
+const planetData = fromFetch("http://localhost:3000/planets").pipe(
+  switchMap(response => response.ok ? response.json() : of({ message: `Error ${response.status}` }))
+);
 
 function mostrarPersonajes(personajes: any[]) {
   contenedor!.innerHTML = personajes.map((personaje: any) =>
     `
     <div class="contenedorPersonajes">
-      <img src="${personaje.image}" alt="${personaje.name} foto"/>
       <h1>${personaje.name}</h1>
     </div>
     `
   ).join("");
 }
+
+function mostrarPlanetas(planetas: any[]) {
+  contenedor!.innerHTML = planetas.map((planeta: any) =>
+    `
+    <div class="contenedorPlanetas">
+      <h1>${planeta.name}</h1>
+    </div>
+    `
+  ).join("");
+}
+
+botonPersonajes?.addEventListener("click", () => {
+  characterData.subscribe(response => {
+    const personajes = Array.isArray(response) ? response : (response?.characters ?? []);
+    mostrarPersonajes(personajes);
+  });
+});
+
+botonPlanetas?.addEventListener("click", () => {
+  planetData.subscribe(response => {
+    const planets = Array.isArray(response) ? response : (response?.planets ?? []);
+    mostrarPlanetas(planets);
+  });
+});
+
+//<img src="${personaje.image}" alt="${personaje.name} foto"/>
 
 /*Forma previa:
 

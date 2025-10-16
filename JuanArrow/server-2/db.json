@@ -1,0 +1,446 @@
+{
+    "characters": [
+        {
+            "id": "ch_001",
+            "name": "Son Goku",
+            "aliases": [
+                "Kakarot"
+            ],
+            "species": "Saiyan",
+            "gender": "Male",
+            "age": 42,
+            "home_planet_id": "pl_earth",
+            "affiliations": [
+                "Z Fighters",
+                "World Martial Arts Tournament"
+            ],
+            "power_level": {
+                "base": 5000,
+                "peak_reported": 1000000000,
+                "units": "approx"
+            },
+            "abilities": [
+                "Kamehameha",
+                "Instant Transmission",
+                "Kaioken",
+                "Spirit Bomb"
+            ],
+            "transformations": [
+                {
+                    "name": "Super Saiyan",
+                    "multiplier": 50
+                },
+                {
+                    "name": "Super Saiyan Blue",
+                    "multiplier": 5000
+                },
+                {
+                    "name": "Ultra Instinct (Omen)",
+                    "multiplier": 10000,
+                    "notes": "Heightened reflexes and autonomous movement"
+                }
+            ],
+            "first_appearance": {
+                "media": "manga",
+                "chapter": "Chapter 1",
+                "year": 1984
+            },
+            "voice_actors": [
+                {
+                    "language": "Japanese",
+                    "actor": "Masako Nozawa"
+                },
+                {
+                    "language": "English",
+                    "actor": "Sean Schemmel"
+                }
+            ],
+            "status": "Alive",
+            "notes": "Primary protagonist"
+        },
+        {
+            "id": "ch_002",
+            "name": "Vegeta",
+            "aliases": [
+                "Prince of Saiyans"
+            ],
+            "species": "Saiyan",
+            "gender": "Male",
+            "age": 46,
+            "home_planet_id": "pl_vegeta",
+            "affiliations": [
+                "Royal Family",
+                "Z Fighters"
+            ],
+            "power_level": {
+                "base": 4500,
+                "peak_reported": 900000000,
+                "units": "approx"
+            },
+            "abilities": [
+                "Galick Gun",
+                "Final Flash",
+                "Big Bang Attack"
+            ],
+            "transformations": [
+                {
+                    "name": "Super Saiyan",
+                    "multiplier": 50
+                },
+                {
+                    "name": "Super Saiyan Blue Evolution",
+                    "multiplier": 7000
+                }
+            ],
+            "first_appearance": {
+                "media": "manga",
+                "chapter": "Chapter 204",
+                "year": 1988
+            },
+            "voice_actors": [
+                {
+                    "language": "Japanese",
+                    "actor": "Ryo Horikawa"
+                },
+                {
+                    "language": "English",
+                    "actor": "Christopher Sabat"
+                }
+            ],
+            "status": "Alive"
+        },
+        {
+            "id": "ch_003",
+            "name": "Bulma",
+            "aliases": [],
+            "species": "Human",
+            "gender": "Female",
+            "age": 48,
+            "home_planet_id": "pl_earth",
+            "affiliations": [
+                "Capsule Corporation"
+            ],
+            "power_level": {
+                "base": 5,
+                "units": "approx"
+            },
+            "abilities": [
+                "Genius-level intellect",
+                "Inventor",
+                "Pilot"
+            ],
+            "transformations": [],
+            "first_appearance": {
+                "media": "manga",
+                "chapter": "Chapter 1",
+                "year": 1984
+            },
+            "voice_actors": [
+                {
+                    "language": "Japanese",
+                    "actor": "Hiromi Tsuru (original)"
+                },
+                {
+                    "language": "English",
+                    "actor": "Monica Rial"
+                }
+            ],
+            "status": "Alive"
+        },
+        {
+            "id": "ch_004",
+            "name": "Frieza",
+            "aliases": [
+                "Frieza (Emperor)"
+            ],
+            "species": "Frieza Race",
+            "gender": "Male",
+            "age": "Unknown",
+            "home_planet_id": "pl_frieza",
+            "affiliations": [
+                "Frieza Force"
+            ],
+            "power_level": {
+                "base": 530000,
+                "peak_reported": 1000000000,
+                "units": "approx"
+            },
+            "abilities": [
+                "Death Beam",
+                "Death Ball",
+                "Telekinesis",
+                "Flight"
+            ],
+            "transformations": [
+                {
+                    "name": "Final Form",
+                    "multiplier": 1
+                },
+                {
+                    "name": "Golden Frieza",
+                    "multiplier": 2500
+                }
+            ],
+            "first_appearance": {
+                "media": "manga",
+                "chapter": "Chapter 225",
+                "year": 1989
+            },
+            "voice_actors": [
+                {
+                    "language": "Japanese",
+                    "actor": "Ryusei Nakao"
+                },
+                {
+                    "language": "English",
+                    "actor": "Christopher Ayres"
+                }
+            ],
+            "status": "Alive"
+        },
+        {
+            "id": "ch_005",
+            "name": "Piccolo",
+            "aliases": [
+                "King Piccolo (ancestor)"
+            ],
+            "species": "Namekian",
+            "gender": "Male",
+            "age": 150,
+            "home_planet_id": "pl_namek",
+            "affiliations": [
+                "Former Demon Clan",
+                "Z Fighters"
+            ],
+            "power_level": {
+                "base": 32000,
+                "peak_reported": 500000,
+                "units": "approx"
+            },
+            "abilities": [
+                "Special Beam Cannon",
+                "Regeneration",
+                "Fusion"
+            ],
+            "transformations": [],
+            "first_appearance": {
+                "media": "manga",
+                "chapter": "Chapter 139",
+                "year": 1987
+            },
+            "voice_actors": [
+                {
+                    "language": "Japanese",
+                    "actor": "Tessho Genda"
+                },
+                {
+                    "language": "English",
+                    "actor": "Christopher Sabat"
+                }
+            ],
+            "status": "Alive"
+        },
+        {
+            "id": "ch_006",
+            "name": "Son Gohan",
+            "aliases": [],
+            "species": "Half-Saiyan",
+            "gender": "Male",
+            "age": 28,
+            "home_planet_id": "pl_earth",
+            "affiliations": [
+                "Z Fighters",
+                "Great Saiyaman"
+            ],
+            "power_level": {
+                "base": 2000,
+                "peak_reported": 800000000,
+                "units": "approx"
+            },
+            "abilities": [
+                "Masenko",
+                "Kamehameha",
+                "Potential Unleashed"
+            ],
+            "transformations": [
+                {
+                    "name": "Super Saiyan 2",
+                    "multiplier": 100
+                },
+                {
+                    "name": "Mystic (Ultimate)",
+                    "multiplier": 1200
+                }
+            ],
+            "first_appearance": {
+                "media": "manga",
+                "chapter": "Chapter 192",
+                "year": 1990
+            },
+            "voice_actors": [
+                {
+                    "language": "Japanese",
+                    "actor": "Masako Nozawa"
+                },
+                {
+                    "language": "English",
+                    "actor": "Kyle Hebert"
+                }
+            ],
+            "status": "Alive"
+        }
+    ],
+    "planets": [
+        {
+            "id": "pl_earth",
+            "name": "Earth",
+            "system": "Milky Way (fictional)",
+            "star": "Sol",
+            "dominant_species": [
+                "Humans"
+            ],
+            "gravity": 1.0,
+            "atmosphere": [
+                "Nitrogen",
+                "Oxygen"
+            ],
+            "population_estimate": 7000000000,
+            "environment": "Temperate, varied biomes",
+            "notable_locations": [
+                {
+                    "name": "Capsule Corporation",
+                    "type": "City / Research"
+                },
+                {
+                    "name": "Kami's Lookout",
+                    "type": "Spiritual"
+                },
+                {
+                    "name": "Mount Paozu",
+                    "type": "Forest / Mountain"
+                }
+            ],
+            "ruler": "None (planetary governments)",
+            "coordinates": {
+                "galactic_longitude": 123.45,
+                "galactic_latitude": 54.32
+            },
+            "satellites": [
+                {
+                    "name": "Moon",
+                    "notes": "Standard natural satellite"
+                }
+            ],
+            "technology_level": "Contemporary to Advanced (capsule tech present)",
+            "notable_events": [
+                "Multiple invasions and battles involving extraterrestrial forces",
+                "World Martial Arts Tournaments held periodically"
+            ],
+            "status": "Intact"
+        },
+        {
+            "id": "pl_namek",
+            "name": "Namek",
+            "system": "Namekian System",
+            "star": "Unnamed",
+            "dominant_species": [
+                "Namekians"
+            ],
+            "gravity": 0.8,
+            "atmosphere": [
+                "Oxygen",
+                "Nitrogen"
+            ],
+            "population_estimate": 40000000,
+            "environment": "Lush, green plains and lakes",
+            "notable_locations": [
+                {
+                    "name": "Guru's Village",
+                    "type": "Settlement / Sacred"
+                },
+                {
+                    "name": "Grand Elder's Shrine",
+                    "type": "Spiritual"
+                }
+            ],
+            "ruler": "Elders (varies by village)",
+            "coordinates": {
+                "galactic_longitude": 210.00,
+                "galactic_latitude": -12.50
+            },
+            "satellites": [],
+            "technology_level": "Primitive to Moderate",
+            "notable_events": [
+                "Namekian Dragon Balls creation",
+                "Invasion by Frieza Force (large-scale battle)"
+            ],
+            "status": "Partially Restored"
+        },
+        {
+            "id": "pl_vegeta",
+            "name": "Planet Vegeta",
+            "system": "Saiyan Home System",
+            "star": "Unknown",
+            "dominant_species": [
+                "Saiyans"
+            ],
+            "gravity": 1.5,
+            "atmosphere": [
+                "Thin but breathable for Saiyans"
+            ],
+            "population_estimate": 15000000,
+            "environment": "Harsh, mountainous",
+            "notable_locations": [
+                {
+                    "name": "Royal Palace",
+                    "type": "Government"
+                }
+            ],
+            "ruler": "Royal Family (historically)",
+            "coordinates": {
+                "galactic_longitude": 310.75,
+                "galactic_latitude": 42.11
+            },
+            "satellites": [],
+            "technology_level": "Advanced (warrior culture with star-faring capability)",
+            "notable_events": [
+                "Destruction by Frieza",
+                "Historic Saiyan homeworld"
+            ],
+            "status": "Destroyed"
+        },
+        {
+            "id": "pl_frieza",
+            "name": "Planet Frieza",
+            "system": "Frieza's Domain",
+            "star": "Unknown",
+            "dominant_species": [
+                "Various (Frieza Force)"
+            ],
+            "gravity": 1.0,
+            "atmosphere": [
+                "Standard"
+            ],
+            "population_estimate": 20000000,
+            "environment": "Artificially maintained imperial world(s)",
+            "notable_locations": [
+                {
+                    "name": "Frieza's Stronghold",
+                    "type": "Military / Palace"
+                }
+            ],
+            "ruler": "Frieza (Emperor)",
+            "coordinates": {
+                "galactic_longitude": 5.00,
+                "galactic_latitude": -2.00
+            },
+            "satellites": [],
+            "technology_level": "Highly Advanced (interstellar military)",
+            "notable_events": [
+                "Seat of Frieza Force operations",
+                "Various planetary conquests"
+            ],
+            "status": "Intact"
+        }
+    ]
+}
