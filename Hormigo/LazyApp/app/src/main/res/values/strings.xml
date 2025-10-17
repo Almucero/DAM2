@@ -48,11 +48,11 @@
     <string name="create_text_22">Reach</string>
 
     <string name="create_text_23">Skill</string>
-    <string name="create_text_24">Image Url</string>
+    <string name="create_text_24">Skill image Url</string>
     <string name="create_text_25">Name</string>
     <string name="create_text_26">Description</string>
-    <string name="create_text_27">Cooldowns - ex. \'10s / 20s / 30s'</string>
-    <string name="create_text_28">Costs - ex. \'10 / 20 / 30'</string>
+   <!-- <string name="create_text_27">Cooldowns - ex. \'10s / 20s / 30s'</string>
+    <string name="create_text_28">Costs - ex. \'10 / 20 / 30'</string>-->
     <string name="create_text_29">Effects</string>
 
     <string name="create_text_30">Effects</string>

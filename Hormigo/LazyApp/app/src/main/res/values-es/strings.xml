@@ -51,8 +51,8 @@
     <string name="create_text_24">Url de imagen de habilidad</string>
     <string name="create_text_25">Nombre</string>
     <string name="create_text_26">Descripción</string>
-    <string name="create_text_27">Cooldowns - p.ej. \'10s / 20s / 30s'</string>
-    <string name="create_text_28">Costes - p.ej. \'10 / 20 / 30'</string>
+   <!--><string name="create_text_27">Cooldowns - p.ej. \'10s / 20s / 30s'</string>
+    <string name="create_text_28">Costes - p.ej. \'10 / 20 / 30'</string>-->
     <string name="create_text_29">Efectos</string>
 
     <string name="annie_label">Annie</string>

@@ -937,77 +937,77 @@ val champions: MutableList<Champion> = mutableStateListOf(
         deletable = false
     ),
 
-//    Champion(
-//        13,
-//        "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/champion/Ziggs.png",
-//        LocalizedString.Res(R.string.ziggs_label),
-//        LocalizedString.Res(R.string.ziggs_title),
-//        LocalizedString.Res(R.string.ziggs_description),
-//        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ziggs_0.jpg",
-//        LocalizedString.Res(R.string.ziggs_longDescription),
-//        Stats(
-//            hpBase = 556.0,
-//            hpPerLevel = 92.0,
-//            mpBase = 400.0,
-//            mpPerLevel = 50.0,
-//            adBase = 54.0,
-//            adPerLevel = 3.0,
-//            armorBase = 22.0,
-//            armorPerLevel = 3.0,
-//            mrBase = 30.0,
-//            mrPerLevel = 0.5,
-//            attackSpeedBase = 0.625,
-//            attackSpeedPerLevel = 0.0136,
-//            moveSpeed = 325,
-//            range = 575
-//        ),
-//        listOf(
-//            Ability(
-//                "Passive",
-//                "https://raw.communitydragon.org/latest/game/assets/characters/ziggs/hud/icons2d/ziggs_passive.png",
-//                LocalizedString.Res(R.string.ziggs_passive_label),
-//                LocalizedString.Res(R.string.ziggs_passive_description),
-//                null,
-//                null,
-//                LocalizedString.Res(R.string.ziggs_passive_effect_1)
-//            ),
-//            Ability(
-//                "Q",
-//                "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/spell/ZiggsQ.png",
-//                LocalizedString.Res(R.string.ziggs_q_label),
-//                LocalizedString.Res(R.string.ziggs_q_description),
-//                "9s / 8s / 7s / 6s / 5s",
-//                "60 / 65 / 70 / 75 / 80",
-//                LocalizedString.Res(R.string.ziggs_q_effect_1)
-//            ),
-//            Ability(
-//                "W",
-//                "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/spell/ZiggsW.png",
-//                LocalizedString.Res(R.string.ziggs_w_label),
-//                LocalizedString.Res(R.string.ziggs_w_description),
-//                "14s / 14s / 14s / 14s / 14s",
-//                "40 / 45 / 50 / 55 / 60",
-//                LocalizedString.Res(R.string.ziggs_w_effect_1)
-//            ),
-//            Ability(
-//                "E",
-//                "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/spell/ZiggsE.png",
-//                LocalizedString.Res(R.string.ziggs_e_label),
-//                LocalizedString.Res(R.string.ziggs_e_description),
-//                "12s / 12s / 12s / 12s / 12s",
-//                "50 / 55 / 60 / 65 / 70",
-//                LocalizedString.Res(R.string.ziggs_e_effect_1)
-//            ),
-//            Ability(
-//                "R",
-//                "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/spell/ZiggsR.png",
-//                LocalizedString.Res(R.string.ziggs_r_label),
-//                LocalizedString.Res(R.string.ziggs_r_description),
-//                "120s / 100s / 80s",
-//                "100 / 100 / 100",
-//                LocalizedString.Res(R.string.ziggs_r_effect_1)
-//            )
-//        ),
-//        deletable = true
-//    )
+    Champion(
+        13,
+        "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/champion/Ziggs.png",
+        LocalizedString.Res(R.string.ziggs_label),
+        LocalizedString.Res(R.string.ziggs_title),
+        LocalizedString.Res(R.string.ziggs_description),
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ziggs_0.jpg",
+        LocalizedString.Res(R.string.ziggs_longDescription),
+        Stats(
+            hpBase = 556.0,
+            hpPerLevel = 92.0,
+            mpBase = 400.0,
+            mpPerLevel = 50.0,
+            adBase = 54.0,
+            adPerLevel = 3.0,
+            armorBase = 22.0,
+            armorPerLevel = 3.0,
+            mrBase = 30.0,
+            mrPerLevel = 0.5,
+            attackSpeedBase = 0.625,
+            attackSpeedPerLevel = 0.0136,
+            moveSpeed = 325,
+            range = 575
+        ),
+        listOf(
+            Ability(
+                "Passive",
+                "https://raw.communitydragon.org/latest/game/assets/characters/ziggs/hud/icons2d/ziggs_passive.png",
+                LocalizedString.Res(R.string.ziggs_passive_label),
+                LocalizedString.Res(R.string.ziggs_passive_description),
+                null,
+                null,
+                LocalizedString.Res(R.string.ziggs_passive_effect_1)
+            ),
+            Ability(
+                "Q",
+                "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/spell/ZiggsQ.png",
+                LocalizedString.Res(R.string.ziggs_q_label),
+                LocalizedString.Res(R.string.ziggs_q_description),
+                "9s / 8s / 7s / 6s / 5s",
+                "60 / 65 / 70 / 75 / 80",
+                LocalizedString.Res(R.string.ziggs_q_effect_1)
+            ),
+            Ability(
+                "W",
+                "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/spell/ZiggsW.png",
+                LocalizedString.Res(R.string.ziggs_w_label),
+                LocalizedString.Res(R.string.ziggs_w_description),
+                "14s / 14s / 14s / 14s / 14s",
+                "40 / 45 / 50 / 55 / 60",
+                LocalizedString.Res(R.string.ziggs_w_effect_1)
+            ),
+            Ability(
+                "E",
+                "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/spell/ZiggsE.png",
+                LocalizedString.Res(R.string.ziggs_e_label),
+                LocalizedString.Res(R.string.ziggs_e_description),
+                "12s / 12s / 12s / 12s / 12s",
+                "50 / 55 / 60 / 65 / 70",
+                LocalizedString.Res(R.string.ziggs_e_effect_1)
+            ),
+            Ability(
+                "R",
+                "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/spell/ZiggsR.png",
+                LocalizedString.Res(R.string.ziggs_r_label),
+                LocalizedString.Res(R.string.ziggs_r_description),
+                "120s / 100s / 80s",
+                "100 / 100 / 100",
+                LocalizedString.Res(R.string.ziggs_r_effect_1)
+            )
+        ),
+        deletable = true
+    )
 )
