@@ -30,22 +30,24 @@ fun PokemonDetailScreen(
     onCancel: () -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
-        Image(
-            painterResource(uiState.artworkId),
-            contentDescription = uiState.name,
-            contentScale = ContentScale.Crop,
-        )
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(12.dp),
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Button(
-                onClick = onCancel,
-                modifier = Modifier.weight(1f)
+    Surface(modifier = modifier.fillMaxSize()) {
+        Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
+            Image(
+                painterResource(uiState.artworkId),
+                contentDescription = uiState.name,
+                contentScale = ContentScale.Crop,
+            )
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(12.dp),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                Text("RETURN")
+                Button(
+                    onClick = onCancel,
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Text("RETURN")
+                }
             }
         }
     }

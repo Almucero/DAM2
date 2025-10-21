@@ -34,10 +34,12 @@ class PokemonDetailViewModel @Inject constructor (
     }
 }
 
-fun Pokemon.toDetailUiState(): DetailUiSate = DetailUiSate(
-    this.name,
-    this.artworkId
-)
+fun Pokemon.toDetailUiState(): DetailUiSate {
+    return DetailUiSate(
+        this.name,
+        this.artworkId
+    )
+}
 
 data class DetailUiSate(
     val name:String = "",
