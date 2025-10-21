@@ -10,6 +10,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
+import com.turingalan.pokemon.ui.detail.PokemonDetailScreen
 import com.turingalan.pokemon.ui.list.PokemonListScreen
 
 @Composable
@@ -30,18 +31,12 @@ fun NavGraph() {
                 )
             }
             composable<Destinations.Details> {
-                bse ->
-                val itemDestination: Destinations.Details = bse.toRoute()
-                val itemId = itemDestination.id
-//                val item = pokemonList.first() { it.id == itemId }
-//                PokemonDetailScreen(
-//                    modifier = hostModifier,
-//                    name = item.name,
-//                    artworkId = item.artwork,
-//                    onCancel = {
-//                        navController.popBackStack()
-//                    }
-//                )
+                PokemonDetailScreen(
+                    modifier = hostModifier,
+                    onCancel = {
+                        navController.popBackStack()
+                    }
+                )
             }
         }
     }

@@ -7,5 +7,5 @@ sealed class Destinations(val route: String) {
     @Serializable
     object List: Destinations("listScreen")
     @Serializable
-    data class Details(val id: Int): Destinations("detailsScreen/$id")
+    data class Details(val id: Long): Destinations("detailsScreen/$id")
 }

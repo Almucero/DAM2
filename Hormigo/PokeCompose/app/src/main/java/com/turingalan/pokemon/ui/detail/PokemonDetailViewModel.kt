@@ -2,22 +2,40 @@ package com.turingalan.pokemon.ui.detail
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import androidx.navigation.toRoute
+import com.turingalan.pokemon.data.model.Pokemon
 import com.turingalan.pokemon.data.repository.PokemonRepository
+import com.turingalan.pokemon.ui.Destinations
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject
 
-data class DetailUiSate(
-    val name:String,
-    val artwork:Int,
-)
-
 @HiltViewModel
-class PokemonDetailViewModel @Inject constructor(
-    savedStateHandle: SavedStateHandle,
-    private val pokemonRepository: PokemonRepository
-
+class PokemonDetailViewModel @Inject constructor (
+    private val savedStateHandle: SavedStateHandle,
+    private val repository: PokemonRepository
 ): ViewModel() {
-    init {
+    private val _uiState: MutableStateFlow<DetailUiSate> = MutableStateFlow(DetailUiSate())
+    val uiState: StateFlow<DetailUiSate>
+        get() = _uiState.asStateFlow()
 
+    init {
+        val route = savedStateHandle.toRoute<Destinations.Details>()
+        val pokemon = repository.readOne(route.id)
+        pokemon?.let {
+            _uiState.value = pokemon.toDetailUiState()
+        }
     }
 }
+
+fun Pokemon.toDetailUiState(): DetailUiSate = DetailUiSate(
+    this.name,
+    this.artworkId
+)
+
+data class DetailUiSate(
+    val name:String = "",
+    val artworkId:Int = 0
+)
