@@ -2,6 +2,7 @@ package com.turingalan.pokemon.ui.detail
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import androidx.navigation.toRoute
 import com.turingalan.pokemon.data.model.Pokemon
 import com.turingalan.pokemon.data.repository.PokemonRepository
@@ -10,6 +11,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
@@ -22,10 +24,12 @@ class PokemonDetailViewModel @Inject constructor (
         get() = _uiState.asStateFlow()
 
     init {
-        val route = savedStateHandle.toRoute<Destinations.Details>()
-        val pokemon = repository.readOne(route.id)
-        pokemon?.let {
-            _uiState.value = pokemon.toDetailUiState()
+        viewModelScope.launch {
+            val route = savedStateHandle.toRoute<Destinations.Details>()
+            val pokemon = repository.readOne(route.id)
+            pokemon?.let {
+                _uiState.value = pokemon.toDetailUiState()
+            }
         }
     }
 }
