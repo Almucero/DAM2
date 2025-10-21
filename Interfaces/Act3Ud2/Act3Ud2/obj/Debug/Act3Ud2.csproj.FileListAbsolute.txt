@@ -1,0 +1,8 @@
+D:\DAM2\Interfaces\Act3Ud2\Act3Ud2\obj\Debug\Act3Ud2.csproj.AssemblyReference.cache
+D:\DAM2\Interfaces\Act3Ud2\Act3Ud2\obj\Debug\Act3Ud2.csproj.CoreCompileInputs.cache
+D:\DAM2\Interfaces\Act3Ud2\Act3Ud2\bin\Debug\Act3Ud2.exe.config
+D:\DAM2\Interfaces\Act3Ud2\Act3Ud2\bin\Debug\Act3Ud2.exe
+D:\DAM2\Interfaces\Act3Ud2\Act3Ud2\bin\Debug\Act3Ud2.pdb
+D:\DAM2\Interfaces\Act3Ud2\Act3Ud2\obj\Debug\Act3Ud2.exe
+D:\DAM2\Interfaces\Act3Ud2\Act3Ud2\obj\Debug\Act3Ud2.pdb
+D:\DAM2\Interfaces\Act3Ud2\Act3Ud2\obj\Debug\Act3Ud2.exe.config
