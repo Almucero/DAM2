@@ -265,6 +265,13 @@ namespace Act2Ud2
      */
     public class Ejercicio9
     {
+        public delegate int OperacionCallback(int x, int y);
+        private static int Restar(int a, int b) => a - b;
+        private static int Multiplicar(int a, int b) => a * b;
+        public static int EjecutarOperacion(OperacionCallback oc, int a, int b)
+        {
+            return oc(a, b);
+        }
         public static void Ejecutar()
         {
 
