@@ -1,0 +1,8 @@
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\EventosyDelegados_v2\EventosyDelegados_v2\bin\Debug\EventosyDelegados_v2.exe.config
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\EventosyDelegados_v2\EventosyDelegados_v2\bin\Debug\EventosyDelegados_v2.exe
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\EventosyDelegados_v2\EventosyDelegados_v2\bin\Debug\EventosyDelegados_v2.pdb
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\EventosyDelegados_v2\EventosyDelegados_v2\obj\Debug\EventosyDelegados_v2.csproj.AssemblyReference.cache
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\EventosyDelegados_v2\EventosyDelegados_v2\obj\Debug\EventosyDelegados_v2.csproj.CoreCompileInputs.cache
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\EventosyDelegados_v2\EventosyDelegados_v2\obj\Debug\EventosyDelegados_v2.exe
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\EventosyDelegados_v2\EventosyDelegados_v2\obj\Debug\EventosyDelegados_v2.pdb
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\EventosyDelegados_v2\EventosyDelegados_v2\obj\Debug\EventosyDelegados_v2.exe.config
