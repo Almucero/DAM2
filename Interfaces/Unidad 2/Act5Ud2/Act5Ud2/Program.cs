@@ -103,7 +103,7 @@ namespace Act5Ud2
             public void EnviarNotificacion(object sender, TransaccionEventArgs e)
             {
                 //Simula el envío de un correo mostrando información por consola
-                Console.WriteLine("Gestor de email: Transacción procesada correctamente.");
+                Console.WriteLine("\nGestor de email: Transacción procesada correctamente.");
                 Console.WriteLine($"Detalles: id:{e.Transaccion.identificador}, fecha:{e.Transaccion.fechaTransaccion}");
                 Console.WriteLine("Enviando correo al usuario...");
             }
@@ -117,7 +117,6 @@ namespace Act5Ud2
 
             Transaccion transaccionEjemplo = new Transaccion(){identificador = 1, fechaTransaccion = DateTime.Now.ToString()};
 
-            Console.WriteLine("Iniciando proceso de pago...");
             pasarela.Pago(transaccionEjemplo);
         }
     }
@@ -175,7 +174,7 @@ namespace Act5Ud2
             public void EnviarNotificacion(object sender, TransaccionEventArgs e)
             {
                 //Simula el envío de un correo mostrando información por consola
-                Console.WriteLine("Gestor de email: Transacción procesada correctamente.");
+                Console.WriteLine("\nGestor de email: Transacción procesada correctamente.");
                 Console.WriteLine($"Detalles: id:{e.Transaccion.identificador}, fecha:{e.Transaccion.fechaTransaccion}");
                 Console.WriteLine("Enviando correo al usuario...");
             }
@@ -199,7 +198,6 @@ namespace Act5Ud2
 
             Transaccion transaccionEjemplo = new Transaccion() { identificador = 71645331, fechaTransaccion = "30 / 06 / 2010" };
 
-            Console.WriteLine("Iniciando proceso de pago...");
             pasarela.Pago(transaccionEjemplo);
         }
     }
