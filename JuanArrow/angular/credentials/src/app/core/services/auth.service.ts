@@ -1,32 +1,67 @@
 import { Injectable, signal } from '@angular/core';
+import { Credentials } from '../models/credentials';
+
+export interface User extends Credentials {
+  name?: string;
+  surname?: string;
+}
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
+  private readonly USERS_KEY = 'REGISTERED_USERS';
+  private readonly AUTH_KEY = 'AUTHENTICATION';
 
-  private readonly _user: any = {
-    name: "este",
-    surnmae: "de aqui",
-    email: "este@gmail.es"
-  }
-  public user: any | null;
+  public user = signal<User | null>(null);
 
-  constructor() { 
-    this.user = signal<any>(null)
-    let cookie = localStorage.getItem("AUTHENTICATION");
-    if (cookie) {
-      this.user.set(this._user)
+  constructor() {
+    const authData = localStorage.getItem(this.AUTH_KEY);
+    if (authData) {
+      const credentials = JSON.parse(authData) as Credentials;
+      this.validateAndSetUser(credentials);
     }
   }
 
-  login(credentials: Credential) {
-    localStorage.setItem("AUTHENTICATION", JSON.stringify(credentials));
-    this.user.set(this._user)
+  register(userData: User): boolean {
+    const users = this.getRegisteredUsers();
+    if (users.some((u) => u.email === userData.email)) {
+      return false;
+    }
+    users.push(userData);
+    localStorage.setItem(this.USERS_KEY, JSON.stringify(users));
+    return true;
   }
-  
+
+  login(credentials: Credentials): boolean {
+    const isValid = this.validateAndSetUser(credentials);
+    if (isValid) {
+      localStorage.setItem(this.AUTH_KEY, JSON.stringify(credentials));
+    }
+    return isValid;
+  }
+
   logout() {
-    localStorage.removeItem("AUTHENTICATION");
+    localStorage.removeItem(this.AUTH_KEY);
     this.user.set(null);
+  }
+
+  private validateAndSetUser(credentials: Credentials): boolean {
+    const users = this.getRegisteredUsers();
+    const user = users.find(
+      (u) =>
+        u.email === credentials.email && u.password === credentials.password
+    );
+
+    if (user) {
+      this.user.set(user);
+      return true;
+    }
+    return false;
+  }
+
+  private getRegisteredUsers(): User[] {
+    const usersJson = localStorage.getItem(this.USERS_KEY);
+    return usersJson ? JSON.parse(usersJson) : [];
   }
 }
