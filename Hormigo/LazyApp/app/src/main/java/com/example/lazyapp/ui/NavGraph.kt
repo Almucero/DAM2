@@ -29,12 +29,14 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import com.example.lazyapp.R
-import com.example.lazyapp.data.champions
-import com.example.lazyapp.ui.lazyList.ChampionListScreen
+import com.example.lazyapp.data.model.champions
+import com.example.lazyapp.ui.create.CreateChampionScreen
+import com.example.lazyapp.ui.detail.ChampionDetailsScreen
+import com.example.lazyapp.ui.list.ChampionListScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AppScreen() {
+fun NavGraph() {
     val navController = rememberNavController()
     var showFab by remember { mutableStateOf(false) }
     Scaffold(

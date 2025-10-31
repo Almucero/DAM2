@@ -1,4 +1,4 @@
-package com.example.lazyapp.ui.lazyList
+package com.example.lazyapp.ui.list
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -7,8 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.example.lazyapp.data.LocalizedString
-import com.example.lazyapp.data.champions
+import com.example.lazyapp.data.model.LocalizedString
+import com.example.lazyapp.data.model.champions
 
 @Composable
 fun ChampionListScreen(

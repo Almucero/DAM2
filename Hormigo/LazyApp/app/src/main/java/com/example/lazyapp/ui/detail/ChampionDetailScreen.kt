@@ -1,4 +1,4 @@
-package com.example.lazyapp.ui
+package com.example.lazyapp.ui.detail
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -31,8 +31,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import com.example.lazyapp.R
-import com.example.lazyapp.data.Champion
-import com.example.lazyapp.data.LocalizedString
+import com.example.lazyapp.data.model.Champion
+import com.example.lazyapp.data.model.LocalizedString
 
 @Composable
 fun ChampionDetailsScreen(

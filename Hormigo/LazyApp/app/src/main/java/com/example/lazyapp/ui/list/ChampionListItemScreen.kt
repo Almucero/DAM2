@@ -1,4 +1,4 @@
-package com.example.lazyapp.ui.lazyList
+package com.example.lazyapp.ui.list
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column

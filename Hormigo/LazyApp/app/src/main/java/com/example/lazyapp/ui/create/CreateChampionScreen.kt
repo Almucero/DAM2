@@ -1,4 +1,4 @@
-package com.example.lazyapp.ui
+package com.example.lazyapp.ui.create
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -29,24 +29,62 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.lazyapp.data.Ability
-import com.example.lazyapp.data.Champion
-import com.example.lazyapp.data.LocalizedString
-import com.example.lazyapp.data.Stats
-import com.example.lazyapp.data.champions
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.example.lazyapp.data.model.Ability
+import com.example.lazyapp.data.model.Champion
+import com.example.lazyapp.data.model.LocalizedString
+import com.example.lazyapp.data.model.Stats
+import com.example.lazyapp.data.model.champions
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CreateChampionScreen(
     modifier: Modifier = Modifier,
+    viewModel: CreateChampionViewModel = hiltViewModel(),
+    onCreateItem: (Champion) -> Unit,
+    onCancel: () -> Unit
+) {
+    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    when(uiState) {
+        is CreateUiState.Cancelled -> {
+            onCancel()
+        }
+        is CreateUiState.Created -> {
+            onCancel()
+        }
+        is CreateUiState.Error -> {
+            TODO()
+        }
+        is CreateUiState.New -> {
+            CreateForm(
+                modifier = modifier,
+                viewModel = viewModel,
+                error = null,
+                onCreateItem = onCreateItem,
+                onCancel = onCancel
+            )
+        }
+    }
+}
+
+@Composable
+fun CreateForm(
+    modifier: Modifier = Modifier,
+    viewModel: CreateChampionViewModel,
+    error: String? = null,
     onCreateItem: (Champion) -> Unit,
     onCancel: () -> Unit
 ) {
     Surface(
         modifier = modifier
     ) {
+        val isScreenInError = error != null
         Column(
-            modifier = Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(12.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState())
+                .padding(12.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             val imageUrl = remember { mutableStateOf("") }
@@ -287,3 +325,6 @@ fun CreateChampionScreen(
         }
     }
 }
+
+//val titleState = rememberTextFieldState
+//OutLinedTextFiled(state=viewModel.titleState)
