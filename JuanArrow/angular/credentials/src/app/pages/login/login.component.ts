@@ -82,3 +82,5 @@ export class LoginComponent {
     return '';
   }
 }
+
+//hacer loginError con signal

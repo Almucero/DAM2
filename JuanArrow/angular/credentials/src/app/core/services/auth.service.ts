@@ -65,3 +65,7 @@ export class AuthService {
     return usersJson ? JSON.parse(usersJson) : [];
   }
 }
+
+//hacer resolve y reject con promise para login, con httpresponse (200, 401) (... : Promise<HTTPResponse>)
+//onSubmit en login, ahora async y con await y try catch
+//(mas todos los cambios que implique)
