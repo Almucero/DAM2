@@ -1,13 +1,35 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
+  AbstractControl,
   FormBuilder,
   FormGroup,
   ReactiveFormsModule,
+  ValidationErrors,
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../../core/services/auth.service';
+import { LocalStorageAuthService } from '../../core/services/local-storage-auth.service';
+
+function passwordMatches(control: AbstractControl): ValidationErrors | null {
+  const group = control as FormGroup;
+  const password = group.controls['password'];
+  const password2 = group.controls['password2'];
+  if (!password || !password2) return null;
+  if (password.value !== password2.value) {
+    const existing = password2.errors ? { ...password2.errors } : {};
+    password2.setErrors({ ...existing, passwordMatch: true });
+  } else {
+    if (password2.errors) {
+      const { passwordMatch, ...rest } = password2.errors as any;
+      const remaining = Object.keys(rest).length ? rest : null;
+      password2.setErrors(remaining);
+    } else {
+      password2.setErrors(null);
+    }
+  }
+  return null;
+}
 
 @Component({
   selector: 'app-register',
@@ -22,19 +44,26 @@ export class RegisterComponent {
   showPassword = false;
   private router = inject(Router);
 
-  constructor(private formSvc: FormBuilder, private auth: AuthService) {
-    this.formRegister = this.formSvc.group({
-      name: ['', Validators.required],
-      surname: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: [
-        '',
-        [
-          Validators.required,
-          Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/),
+  constructor(
+    private formSvc: FormBuilder,
+    private auth: LocalStorageAuthService
+  ) {
+    this.formRegister = this.formSvc.group(
+      {
+        name: ['', Validators.required],
+        surname: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+        password: [
+          '',
+          [
+            Validators.required,
+            Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/),
+          ],
         ],
-      ],
-    });
+        password2: ['', [Validators.required]],
+      },
+      { validators: passwordMatches }
+    );
   }
 
   onSubmit() {
@@ -86,6 +115,22 @@ export class RegisterComponent {
           )
         )
           return 'La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula y un número';
+        break;
+      case 'password2':
+        if (
+          this.formRegister.controls['password2'].errors != null &&
+          Object.keys(this.formRegister.controls['password2'].errors).includes(
+            'required'
+          )
+        )
+          return 'Repite la contraseña';
+        else if (
+          this.formRegister.controls['password2'].errors != null &&
+          Object.keys(this.formRegister.controls['password2'].errors).includes(
+            'passwordMatch'
+          )
+        )
+          return 'Las contraseñas no coinciden';
         break;
       case 'name':
         if (

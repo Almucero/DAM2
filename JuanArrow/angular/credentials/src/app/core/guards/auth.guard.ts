@@ -1,12 +1,12 @@
 import { CanActivateFn, Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
+import { LocalStorageAuthService } from '../services/local-storage-auth.service';
 import { inject } from '@angular/core';
 
 export const authGuard: CanActivateFn = (route, state) => {
-  let auth = inject(AuthService);
+  let auth = inject(LocalStorageAuthService);
   let router = inject(Router);
   let authenticated = auth.user() != null;
   if (!authenticated)
-    router.navigate(['/login'], { state: { navigateTo: route.url } }); //fumada esta cosa, se tendrán que cambiar otras cosas probablemente
+    router.navigate(['/login'], { state: { navigateTo: state.url } });
   return authenticated;
 };

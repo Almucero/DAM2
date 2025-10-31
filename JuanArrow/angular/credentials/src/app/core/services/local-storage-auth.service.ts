@@ -9,7 +9,7 @@ export interface User extends Credentials {
 @Injectable({
   providedIn: 'root',
 })
-export class AuthService {
+export class LocalStorageAuthService {
   private readonly USERS_KEY = 'REGISTERED_USERS';
   private readonly AUTH_KEY = 'AUTHENTICATION';
 

@@ -6,7 +6,7 @@ import {
   Validators,
   FormGroup,
 } from '@angular/forms';
-import { AuthService } from '../../core/services/auth.service';
+import { LocalStorageAuthService } from '../../core/services/local-storage-auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -20,11 +20,14 @@ export class LoginComponent {
   formLogin: FormGroup;
   loginError = '';
   showPassword = false;
+  registrationSuccess = false;
+  readonly navigateTo: string = '';
   private router = inject(Router);
 
-  registrationSuccess = false;
-
-  constructor(private formSvc: FormBuilder, private auth: AuthService) {
+  constructor(
+    private formSvc: FormBuilder,
+    private auth: LocalStorageAuthService
+  ) {
     this.formLogin = this.formSvc.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
@@ -33,6 +36,9 @@ export class LoginComponent {
       this.registrationSuccess = true;
       sessionStorage.removeItem('registrationSuccess');
     }
+    this.navigateTo =
+      this.router.getCurrentNavigation()?.extras.state?.['navigateTo'] ||
+      '/dashboard';
   }
 
   onSubmit() {
@@ -40,7 +46,7 @@ export class LoginComponent {
     if (this.formLogin.valid) {
       const success = this.auth.login(this.formLogin.value);
       if (success) {
-        this.router.navigate(['/dashboard']);
+        this.router.navigate([this.navigateTo]);
       } else {
         this.loginError = 'Usuario no registrado o credenciales incorrectas';
       }
