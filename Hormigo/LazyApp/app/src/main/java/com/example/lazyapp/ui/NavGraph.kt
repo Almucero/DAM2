@@ -27,9 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.toRoute
 import com.example.lazyapp.R
-import com.example.lazyapp.data.model.champions
 import com.example.lazyapp.ui.create.CreateChampionScreen
 import com.example.lazyapp.ui.detail.ChampionDetailsScreen
 import com.example.lazyapp.ui.list.ChampionListScreen
@@ -55,11 +53,13 @@ fun NavGraph() {
         floatingActionButton = {
             if (showFab) {
                 ExtendedFloatingActionButton(
-                    text = { Text(
-                        stringResource(R.string.create_label),
-                        style = MaterialTheme.typography.headlineSmall,
-                        fontWeight = FontWeight.Bold,
-                    ) },
+                    text = {
+                        Text(
+                            stringResource(R.string.create_label),
+                            style = MaterialTheme.typography.headlineSmall,
+                            fontWeight = FontWeight.Bold
+                        )
+                    },
                     icon = { Icon(Icons.Filled.Add, null) },
                     onClick = {
                         navController.navigate(Destinations.Create)
@@ -88,37 +88,22 @@ fun NavGraph() {
                 SideEffect { showFab = false }
                 CreateChampionScreen(
                     modifier = hostModifier,
-                    onCreateItem = { item ->
-                        champions.add(item)
-                        navController.popBackStack()
-                    },
                     onCancel = {
                         navController.popBackStack()
                     }
                 )
             }
             composable<Destinations.Details> {
-                bse ->
                 SideEffect { showFab = false }
-                val itemDestination: Destinations.Details = bse.toRoute()
-                val itemId = itemDestination.id
-                val item = champions.firstOrNull() { it.id == itemId }
-                if (item!=null) {
-                    ChampionDetailsScreen(
-                        modifier = hostModifier,
-                        item = item,
-                        onCancel = {
-                            navController.popBackStack()
-                        },
-                        onDeleteItem = {
-                            champions.removeIf { it.id == itemId }
-                            navController.popBackStack()
-                        }
-                    )
-                }
-                else {
-                    navController.popBackStack()
-                }
+                ChampionDetailsScreen(
+                    modifier = hostModifier,
+                    onCancel = {
+                        navController.popBackStack()
+                    },
+                    onDeleteItem = {
+                        navController.popBackStack()
+                    }
+                )
             }
         }
     }

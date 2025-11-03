@@ -51,11 +51,14 @@
     <string name="create_text_24">Skill image Url</string>
     <string name="create_text_25">Name</string>
     <string name="create_text_26">Description</string>
-   <!-- <string name="create_text_27">Cooldowns - ex. \'10s / 20s / 30s'</string>
-    <string name="create_text_28">Costs - ex. \'10 / 20 / 30'</string>-->
+    <string name="create_text_27">Cooldowns - ex. 10s / 20s / 30s</string>
+    <string name="create_text_28">Costs - ex. 10 / 20 / 30</string>
     <string name="create_text_29">Effects</string>
-
-    <string name="create_text_30">Effects</string>
+    <string name="create_abilities_title">Abilities (complete the 5 required)</string>
+    <string name="create_ability_kind_label">Ability: %1$s</string>
+    <string name="create_ability_id_label">(id: %1$s)</string>
+    <string name="create_champion_button">Create champion</string>
+    <string name="cancel_button">Cancel</string>
 
     <string name="annie_label">Annie</string>
     <string name="annie_title">The dark child\'s daughter</string>
@@ -296,4 +299,11 @@
     <string name="ziggs_r_label">Mega Inferno Bomb</string>
     <string name="ziggs_r_description">Ziggs lobs a massive bomb that deals huge area magic damage, ideal for sieging or finishing fights.</string>
     <string name="ziggs_r_effect_1">Huge artillery nuke</string>
+
+    <!-- Validation error messages -->
+    <string name="error_field_mandatory">This field is mandatory</string>
+    <string name="error_field_must_be_number">%1$s must be a valid number</string>
+    <string name="error_field_must_be_integer">%1$s must be a valid integer</string>
+    <string name="error_fix_champion_fields">Please fix the errors in the champion fields.</string>
+    <string name="error_unexpected">An unexpected error occurred while creating the champion.</string>
 </resources>

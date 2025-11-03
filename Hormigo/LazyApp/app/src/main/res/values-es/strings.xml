@@ -51,9 +51,14 @@
     <string name="create_text_24">Url de imagen de habilidad</string>
     <string name="create_text_25">Nombre</string>
     <string name="create_text_26">Descripción</string>
-   <!--><string name="create_text_27">Cooldowns - p.ej. \'10s / 20s / 30s'</string>
-    <string name="create_text_28">Costes - p.ej. \'10 / 20 / 30'</string>-->
+    <string name="create_text_27">Cooldowns - p.ej. 10s / 20s / 30s</string>
+    <string name="create_text_28">Costes - p.ej. 10 / 20 / 30</string>
     <string name="create_text_29">Efectos</string>
+    <string name="create_abilities_title">Habilidades (completa las 5 obligatorias)</string>
+    <string name="create_ability_kind_label">Habilidad: %1$s</string>
+    <string name="create_ability_id_label">(id: %1$s)</string>
+    <string name="create_champion_button">Crear campeón</string>
+    <string name="cancel_button">Cancelar</string>
 
     <string name="annie_label">Annie</string>
     <string name="annie_title">La hija de la oscuridad</string>
@@ -220,7 +225,7 @@
     <string name="taric_description">El protector de Valoran, bendecido con el poder celestial.</string>
     <string name="taric_longDescription">Taric es guardián de la belleza y la resiliencia; su magia de gemas repara y protege a los aliados mientras castiga a quienes amenazan el equilibrio de la vida.</string>
     <string name="taric_passive_label">Osadía</string>
-    <string name="taric_passive_description">Los ataques potenciados de Taric otorgan efectos adicionales y reducen el tiempo entre básicos, favoreciendo la defensa sostenida.</string>
+    <string name="taric_passive_description">Los ataques potenciados de Taric otorgan efectos adicionales y reducen el tiempo entre básicos, favorecendo la defensa sostenida.</string>
     <string name="taric_passive_effect_1">Armadura + mejora de curación</string>
     <string name="taric_q_label">Toque de luz estelar</string>
     <string name="taric_q_description">Taric convoca un estallido de luz estelar que cura a los aliados cercanos y daña a los enemigos en una pequeña área.</string>
@@ -294,4 +299,11 @@
     <string name="ziggs_r_label">Bomba infernal</string>
     <string name="ziggs_r_description">Ziggs lanza una bomba masiva que inflige gran daño mágico en área, ideal para asediar o rematar peleas.</string>
     <string name="ziggs_r_effect_1">Gran bomba de artillería</string>
+
+    <!-- Validation error messages -->
+    <string name="error_field_mandatory">Este campo es obligatorio</string>
+    <string name="error_field_must_be_number">%1$s debe ser un número válido</string>
+    <string name="error_field_must_be_integer">%1$s debe ser un entero válido</string>
+    <string name="error_fix_champion_fields">Por favor, corrige los errores en los campos del campeón.</string>
+    <string name="error_unexpected">Ocurrió un error inesperado al crear el campeón.</string>
 </resources>

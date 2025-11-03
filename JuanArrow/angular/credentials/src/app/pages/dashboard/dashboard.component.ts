@@ -1,7 +1,7 @@
 import { Component, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { LocalStorageAuthService } from '../../core/services/local-storage-auth.service';
+import { AUTH_SERVICE } from '../../core/services/auth.token';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,12 +11,12 @@ import { LocalStorageAuthService } from '../../core/services/local-storage-auth.
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent {
-  private auth = inject(LocalStorageAuthService);
+  private auth = inject(AUTH_SERVICE);
   private router = inject(Router);
 
   user = computed(() => this.auth.user());
 
-  onLogout() {
+  async onLogout() {
     this.auth.logout();
     this.router.navigate(['/login']);
   }

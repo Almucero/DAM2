@@ -22,6 +22,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -29,23 +31,25 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import com.example.lazyapp.R
-import com.example.lazyapp.data.model.Champion
 import com.example.lazyapp.data.model.LocalizedString
+
+@Composable
+fun lsText(ls: LocalizedString): String = when (ls) {
+    is LocalizedString.Res -> stringResource(ls.resId)
+    is LocalizedString.Plain -> ls.text
+}
 
 @Composable
 fun ChampionDetailsScreen(
     modifier: Modifier = Modifier,
-    item: Champion,
+    viewModel: ChampionViewModel = hiltViewModel(),
     onCancel: () -> Unit,
     onDeleteItem: () -> Unit
 ) {
-    @Composable
-    fun lsText(ls: LocalizedString): String = when (ls) {
-        is LocalizedString.Res -> stringResource(ls.resId)
-        is LocalizedString.Plain -> ls.text
-    }
+    val uiState by viewModel.uiState.collectAsState()
     Surface(
         modifier = modifier.fillMaxSize()
     ) {
@@ -58,7 +62,7 @@ fun ChampionDetailsScreen(
                     modifier = Modifier.fillMaxWidth().height(200.dp)
                 ) {
                     AsyncImage(
-                        model = item.splashImageUrl,
+                        model = uiState.splashImageUrl,
                         contentDescription = stringResource(R.string.splash_desc),
                         modifier = Modifier.fillMaxWidth(),
                         contentScale = ContentScale.Crop
@@ -76,8 +80,8 @@ fun ChampionDetailsScreen(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     AsyncImage(
-                        model = item.imageUrl,
-                        contentDescription = lsText(item.name),
+                        model = uiState.imageUrl,
+                        contentDescription = lsText(uiState.name),
                         modifier = Modifier.size(96.dp),
                         contentScale = ContentScale.Crop
                     )
@@ -85,17 +89,17 @@ fun ChampionDetailsScreen(
                         modifier = Modifier.padding(horizontal = 12.dp)
                     ) {
                         Text(
-                            text = lsText(item.name),
+                            text = lsText(uiState.name),
                             style = MaterialTheme.typography.headlineMedium,
                             fontWeight = FontWeight.Bold
                         )
                         Text(
-                            text = lsText(item.title),
+                            text = lsText(uiState.title),
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Medium
                         )
                         Text(
-                            text = lsText(item.description),
+                            text = lsText(uiState.description),
                             style = MaterialTheme.typography.bodySmall,
                             modifier = Modifier.padding(top = 6.dp)
                         )
@@ -112,7 +116,7 @@ fun ChampionDetailsScreen(
                     modifier = Modifier.padding(horizontal = 12.dp)
                 ) {
                     Text(
-                        text = lsText(item.longDescription),
+                        text = lsText(uiState.longDescription),
                         style = MaterialTheme.typography.bodyLarge
                     )
                 }
@@ -132,14 +136,14 @@ fun ChampionDetailsScreen(
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(bottom = 8.dp)
                     )
-                    Text("${stringResource(R.string.stat_hp_label)}: ${item.stats.hpBase} (+${item.stats.hpPerLevel}/${stringResource(R.string.per_level)})")
-                    Text("${stringResource(R.string.stat_mp_label)}: ${item.stats.mpBase} (+${item.stats.mpPerLevel}/${stringResource(R.string.per_level)})")
-                    Text("${stringResource(R.string.stat_ad_label)}: ${item.stats.adBase} (+${item.stats.adPerLevel}/${stringResource(R.string.per_level)})")
-                    Text("${stringResource(R.string.stat_armor_label)}: ${item.stats.armorBase} (+${item.stats.armorPerLevel}/${stringResource(R.string.per_level)})")
-                    Text("${stringResource(R.string.stat_mr_label)}: ${item.stats.mrBase} (+${item.stats.mrPerLevel}/${stringResource(R.string.per_level)})")
-                    Text("${stringResource(R.string.stat_as_label)}: ${item.stats.attackSpeedBase} (+${item.stats.attackSpeedPerLevel}/${stringResource(R.string.per_level)})")
-                    Text("${stringResource(R.string.stat_ms_label)}: ${item.stats.moveSpeed}")
-                    Text("${stringResource(R.string.stat_range_label)}: ${item.stats.range}")
+                    Text("${stringResource(R.string.stat_hp_label)}: ${uiState.stats.hpBase} (+${uiState.stats.hpPerLevel}/${stringResource(R.string.per_level)})")
+                    Text("${stringResource(R.string.stat_mp_label)}: ${uiState.stats.mpBase} (+${uiState.stats.mpPerLevel}/${stringResource(R.string.per_level)})")
+                    Text("${stringResource(R.string.stat_ad_label)}: ${uiState.stats.adBase} (+${uiState.stats.adPerLevel}/${stringResource(R.string.per_level)})")
+                    Text("${stringResource(R.string.stat_armor_label)}: ${uiState.stats.armorBase} (+${uiState.stats.armorPerLevel}/${stringResource(R.string.per_level)})")
+                    Text("${stringResource(R.string.stat_mr_label)}: ${uiState.stats.mrBase} (+${uiState.stats.mrPerLevel}/${stringResource(R.string.per_level)})")
+                    Text("${stringResource(R.string.stat_as_label)}: ${uiState.stats.attackSpeedBase} (+${uiState.stats.attackSpeedPerLevel}/${stringResource(R.string.per_level)})")
+                    Text("${stringResource(R.string.stat_ms_label)}: ${uiState.stats.moveSpeed}")
+                    Text("${stringResource(R.string.stat_range_label)}: ${uiState.stats.range}")
                 }
                 HorizontalDivider(
                     thickness = 2.dp,
@@ -158,7 +162,7 @@ fun ChampionDetailsScreen(
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
                     modifier = Modifier.padding(start = 12.dp, end = 12.dp)
                 ) {
-                    items(item.abilities) { ability ->
+                    items(uiState.abilities) { ability ->
                         Surface(
                             tonalElevation = 2.dp,
                             modifier = Modifier.width(260.dp).height(230.dp)
@@ -231,9 +235,12 @@ fun ChampionDetailsScreen(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Button(
-                        onClick = onDeleteItem,
+                        onClick = {
+                            viewModel.deleteChampion()
+                            onDeleteItem()
+                        },
                         modifier = Modifier.weight(1f),
-                        enabled = item.deletable
+                        enabled = uiState.deletable
                     ) {
                         Text(stringResource(R.string.delete_label))
                     }

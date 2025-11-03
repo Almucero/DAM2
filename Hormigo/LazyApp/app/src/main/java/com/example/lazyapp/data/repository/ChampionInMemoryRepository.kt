@@ -1,26 +1,18 @@
 package com.example.lazyapp.data.repository
 
-import androidx.compose.runtime.mutableStateListOf
 import com.example.lazyapp.R
 import com.example.lazyapp.data.model.Ability
 import com.example.lazyapp.data.model.Champion
 import com.example.lazyapp.data.model.LocalizedString
 import com.example.lazyapp.data.model.Stats
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject
 
-class ChampionInMemoryRepository @Inject constructor(): ChampionRepository {
-    override suspend fun readOne(id: Int): Champion? {
-        val champion = championList.firstOrNull() {
-                c -> c.id == id
-        }
-        return champion
-    }
-    override suspend fun readAll(): List<Champion> {
-        delay(5000L)
-        return this.championList
-    }
-    val championList: MutableList<Champion> = mutableStateListOf( //champions
+class ChampionInMemoryRepository @Inject constructor() : ChampionRepository {
+
+    private val initialChampions = listOf(
         Champion(
             1,
             "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/champion/Annie.png",
@@ -911,76 +903,175 @@ class ChampionInMemoryRepository @Inject constructor(): ChampionRepository {
 
         Champion(
             13,
-            "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/champion/Ziggs.png",
-            LocalizedString.Res(R.string.ziggs_label),
-            LocalizedString.Res(R.string.ziggs_title),
-            LocalizedString.Res(R.string.ziggs_description),
-            "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ziggs_0.jpg",
-            LocalizedString.Res(R.string.ziggs_longDescription),
+            "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+            LocalizedString.Plain("Test"),
+            LocalizedString.Plain("Test"),
+            LocalizedString.Plain("Test"),
+            "https://t3.ftcdn.net/jpg/03/31/78/58/360_F_331785873_kGJgDPmF7YEHRAwPsF3LdGeqjoAuULK4.jpg",
+            LocalizedString.Plain("Test"),
             Stats(
-                hpBase = 556.0,
-                hpPerLevel = 92.0,
-                mpBase = 400.0,
-                mpPerLevel = 50.0,
-                adBase = 54.0,
-                adPerLevel = 3.0,
-                armorBase = 22.0,
-                armorPerLevel = 3.0,
-                mrBase = 30.0,
-                mrPerLevel = 0.5,
-                attackSpeedBase = 0.625,
-                attackSpeedPerLevel = 0.0136,
-                moveSpeed = 325,
-                range = 575
+                hpBase = 0.0,
+                hpPerLevel = 0.0,
+                mpBase = 0.0,
+                mpPerLevel = 0.0,
+                adBase = 0.0,
+                adPerLevel = 0.0,
+                armorBase = 0.0,
+                armorPerLevel = 0.0,
+                mrBase = 0.0,
+                mrPerLevel = 0.0,
+                attackSpeedBase = 0.0,
+                attackSpeedPerLevel = 0.0,
+                moveSpeed = 0,
+                range = 0
             ),
             listOf(
                 Ability(
                     "Passive",
-                    "https://raw.communitydragon.org/latest/game/assets/characters/ziggs/hud/icons2d/ziggs_passive.png",
-                    LocalizedString.Res(R.string.ziggs_passive_label),
-                    LocalizedString.Res(R.string.ziggs_passive_description),
+                    "https://t3.ftcdn.net/jpg/03/31/78/58/360_F_331785873_kGJgDPmF7YEHRAwPsF3LdGeqjoAuULK4.jpg",
+                    LocalizedString.Plain("Test"),
+                    LocalizedString.Plain("Test"),
                     null,
                     null,
-                    LocalizedString.Res(R.string.ziggs_passive_effect_1)
+                    LocalizedString.Plain("Test"),
                 ),
                 Ability(
                     "Q",
-                    "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/spell/ZiggsQ.png",
-                    LocalizedString.Res(R.string.ziggs_q_label),
-                    LocalizedString.Res(R.string.ziggs_q_description),
-                    "9s / 8s / 7s / 6s / 5s",
-                    "60 / 65 / 70 / 75 / 80",
-                    LocalizedString.Res(R.string.ziggs_q_effect_1)
+                    "https://t3.ftcdn.net/jpg/03/31/78/58/360_F_331785873_kGJgDPmF7YEHRAwPsF3LdGeqjoAuULK4.jpg",
+                    LocalizedString.Plain("Test"),
+                    LocalizedString.Plain("Test"),
+                    "0s / 0s / 0s / 0s / 0s",
+                    "0 / 0 / 0 / 0 / 0",
+                    LocalizedString.Plain("Test"),
                 ),
                 Ability(
                     "W",
-                    "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/spell/ZiggsW.png",
-                    LocalizedString.Res(R.string.ziggs_w_label),
-                    LocalizedString.Res(R.string.ziggs_w_description),
-                    "14s / 14s / 14s / 14s / 14s",
-                    "40 / 45 / 50 / 55 / 60",
-                    LocalizedString.Res(R.string.ziggs_w_effect_1)
+                    "https://t3.ftcdn.net/jpg/03/31/78/58/360_F_331785873_kGJgDPmF7YEHRAwPsF3LdGeqjoAuULK4.jpg",
+                    LocalizedString.Plain("Test"),
+                    LocalizedString.Plain("Test"),
+                    "0s / 0s / 0s / 0s / 0s",
+                    "0 / 0 / 0 / 0 / 0",
+                    LocalizedString.Plain("Test"),
                 ),
                 Ability(
                     "E",
-                    "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/spell/ZiggsE.png",
-                    LocalizedString.Res(R.string.ziggs_e_label),
-                    LocalizedString.Res(R.string.ziggs_e_description),
-                    "12s / 12s / 12s / 12s / 12s",
-                    "50 / 55 / 60 / 65 / 70",
-                    LocalizedString.Res(R.string.ziggs_e_effect_1)
+                    "https://t3.ftcdn.net/jpg/03/31/78/58/360_F_331785873_kGJgDPmF7YEHRAwPsF3LdGeqjoAuULK4.jpg",
+                    LocalizedString.Plain("Test"),
+                    LocalizedString.Plain("Test"),
+                    "0s / 0s / 0s / 0s / 0s",
+                    "0 / 0 / 0 / 0 / 0",
+                    LocalizedString.Plain("Test"),
                 ),
                 Ability(
                     "R",
-                    "https://ddragon.leagueoflegends.com/cdn/15.20.1/img/spell/ZiggsR.png",
-                    LocalizedString.Res(R.string.ziggs_r_label),
-                    LocalizedString.Res(R.string.ziggs_r_description),
-                    "120s / 100s / 80s",
-                    "100 / 100 / 100",
-                    LocalizedString.Res(R.string.ziggs_r_effect_1)
+                    "https://t3.ftcdn.net/jpg/03/31/78/58/360_F_331785873_kGJgDPmF7YEHRAwPsF3LdGeqjoAuULK4.jpg",
+                    LocalizedString.Plain("Test"),
+                    LocalizedString.Plain("Test"),
+                    "0s / 0s / 0s / 0s / 0s",
+                    "0 / 0 / 0 / 0 / 0",
+                    LocalizedString.Plain("Test"),
                 )
             ),
             deletable = true
         )
     )
+
+    private val _championsFlow = MutableStateFlow(initialChampions)
+    private var _nextId: Int = initialChampions.maxOfOrNull { it.id }?.plus(1) ?: 14 // Start with an ID greater than initial champions or 14 if no initial champions
+
+    override suspend fun getNextId(): Int {
+        return _nextId++
+    }
+
+    override suspend fun readOne(id: Int): Champion? {
+        return _championsFlow.value.firstOrNull { it.id == id }
+    }
+
+    override fun observeAll(): Flow<List<Champion>> {
+        return _championsFlow.asStateFlow()
+    }
+
+    override suspend fun addChampion(
+        imageUrl: String,
+        splashImageUrl: String,
+        name: String,
+        title: String,
+        description: String,
+        longDescription: String,
+        hpBase: Double,
+        hpPerLevel: Double,
+        mpBase: Double,
+        mpPerLevel: Double,
+        adBase: Double,
+        adPerLevel: Double,
+        armorBase: Double,
+        armorPerLevel: Double,
+        mrBase: Double,
+        mrPerLevel: Double,
+        attackSpeedBase: Double,
+        attackSpeedPerLevel: Double,
+        moveSpeed: Int,
+        range: Int,
+        abilities: List<Ability>
+    ): Boolean {
+        // Validation logic
+        if (
+            imageUrl.isBlank() ||
+            splashImageUrl.isBlank() ||
+            name.isBlank() ||
+            title.isBlank() ||
+            description.isBlank() ||
+            longDescription.isBlank() ||
+            hpBase < 0 || // Changed to allow 0 for base stats if desired, though typically they are > 0
+            hpPerLevel < 0 ||
+            mpBase < 0 ||
+            mpPerLevel < 0 ||
+            adBase < 0 ||
+            adPerLevel < 0 ||
+            armorBase < 0 ||
+            armorPerLevel < 0 ||
+            mrBase < 0 ||
+            mrPerLevel < 0 ||
+            attackSpeedBase < 0 ||
+            attackSpeedPerLevel < 0 ||
+            moveSpeed < 0 ||
+            range < 0 ||
+            abilities.size != 5
+        ) {
+            return false
+        }
+        val newChampion = Champion(
+            id = getNextId(),
+            imageUrl = imageUrl,
+            splashImageUrl = splashImageUrl,
+            name = LocalizedString.Plain(name),
+            title = LocalizedString.Plain(title),
+            description = LocalizedString.Plain(description),
+            longDescription = LocalizedString.Plain(longDescription),
+            stats = Stats(
+                hpBase = hpBase,
+                hpPerLevel = hpPerLevel,
+                mpBase = mpBase,
+                mpPerLevel = mpPerLevel,
+                adBase = adBase,
+                adPerLevel = adPerLevel,
+                armorBase = armorBase,
+                armorPerLevel = armorPerLevel,
+                mrBase = mrBase,
+                mrPerLevel = mrPerLevel,
+                attackSpeedBase = attackSpeedBase,
+                attackSpeedPerLevel = attackSpeedPerLevel,
+                moveSpeed = moveSpeed,
+                range = range
+            ),
+            abilities = abilities,
+            deletable = true
+        )
+        _championsFlow.value = _championsFlow.value + newChampion // Update the flow
+        return true
+    }
+
+    override suspend fun removeChampion(id: Int) {
+        _championsFlow.value = _championsFlow.value.filterNot { it.id == id } // Update the flow
+    }
 }

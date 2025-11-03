@@ -9,7 +9,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LocalStorageAuthService } from '../../core/services/local-storage-auth.service';
+import { AUTH_SERVICE } from '../../core/services/auth.token';
 
 function passwordMatches(control: AbstractControl): ValidationErrors | null {
   const group = control as FormGroup;
@@ -43,11 +43,9 @@ export class RegisterComponent {
   registrationError = '';
   showPassword = false;
   private router = inject(Router);
+  private auth = inject(AUTH_SERVICE);
 
-  constructor(
-    private formSvc: FormBuilder,
-    private auth: LocalStorageAuthService
-  ) {
+  constructor(private formSvc: FormBuilder) {
     this.formRegister = this.formSvc.group(
       {
         name: ['', Validators.required],
@@ -66,9 +64,9 @@ export class RegisterComponent {
     );
   }
 
-  onSubmit() {
+  async onSubmit() {
     if (this.formRegister.valid) {
-      const success = this.auth.register(this.formRegister.value);
+      const success = await this.auth.register(this.formRegister.value);
       if (success) {
         sessionStorage.setItem('registrationSuccess', 'true');
         this.router.navigate(['/login']);

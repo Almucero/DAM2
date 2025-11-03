@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, Inject } from '@angular/core';
 import {
   FormBuilder,
   ReactiveFormsModule,
   Validators,
   FormGroup,
 } from '@angular/forms';
-import { LocalStorageAuthService } from '../../core/services/local-storage-auth.service';
 import { Router } from '@angular/router';
+import { AUTH_SERVICE } from '../../core/services/auth.token';
 
 @Component({
   selector: 'app-login',
@@ -21,13 +21,11 @@ export class LoginComponent {
   loginError = '';
   showPassword = false;
   registrationSuccess = false;
-  readonly navigateTo: string = '';
+  navigateTo: string = '';
   private router = inject(Router);
+  private auth = inject(AUTH_SERVICE);
 
-  constructor(
-    private formSvc: FormBuilder,
-    private auth: LocalStorageAuthService
-  ) {
+  constructor(private formSvc: FormBuilder) {
     this.formLogin = this.formSvc.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
@@ -41,10 +39,10 @@ export class LoginComponent {
       '/dashboard';
   }
 
-  onSubmit() {
+  async onSubmit() {
     this.loginError = '';
     if (this.formLogin.valid) {
-      const success = this.auth.login(this.formLogin.value);
+      const success = await this.auth.login(this.formLogin.value);
       if (success) {
         this.router.navigate([this.navigateTo]);
       } else {
