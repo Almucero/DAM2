@@ -258,7 +258,7 @@ namespace Act7Ud2
             public event EventHandler<StockEventArgs> StockBajo;
             public void ComprobarStock(string producto, int nivelActual, int nivelMinimo)
             {
-                Console.WriteLine($"\nControlStock: Comprobando stock de {producto}...");
+                Console.WriteLine($"\nComprobando stock de {producto}...");
                 System.Threading.Thread.Sleep(200);
                 if (nivelActual < nivelMinimo)
                 {
@@ -267,7 +267,7 @@ namespace Act7Ud2
                 }
                 else
                 {
-                    Console.WriteLine($"ControlStock: Nivel suficiente para {producto} ({nivelActual}).");
+                    Console.WriteLine($"Nivel suficiente para {producto} ({nivelActual}).");
                 }
             }
         }
@@ -275,7 +275,7 @@ namespace Act7Ud2
         {
             public void OnStockBajo(object sender, StockEventArgs e)
             {
-                Console.WriteLine($"ServicioPedidoReposicion: Generando pedido de reposición para {e.Stock.NombreProducto}. Nivel actual: {e.Stock.NivelActual}.");
+                Console.WriteLine($"Generando pedido de reposición para {e.Stock.NombreProducto}. Nivel actual: {e.Stock.NivelActual}.");
             }
         }
         private class ServicioAlertaStock
@@ -283,7 +283,7 @@ namespace Act7Ud2
             public void OnStockBajo(object sender, StockEventArgs e)
             {
                 System.Threading.Thread.Sleep(150);
-                Console.WriteLine($"Alerta -> Stock bajo en {e.Stock.NombreProducto}. Nivel: {e.Stock.NivelActual}.");
+                Console.WriteLine($"Alerta: Stock bajo en {e.Stock.NombreProducto}. Nivel: {e.Stock.NivelActual}.");
             }
         }
         public static void Ejecutar()
@@ -299,18 +299,71 @@ namespace Act7Ud2
         }
     }
     /* Ejercicio 5: Sistema de Reserva de Habitaciones y Notificación
-     * Implementa un sistema de reservas de habitaciones en un hotel. La clase GestorReservas debe emitir el evento ReservaConfirmada cuando una 
-     * reserva es confirmada. Usa ReservaEventArgs para incluir el nombre del cliente, el tipo de habitación y las fechas. Crea dos clases:
-     * • ServicioLimpieza recibe el evento y programa la limpieza de la habitación.
-     * • ServicioNotificacionCliente envía una confirmación al cliente.
-     */
+ * Implementa un sistema de reservas de habitaciones en un hotel. La clase GestorReservas debe emitir el evento ReservaConfirmada cuando una 
+ * reserva es confirmada. Usa ReservaEventArgs para incluir el nombre del cliente, el tipo de habitación y las fechas. Crea dos clases:
+ * • ServicioLimpieza recibe el evento y programa la limpieza de la habitación.
+ * • ServicioNotificacionCliente envía una confirmación al cliente.
+ */
     class Ejercicio5
     {
+        private class Reserva
+        {
+            public string NombreCliente { get; set; }
+            public string TipoHabitacion { get; set; }
+            public DateTime FechaEntrada { get; set; }
+            public DateTime FechaSalida { get; set; }
+        }
+        private class ReservaEventArgs : EventArgs
+        {
+            public Reserva Reserva { get; set; }
+        }
+        private class GestorReservas
+        {
+            public event EventHandler<ReservaEventArgs> ReservaConfirmada;
+            public void ConfirmarReserva(string nombreCliente, string tipoHabitacion, DateTime fechaEntrada, DateTime fechaSalida)
+            {
+                Console.WriteLine($"\nProcesando reserva para {nombreCliente}...");
+                System.Threading.Thread.Sleep(400);
+                var reserva = new Reserva()
+                {
+                    NombreCliente = nombreCliente,
+                    TipoHabitacion = tipoHabitacion,
+                    FechaEntrada = fechaEntrada,
+                    FechaSalida = fechaSalida
+                };
+                ReservaConfirmada?.Invoke(this, new ReservaEventArgs() { Reserva = reserva });
+            }
+        }
+        private class ServicioLimpieza
+        {
+            public void OnReservaConfirmada(object sender, ReservaEventArgs e)
+            {
+                Console.WriteLine($"Programando limpieza para {e.Reserva.NombreCliente} (Habitación: {e.Reserva.TipoHabitacion}) antes del {e.Reserva.FechaEntrada:dd/MM/yyyy}.");
+            }
+        }
+        private class ServicioNotificacionCliente
+        {
+            public void OnReservaConfirmada(object sender, ReservaEventArgs e)
+            {
+                System.Threading.Thread.Sleep(250);
+                Console.WriteLine($"Notificación enviada a {e.Reserva.NombreCliente}: Reserva confirmada ({e.Reserva.TipoHabitacion}) desde {e.Reserva.FechaEntrada:dd/MM/yyyy} hasta {e.Reserva.FechaSalida:dd/MM/yyyy}.");
+            }
+        }
         public static void Ejecutar()
         {
+            GestorReservas gestorReservas = new GestorReservas();
+            ServicioLimpieza servicioLimpieza = new ServicioLimpieza();
+            ServicioNotificacionCliente servicioNotificacionCliente = new ServicioNotificacionCliente();
 
+            gestorReservas.ReservaConfirmada += servicioLimpieza.OnReservaConfirmada;
+            gestorReservas.ReservaConfirmada += servicioNotificacionCliente.OnReservaConfirmada;
+
+            DateTime entrada = DateTime.Now.AddDays(7);
+            DateTime salida = entrada.AddDays(3);
+            gestorReservas.ConfirmarReserva("El peruanillo", "The real Palace", entrada, salida);
         }
     }
+
     /* Ejercicio 6: Sistema de Gestión de Incidencias en un Servicio de Atención al Cliente
      * Diseña un sistema que gestione incidencias reportadas por los clientes. Crea la clase GestorIncidencias, que emitirá el evento 
      * IncidenciaReportada cada vez que un cliente reporte un problema. Usa IncidenciaEventArgs para incluir detalles como el ID de la incidencia, 
@@ -321,9 +374,78 @@ namespace Act7Ud2
      */
     class Ejercicio6
     {
+        private class Incidencia
+        {
+            public int Id { get; set; }
+            public string Cliente { get; set; }
+            public string Descripcion { get; set; }
+        }
+        private class IncidenciaEventArgs : EventArgs
+        {
+            public Incidencia Incidencia { get; set; }
+        }
+        private class GestorIncidencias
+        {
+            public event EventHandler<IncidenciaEventArgs> IncidenciaReportada;
+            private int siguienteId = 1;
+            public void ReportarIncidencia(string cliente, string descripcion)
+            {
+                Console.WriteLine($"\nReporte recibido de {cliente}...");
+                var inc = new Incidencia() { Id = siguienteId++, Cliente = cliente, Descripcion = descripcion };
+                IncidenciaReportada?.Invoke(this, new IncidenciaEventArgs() { Incidencia = inc });
+            }
+        }
+        private class Tecnico
+        {
+            public string Nombre { get; set; }
+            public string Especialidad { get; set; }
+        }
+        private class ServicioTecnico
+        {
+            private Tecnico[] tecnicos = new Tecnico[]
+            {
+                new Tecnico(){ Nombre = "Elxokas", Especialidad = "Redes" },
+                new Tecnico(){ Nombre = "Nate Gentile", Especialidad = "Hardware" }
+            };
+            private Random rnd = new Random();
+            public void OnIncidenciaReportada(object sender, IncidenciaEventArgs e)
+            {
+                var asignado = tecnicos[rnd.Next(tecnicos.Length)];
+                Console.WriteLine($"Incidencia {e.Incidencia.Id} asignada a {asignado.Nombre} ({asignado.Especialidad}). Descripción: {e.Incidencia.Descripcion}");
+            }
+        }
+        private class ServicioNotificacionCliente
+        {
+            public void OnIncidenciaReportada(object sender, IncidenciaEventArgs e)
+            {
+                System.Threading.Thread.Sleep(400);
+                Console.WriteLine($"Notificación enviada a {e.Incidencia.Cliente}: Se ha registrado su incidencia #{e.Incidencia.Id}.");
+            }
+        }
+        private class ServicioRegistroIncidencias
+        {
+            private int contador = 0;
+            public void OnIncidenciaReportada(object sender, IncidenciaEventArgs e)
+            {
+                contador++;
+                System.Threading.Thread.Sleep(250);
+                Console.WriteLine($"Registro: Guardada incidencia #{e.Incidencia.Id} ({e.Incidencia.Descripcion}). Total registradas: {contador}.");
+            }
+        }
         public static void Ejecutar()
         {
+            GestorIncidencias gestor = new GestorIncidencias();
+            ServicioTecnico servicioTecnico = new ServicioTecnico();
+            ServicioNotificacionCliente servicioNotificacionCliente = new ServicioNotificacionCliente();
+            ServicioRegistroIncidencias servicioRegistro = new ServicioRegistroIncidencias();
 
+            gestor.IncidenciaReportada += servicioTecnico.OnIncidenciaReportada;
+            gestor.IncidenciaReportada += servicioNotificacionCliente.OnIncidenciaReportada;
+            gestor.IncidenciaReportada += servicioRegistro.OnIncidenciaReportada;
+
+            gestor.ReportarIncidencia("Hirohito", "No funciona el acceso a la cuenta");
+            gestor.ReportarIncidencia("Genghis Khan", "Ruido extraño en el dispositivo");
         }
     }
+
 }
