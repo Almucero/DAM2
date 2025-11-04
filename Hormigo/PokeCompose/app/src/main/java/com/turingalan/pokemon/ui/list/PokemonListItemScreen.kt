@@ -19,12 +19,15 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
+import com.turingalan.pokemon.data.model.LocalizedString
+import com.turingalan.pokemon.isHttpUrl
 
 @Composable
 fun PokemonListItemScreen(
     id: Long,
     name: String,
-    spriteId: Int,
+    spriteId: LocalizedString,
     onClickItem: (Long) -> Unit
 ) {
     HorizontalDivider(
@@ -37,12 +40,28 @@ fun PokemonListItemScreen(
         }),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Image(
-            painter = painterResource(spriteId),
-            modifier = Modifier.size(128.dp).padding(8.dp).clip(CircleShape),
-            contentDescription = "Pokemon image",
-            contentScale = ContentScale.Crop
-        )
+        //si es un resource se usa image, si es texto se usa AsyncImage y se pone por medio de url
+        when (spriteId) {
+            is LocalizedString.Plain -> {
+                val text = spriteId.text
+                if (text.isHttpUrl()) {
+                    AsyncImage(
+                        model = text,
+                        modifier = Modifier.size(128.dp).padding(8.dp).clip(CircleShape),
+                        contentDescription = "Pokemon image",
+                        contentScale = ContentScale.Crop
+                    )
+                }
+            }
+            is LocalizedString.Res -> {
+                Image(
+                    painter = painterResource(spriteId.resId),
+                    modifier = Modifier.size(128.dp).padding(8.dp).clip(CircleShape),
+                    contentDescription = "Pokemon image",
+                    contentScale = ContentScale.Crop
+                )
+            }
+        }
         Column(
             modifier = Modifier.padding(horizontal = 10.dp)
         ) {

@@ -3,6 +3,7 @@ package com.turingalan.pokemon.ui.list
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.turingalan.pokemon.data.model.LocalizedString
 import com.turingalan.pokemon.data.model.Pokemon
 import com.turingalan.pokemon.data.repository.PokemonRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -24,9 +25,9 @@ class PokemonListViewModel @Inject constructor (
     init {
         viewModelScope.launch {
             _uiState.value = ListUiState.Loading
-            val allPokemon = repository.readAll()
-            val successResponse = ListUiState.Success(allPokemon.asListUiState())
-            _uiState.value = successResponse
+            repository.readAll().collect { list ->
+                _uiState.value = ListUiState.Success(list.asListUiState())
+            }
         }
     }
 }
@@ -40,7 +41,7 @@ sealed class ListUiState {
 data class ListItemUiState(
     val id: Long,
     val name: String,
-    val spriteId: Int
+    val spriteId: LocalizedString
 )
 
 fun Pokemon.asListItemUiState():ListItemUiState {

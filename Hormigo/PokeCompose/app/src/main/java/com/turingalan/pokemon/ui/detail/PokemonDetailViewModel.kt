@@ -4,6 +4,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.toRoute
+import com.turingalan.pokemon.data.model.LocalizedString
 import com.turingalan.pokemon.data.model.Pokemon
 import com.turingalan.pokemon.data.repository.PokemonRepository
 import com.turingalan.pokemon.ui.Destinations
@@ -26,9 +27,26 @@ class PokemonDetailViewModel @Inject constructor (
     init {
         viewModelScope.launch {
             val route = savedStateHandle.toRoute<Destinations.Details>()
-            val pokemon = repository.readOne(route.id)
-            pokemon?.let {
-                _uiState.value = pokemon.toDetailUiState()
+            repository.readOne(route.id).collect { pokemon ->
+                pokemon?.let {
+                    _uiState.value = it.toDetailUiState()
+                }
+            }
+        }
+    }
+
+    fun deleteChampion() {
+        viewModelScope.launch {
+            try {
+                val route = savedStateHandle.toRoute<Destinations.Details>()
+                val success = repository.deleteOne(route.id)
+                savedStateHandle["delete_success"] = success
+                if (success) {
+                    _uiState.value = DetailUiSate()
+                }
+            }
+            catch (e: Exception) {
+                savedStateHandle["delete_success"] = false
             }
         }
     }
@@ -42,6 +60,6 @@ fun Pokemon.toDetailUiState(): DetailUiSate {
 }
 
 data class DetailUiSate(
-    val name:String = "",
-    val artworkId:Int = 0
+    val name: String = "",
+    val artworkId: LocalizedString = LocalizedString.Plain("")
 )

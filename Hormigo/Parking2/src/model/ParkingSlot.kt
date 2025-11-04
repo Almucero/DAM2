@@ -17,7 +17,7 @@ class Parking(private val maxSlots: Int = 100) {
     fun park(vehicle:Vehicle) {
         if (!isFull()) {
             val exists = parkingSlots.any {
-                slot -> slot.vehicle?.plate == vehicle.plate
+                it.vehicle?.plate == vehicle.plate
             }
             if (!exists) {
                 val slot = ParkingSlot(vehicle, Instant.now())
