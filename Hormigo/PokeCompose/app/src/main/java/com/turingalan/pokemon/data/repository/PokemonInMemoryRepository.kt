@@ -52,7 +52,7 @@ class PokemonInMemoryRepository @Inject constructor(): PokemonRepository {
             ),
             Pokemon(
                 id = 133,
-                name = "Eeve",
+                name = "Eevee",
                 spriteId = LocalizedString.Res(R.drawable.sprite_133),
                 artworkId = LocalizedString.Res(R.drawable.artwork_133)
             ),

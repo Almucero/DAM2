@@ -45,13 +45,11 @@ fun PokemonCreateScreen(
     val spriteId by viewModel.spriteId.collectAsStateWithLifecycle()
     val artworkId by viewModel.artworkId.collectAsStateWithLifecycle()
 
-    // --- FLAGS LOCALES: touched por campo + intento de submit ---
     val nameTouched = remember { mutableStateOf(false) }
     val spriteTouched = remember { mutableStateOf(false) }
     val artworkTouched = remember { mutableStateOf(false) }
     val submitAttempt = remember { mutableStateOf(false) }
 
-    // Validaciones por campo (solo mensaje, no bloqueo aquí)
     val nameError: String? = if (name.isBlank()) "Name is mandatory" else null
     val spriteError: String? = run {
         val t = spriteId.text
@@ -71,7 +69,6 @@ fun PokemonCreateScreen(
             is CreateUiState.Created, CreateUiState.Canceled -> {
                 onCancel()
                 viewModel.resetState()
-                // limpiar flags locales por si vuelve a esta pantalla
                 submitAttempt.value = false
                 nameTouched.value = false
                 spriteTouched.value = false
@@ -80,12 +77,9 @@ fun PokemonCreateScreen(
             else -> {}
         }
     }
-
     Surface(modifier = modifier.fillMaxSize()) {
         Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(12.dp),
+            modifier = Modifier.fillMaxSize().padding(12.dp),
             horizontalAlignment = CenterHorizontally
         ) {
             val artText = artworkId.text
@@ -104,10 +98,7 @@ fun PokemonCreateScreen(
                     Text(text = name.ifBlank { "Preview" }, style = MaterialTheme.typography.headlineSmall)
                 }
             }
-
             Spacer(modifier = Modifier.height(12.dp))
-
-            // NAME
             Text("Name", style = MaterialTheme.typography.labelMedium)
             OutlinedTextField(
                 value = name,
@@ -125,10 +116,7 @@ fun PokemonCreateScreen(
                     }
                 }
             )
-
             Spacer(modifier = Modifier.height(8.dp))
-
-            // SPRITE
             Text("Sprite (URL)", style = MaterialTheme.typography.labelMedium)
             OutlinedTextField(
                 value = spriteId.text,
@@ -146,10 +134,7 @@ fun PokemonCreateScreen(
                     }
                 }
             )
-
             Spacer(modifier = Modifier.height(8.dp))
-
-            // ARTWORK
             Text("Artwork (URL)", style = MaterialTheme.typography.labelMedium)
             OutlinedTextField(
                 value = artworkId.text,
@@ -167,8 +152,6 @@ fun PokemonCreateScreen(
                     }
                 }
             )
-
-            // Error general del ViewModel (si lo hay)
             if (uiState is CreateUiState.Error) {
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
@@ -177,16 +160,13 @@ fun PokemonCreateScreen(
                     style = MaterialTheme.typography.bodySmall
                 )
             }
-
             Spacer(modifier = Modifier.weight(1f))
-
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 OutlinedButton(
                     onClick = {
-                        // reset local touched flags si cancela manualmente
                         viewModel.cancel()
                     },
                     modifier = Modifier.weight(1f)
@@ -195,7 +175,6 @@ fun PokemonCreateScreen(
                 }
                 Button(
                     onClick = {
-                        // marcar intento de submit para forzar mostrar errores si existen
                         submitAttempt.value = true
                         viewModel.createPokemon()
                     },

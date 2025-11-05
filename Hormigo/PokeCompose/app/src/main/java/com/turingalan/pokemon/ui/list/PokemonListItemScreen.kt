@@ -40,7 +40,6 @@ fun PokemonListItemScreen(
         }),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        //si es un resource se usa image, si es texto se usa AsyncImage y se pone por medio de url
         when (spriteId) {
             is LocalizedString.Plain -> {
                 val text = spriteId.text
