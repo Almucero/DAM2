@@ -1,0 +1,16 @@
+﻿<Window x:Class="Ejercicio_5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio_5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" >
+            <Button Content="Botón 1" Padding="10" Click="Button1_Click"/>
+            <Button Content="Botón 2" Padding="10" MouseEnter="Button2_MouseEnter"/>
+            <Button Content="Botón 3" Padding="10" MouseRightButtonDown="Button3_MouseRightButtonDown"/>
+        </WrapPanel>
+    </Grid> 
+</Window>
