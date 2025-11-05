@@ -6,3 +6,11 @@ C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act7Ud2\Act7Ud2\obj\Debug\A
 C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act7Ud2\Act7Ud2\obj\Debug\Act7Ud2.exe
 C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act7Ud2\Act7Ud2\obj\Debug\Act7Ud2.pdb
 C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act7Ud2\Act7Ud2\obj\Debug\Act7Ud2.exe.config
+D:\DAM2\Interfaces\Unidad 2\Act7Ud2\Act7Ud2\bin\Debug\Act7Ud2.exe.config
+D:\DAM2\Interfaces\Unidad 2\Act7Ud2\Act7Ud2\bin\Debug\Act7Ud2.exe
+D:\DAM2\Interfaces\Unidad 2\Act7Ud2\Act7Ud2\bin\Debug\Act7Ud2.pdb
+D:\DAM2\Interfaces\Unidad 2\Act7Ud2\Act7Ud2\obj\Debug\Act7Ud2.csproj.AssemblyReference.cache
+D:\DAM2\Interfaces\Unidad 2\Act7Ud2\Act7Ud2\obj\Debug\Act7Ud2.exe.config
+D:\DAM2\Interfaces\Unidad 2\Act7Ud2\Act7Ud2\obj\Debug\Act7Ud2.csproj.CoreCompileInputs.cache
+D:\DAM2\Interfaces\Unidad 2\Act7Ud2\Act7Ud2\obj\Debug\Act7Ud2.exe
+D:\DAM2\Interfaces\Unidad 2\Act7Ud2\Act7Ud2\obj\Debug\Act7Ud2.pdb
