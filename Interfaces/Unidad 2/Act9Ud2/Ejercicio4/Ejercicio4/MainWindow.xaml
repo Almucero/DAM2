@@ -1,0 +1,14 @@
+﻿<Window x:Class="Ejercicio4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="350">
+    <Grid>
+        <TextBlock Margin="10" TextWrapping="Wrap" Foreground="Red">Los cocodrilos son unas entidades de <Run FontWeight="Bold">inmenso poder</Run> y con unas alas a cada costado de su cuerpo que los animales que los ven se quedan to locos y dice "oh my god, what is this" y luego empiezan a saltar de una forma loquisima</TextBlock>
+    </Grid>
+    <!--Ejercicio 4: Crea una aplicación que muestre un texto rojo en pantalla mediante un TextBlock. Debe tener un margen de 10. El texto contendrá varias líneas con diferentes colores (el texto no debe aparecer “cortado”). 
+    La ventana será de 250 de alto por 350 de ancho. Prueba a marcar una palabra como “negrita”. -->
+</Window>

@@ -1,0 +1,18 @@
+﻿<Window x:Class="Ejercicio3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio3"
+        mc:Ignorable="d"
+        Title="Ejercicio 3" Height="450" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" Button.Click="StackPanel_Click" Margin="350,0,350,0">
+            <Button Click="Button_Click" Content="Pulsa Aquí"/>
+        </StackPanel>
+    </Grid>
+    <!--Ejercicio 3: Crea un botón en XAML y asígnale un evento de tipo bubbling que se lance cuando se haga clic en él. Utiliza otro elemento, un stackpanel, 
+    que contenga a este botón y que recoja el evento lanzado por él. Cuando se haga click en el botón, se lanzará un mensaje, e inmediatamente después se elevará el evento al contenedor, al stackpanel, 
+    que con su propiedad “Button.Click” en el XAML y el método vinculado a ésta, estará indicando que va a manejar un evento tipo click (si le llega y no se ha puesto e.handle a true en la respuesta del click del botón).  
+    El evento del Stackpanel deberá mostrar un mensaje por pantalla dando el nombre del evento que has elegido y explicando brevemente su comportamiento. -->
+</Window>
