@@ -1,0 +1,15 @@
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act9Ud2\Ejercicio8\Ejercicio8\bin\Debug\Ejercicio8.exe.config
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act9Ud2\Ejercicio8\Ejercicio8\bin\Debug\Ejercicio8.exe
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act9Ud2\Ejercicio8\Ejercicio8\bin\Debug\Ejercicio8.pdb
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act9Ud2\Ejercicio8\Ejercicio8\obj\Debug\Ejercicio8.csproj.AssemblyReference.cache
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act9Ud2\Ejercicio8\Ejercicio8\obj\Debug\MainWindow.g.cs
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act9Ud2\Ejercicio8\Ejercicio8\obj\Debug\App.g.cs
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act9Ud2\Ejercicio8\Ejercicio8\obj\Debug\Ejercicio8_MarkupCompile.cache
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act9Ud2\Ejercicio8\Ejercicio8\obj\Debug\Ejercicio8_MarkupCompile.lref
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act9Ud2\Ejercicio8\Ejercicio8\obj\Debug\MainWindow.baml
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act9Ud2\Ejercicio8\Ejercicio8\obj\Debug\Ejercicio8.g.resources
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act9Ud2\Ejercicio8\Ejercicio8\obj\Debug\Ejercicio8.Properties.Resources.resources
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act9Ud2\Ejercicio8\Ejercicio8\obj\Debug\Ejercicio8.csproj.GenerateResource.cache
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act9Ud2\Ejercicio8\Ejercicio8\obj\Debug\Ejercicio8.csproj.CoreCompileInputs.cache
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act9Ud2\Ejercicio8\Ejercicio8\obj\Debug\Ejercicio8.exe
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act9Ud2\Ejercicio8\Ejercicio8\obj\Debug\Ejercicio8.pdb

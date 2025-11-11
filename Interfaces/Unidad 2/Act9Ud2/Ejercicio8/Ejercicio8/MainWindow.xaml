@@ -1,0 +1,24 @@
+﻿<Window x:Class="Ejercicio8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock TextWrapping="Wrap" FontSize="16" Margin="20">
+            <Span>
+                <Run Text="Este es un " Foreground="Blue"/>
+                <Run Text="ejemplo" Foreground="Red" FontWeight="Bold"/>
+                <Run Text=" de cómo " Foreground="Blue"/>
+                <Run Text="Span" Foreground="Green" FontWeight="Bold"/>
+                <Run Text=" permite incluir diferentes elementos, como un " Foreground="Blue"/>
+                <Hyperlink NavigateUri="https://www.microsoft.com" RequestNavigate="Hyperlink_RequestNavigate" Foreground="Blue">enlace</Hyperlink>
+                <Run Text=". " Foreground="Blue"/>
+            </Span>
+            <Run Text="Run " Foreground="Purple" FontStyle="Italic"/>
+            <Run Text="solo aplica estilos a su propio texto." Foreground="Black"/>
+        </TextBlock>
+    </Grid>
+</Window>
