@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{2EF0F84A-85A2-436B-A5BE-1CCF88710151}|Ejercicio9\\Ejercicio9.csproj|solutionrelative:ejercicio9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EF0F84A-85A2-436B-A5BE-1CCF88710151}|Ejercicio9\\Ejercicio9.csproj|c:\\users\\ajimmun901\\desktop\\dam2\\interfaces\\unidad 2\\act9ud2\\ejercicio9\\ejercicio9\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2EF0F84A-85A2-436B-A5BE-1CCF88710151}|Ejercicio9\\Ejercicio9.csproj|C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 2\\Act9Ud2\\Ejercicio9\\ejercicio9\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EF0F84A-85A2-436B-A5BE-1CCF88710151}|Ejercicio9\\Ejercicio9.csproj|solutionrelative:ejercicio9\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,8 +42,7 @@
               "RelativeToolTip": "Ejercicio9\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T09:07:37.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T09:07:37.782Z"
             }
           ]
         }

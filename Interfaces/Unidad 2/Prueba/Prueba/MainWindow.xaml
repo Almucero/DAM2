@@ -1,0 +1,16 @@
+﻿<Window x:Class="Prueba.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prueba"
+        mc:Ignorable="d"
+        Title="Tunneling/Direct" Height="200" Width="300"
+        PreviewMouseDown="Window_PreviewMouseDown">
+    <Grid>
+        <StackPanel PreviewMouseDown="StackPanel_PreviewMouseDown" Background="LightCoral">
+            <Button Content="Haz click aquí" PreviewMouseDown="Button_PreviewMouseDown" Margin="10"/>
+            <Button Content="Pasa el ratón por aquí" MouseEnter="Button_MouseEnter" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>
