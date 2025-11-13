@@ -5,12 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prueba"
         mc:Ignorable="d"
-        Title="Tunneling/Direct" Height="200" Width="300"
-        PreviewMouseDown="Window_PreviewMouseDown">
+        Title="Prueba" Height="200" Width="300">
     <Grid>
-        <StackPanel PreviewMouseDown="StackPanel_PreviewMouseDown" Background="LightCoral">
-            <Button Content="Haz click aquí" PreviewMouseDown="Button_PreviewMouseDown" Margin="10"/>
-            <Button Content="Pasa el ratón por aquí" MouseEnter="Button_MouseEnter" Margin="10"/>
+        <StackPanel Margin="10">
+            <Label FontWeight="Bold">Agrega ingredientes a tu pizza</Label>
+            <CheckBox Name="cbTodos" IsThreeState="True" Checked="cb_TodosHaCambiado" Unchecked="cb_TodosHaCambiado">Todos</CheckBox>
+            <StackPanel Margin="10">
+                <CheckBox Name="cbChile" Checked="cb_SimpleHaCambiado" Unchecked="cb_SimpleHaCambiado">
+                    <TextBlock>Chile <Run Foreground="Red" FontWeight="Bold">Picante</Run></TextBlock>
+                </CheckBox>
+                <CheckBox Name="cbChampis" Checked="cb_SimpleHaCambiado" Unchecked="cb_SimpleHaCambiado">Champis</CheckBox>
+                <CheckBox Name="cbMozzarela" Checked="cb_SimpleHaCambiado" Unchecked="cb_SimpleHaCambiado">Mozzarela</CheckBox>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Prueba
@@ -13,24 +14,24 @@ namespace Prueba
             InitializeComponent();
         }
 
-        private void Window_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        private void cb_TodosHaCambiado(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Window");
+            bool nuevoValor = (cbTodos.IsChecked == true);
+            cbChile.IsChecked = nuevoValor;
+            cbChampis.IsChecked = nuevoValor;
+            cbMozzarela.IsChecked = nuevoValor;
         }
-
-        private void StackPanel_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        private void cb_SimpleHaCambiado(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("StackPanel");
-        }
-
-        private void Button_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show("Button");
-        }
-
-        private void Button_MouseEnter(object sender, MouseEventArgs e)
-        {
-            MessageBox.Show("Ratón");
+            cbTodos.IsChecked = null;
+            if ((cbTodos.IsChecked == true) && (cbChampis.IsChecked == true) && (cbMozzarela.IsChecked == true))
+            {
+                cbTodos.IsChecked = true;
+            }
+            else if ((cbChile.IsChecked == false) && (cbChampis.IsChecked == false) && (cbMozzarela.IsChecked == false))
+            {
+                cbTodos.IsChecked = false;
+            }
         }
     }
 }

@@ -94,5 +94,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Aceptar.png" />
+    <Resource Include="Images\help.png" />
+    <Resource Include="Images\interrogacion_azul.png" />
+    <Resource Include="Images\interrogacion_naranja.jpg" />
+    <Resource Include="Images\rechazar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
