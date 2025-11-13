@@ -1,0 +1,20 @@
+<div class="home-container">
+  <h1>Ingresa un Nombre</h1>
+  <input
+    type="text"
+    [(ngModel)]="nombreInput"
+    (keyup.enter)="agregarNombre()"
+    placeholder="Escribe un nombre y presiona Enter"
+    class="input"
+  />
+  <div>
+    @if(nombres.length > 0) {
+    <h2>Nombres:</h2>
+    <p *ngFor="let nombre of nombres; let i = index">
+      {{ nombre }}
+      <button (click)="borrarNombre(i)" class="btn-borrar">Eliminar</button>
+    </p>
+    }
+  </div>
+  <p>@if(nombres.length === 0) { No hay nombres aún }</p>
+</div>
