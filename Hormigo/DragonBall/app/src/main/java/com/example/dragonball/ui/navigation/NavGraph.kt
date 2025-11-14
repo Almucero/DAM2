@@ -14,7 +14,7 @@ import androidx.navigation.compose.rememberNavController
 @Composable
 fun NavGraph() {
     val navController = rememberNavController()
-    val startDestination = Destinations.List
+    val startDestination = Destinations.CharacterList
     val backStackEntry by navController.currentBackStackEntryAsState()
     Scaffold(
         modifier = Modifier.fillMaxSize(),

@@ -1,6 +1,12 @@
 package com.example.dragonball.data.remote
 
-import okhttp3.Response
+import com.example.dragonball.data.remote.model.CharacterListRemote
+import com.example.dragonball.data.remote.model.CharacterRemote
+import com.example.dragonball.data.remote.model.PlanetListRemote
+import com.example.dragonball.data.remote.model.PlanetRemote
+import com.example.dragonball.data.remote.model.TransformationListRemote
+import com.example.dragonball.data.remote.model.TransformationRemote
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 
