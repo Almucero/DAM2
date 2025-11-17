@@ -1,0 +1,24 @@
+﻿<Window x:Class="Ejercicio4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+            <TextBox Name="NombreTextBox" Width="200" HorizontalAlignment="Center"/>
+            <Button Click="Button_Click" Padding="10" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/rechazar.png" Width="20" Height="20"/>
+                    <TextBlock Text="Botón"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
+    <!--Ejercicio 4:
+    Crea una ventana con un TextBox centrado. Debajo de este TextBox, crea un botón con las siguientes características: padding de 10 por los 4 lados,
+    icono dentro del botón a la izquierda, y el tecto “Botón” dentro del botón a la derecha del icono. El botón deberá gestionar el evento “Clic” y deberá mostrar un MessageBox que diga
+    “Hola, XXXX”, donde XXX es el tecto que el usuario haya introducido en el TextBox.-->
+</Window>

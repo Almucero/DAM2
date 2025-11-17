@@ -1,0 +1,15 @@
+﻿<Window x:Class="Ejercicio3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Name="MiBoton" Content="Se ve trabado" Width="150" Height="50" Background="Green" Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Center" MouseEnter="MiBoton_MouseEnter"/>
+    </Grid>
+    <!--Ejercicio 3:
+    Crea una ventana con un botón centrado, con el fondo verde y la letra en roja. Genera el evento que salte cuando se pase el ratón por encima del botón (sin hacer clic), 
+    y que muestre un MessageBox con el valor de alguna propiedad del botón.-->
+</Window>
