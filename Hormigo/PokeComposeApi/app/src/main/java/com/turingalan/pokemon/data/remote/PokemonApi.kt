@@ -5,10 +5,14 @@ import com.turingalan.pokemon.data.remote.model.PokemonRemote
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface PokemonApi {
     @GET("/api/v2/pokemon")
-    suspend fun readAll(): Response<PokemonListRemote>
+    suspend fun readAll(
+        @Query("limit")limit: Int = 20,
+        @Query("offset")offset: Int = 0
+    ): Response<PokemonListRemote>
     @GET("/api/v2/pokemon/{id}")
     suspend fun readOne(@Path("id") id: Long): Response<PokemonRemote>
     @GET("/api/v2/pokemon/{name}")

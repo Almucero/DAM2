@@ -27,17 +27,13 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import coil3.compose.AsyncImage
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
-
-
 @Composable
 fun PokemonListScreen(
     modifier: Modifier = Modifier,
     viewModel: PokemonListViewModel = hiltViewModel(),
     onShowDetail:(Long)->Unit,
 ) {
-
     val uiState by viewModel.uiState.collectAsState()
-
     when(uiState) {
         is ListUiState.Initial -> {
 
@@ -48,8 +44,23 @@ fun PokemonListScreen(
         is ListUiState.Success -> {
             PokemonList(modifier, uiState, onShowDetail)
         }
+        is ListUiState.Error -> {
+            PokemonError()
+        }
     }
+}
 
+@Composable
+private fun PokemonError(
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text("Se ha producido un error", style = MaterialTheme.typography.titleLarge)
+    }
 }
 
 @Composable
@@ -97,7 +108,6 @@ private fun PokemonList(
 
 @Composable
 fun PokemonListItemCard(
-
     modifier: Modifier = Modifier,
     pokemonId: Long,
     name: String,
@@ -106,8 +116,11 @@ fun PokemonListItemCard(
 )
 {
     Card(
-        modifier = Modifier.fillMaxWidth().height(128.dp)
-            .clickable(enabled = true,
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(128.dp)
+            .clickable(
+                enabled = true,
                 onClick = {
                     onShowDetail(pokemonId)
                 })
