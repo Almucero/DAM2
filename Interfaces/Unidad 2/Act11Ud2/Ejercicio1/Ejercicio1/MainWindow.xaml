@@ -1,0 +1,24 @@
+﻿<Window x:Class="Ejercicio1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="240" Width="300">
+    <Grid>
+        <StackPanel Margin="16" VerticalAlignment="Top">
+            <Label Name="lblQuestion" FontSize="16" FontWeight="Bold" Margin="0,0,0,10">¿Son los calvos personas de fiar?</Label>
+            <RadioButton Name="radio1" GroupName="Respuestas" Content="A) Sí"/>
+            <RadioButton Name="radio2" GroupName="Respuestas" Content="B) No"/>
+            <RadioButton Name="radio3" GroupName="Respuestas" Content="C) Solo los viernes"/>
+            <RadioButton Name="radio4" GroupName="Respuestas" Content="D) ¿Qué?"/>
+            <TextBlock Name="tbStatus" Margin="0,10,0,6"/>
+            <Button HorizontalAlignment="Left" Name="btnCheck" Content="Corregir" Width="100" Padding="6" Click="BtnCheck_Click"/>
+        </StackPanel>
+    </Grid>
+    <!--Ejercicio 1:
+    Crea una ventana formada por un StackPanel que contenga un Label y 4 RadioButton. Debes simular una pregunta tipo test junto a 4 posibles respuestas. 
+    Debajo crearás un botón “Corregir” que mostrará un MessageBox indicando si la respuesta es correcta. Mejora el programa implementando un contador que 
+    cuente el número de veces que has intentado responder, y si llega a un máximo (por ejemplo, 2) indique que ya no le queda intentos al usuario.-->
+</Window>

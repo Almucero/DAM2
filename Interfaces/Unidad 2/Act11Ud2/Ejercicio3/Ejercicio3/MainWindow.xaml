@@ -1,0 +1,31 @@
+﻿<Window x:Class="Ejercicio3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="160" Width="250">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">Usuario:</Label>
+        <TextBox Name="txtUsuario" Grid.Row="0" Grid.Column="1" Margin="4" />
+        <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Password:</Label>
+        <PasswordBox Name="pwdPassword" Grid.Row="1" Grid.Column="1" Margin="4" MaxLength="8" PasswordChar="X"/>
+        <Button HorizontalAlignment="Right" Grid.Row="2" Grid.ColumnSpan="2" Content="Entrar" Width="100" Height="30" Margin="0,10,0,0" Click="BtnEntrar_Click"/>
+    </Grid>
+    <!--Ejercicio 3:
+    Crea una aplicación que simule el login de una aplicación. Para ello, debes crear un Label que ponga “Usuario:” y otro Label para “Password:”. 
+    Deberás crear también los dos TextBox correspondientes. A continuación, crea un botón y captura el evento Clic para que verifique si la combinación 
+    usuario/contraseña es la correcta, en cuyo caso mostrará un MessageBox informando. El campo de la contraseña deberá aparecer con ****** ó XXXXX. 
+    El campo contraseña no permitirá más de 8 caracteres.-->
+</Window>

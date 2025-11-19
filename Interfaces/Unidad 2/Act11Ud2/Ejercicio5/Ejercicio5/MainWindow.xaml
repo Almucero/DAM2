@@ -1,0 +1,27 @@
+﻿<Window x:Class="Ejercicio5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="220" Width="200">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Método de pago:" FontWeight="Bold" Margin="0,0,0,8"/>
+            <StackPanel Margin="12,0,0,8">
+                <RadioButton Name="rbTarjeta" Content="Tarjeta de Crédito" GroupName="Pago"/>
+                <RadioButton Name="rbPaypal" Content="PayPal" GroupName="Pago"/>
+                <RadioButton Name="rbTransferencia" Content="Transferencia" GroupName="Pago"/>
+            </StackPanel>
+            <TextBlock Text="Contraseña:" Margin="0,6,0,4"/>
+            <PasswordBox Name="pwdContra" Width="auto"/>
+            <Button Content="Realizar pago" Width="auto" Margin="0,12,0,0" Click="BtnPagar_Click"/>
+        </StackPanel>
+    </Grid>
+    <!--Ejercicio 5:
+    Crear una interfaz donde el usuario pueda elegir un método de pago (Tarjeta de Crédito, PayPal, Transferencia) usando RadioButton.
+    Después, debe ingresar una contraseña a través de un PasswordBox para realizar el pago. Al hacer clic en el botón de "Realizar pago",
+    el programa debe validar si el método de pago y la contraseña son correctos (por ejemplo, si la contraseña es "1234").
+    Si todo es correcto, debe mostrar un MessageBox que indique que el pago se ha realizado con éxito. Si la contraseña es incorrecta, debe mostrar un mensaje de error.-->
+</Window>

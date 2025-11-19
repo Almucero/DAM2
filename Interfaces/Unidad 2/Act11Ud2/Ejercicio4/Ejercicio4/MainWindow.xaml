@@ -1,0 +1,27 @@
+﻿<Window x:Class="Ejercicio4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="200">
+    <Grid Margin="10" HorizontalAlignment="Center">
+        <StackPanel>
+            <TextBlock Text="Elige nivel de seguridad:" FontWeight="Bold" Margin="0,0,0,8"/>
+            <StackPanel Orientation="Vertical" Margin="12,0,0,8">
+                <RadioButton Name="rbBajo" Content="Bajo" GroupName="Nivel" Margin="0,2"/>
+                <RadioButton Name="rbMedio" Content="Medio" GroupName="Nivel" Margin="0,2" IsChecked="True"/>
+                <RadioButton Name="rbAlto" Content="Alto" GroupName="Nivel" Margin="0,2"/>
+            </StackPanel>
+            <TextBlock Text="Contraseña:" Margin="0,6,0,4"/>
+            <PasswordBox Name="pwdContra" Width="140" HorizontalAlignment="Left"/>
+            <Button Content="Aceptar" Width="140" Margin="0,12,0,0" HorizontalAlignment="Left" Click="BtnAceptar_Click"/>
+        </StackPanel>
+    </Grid>
+    <!--Ejercicio 4:
+    Crear una interfaz donde el usuario pueda elegir un nivel de seguridad a través de tres RadioButton ("Bajo", "Medio", "Alto"). 
+    Además, se debe incluir un PasswordBox donde el usuario ingrese una contraseña. La interfaz debe mostrar un MessageBox al hacer clic en un botón, 
+    que indique el nivel de seguridad seleccionado y la contraseña ingresada, pero solo si la longitud de la contraseña es mayor de 6 caracteres. 
+    Si no lo es, se debe mostrar un mensaje de advertencia.-->
+</Window>

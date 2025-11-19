@@ -5,18 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prueba"
         mc:Ignorable="d"
-        Title="Prueba" Height="200" Width="300">
+        Title="Prueba" Height="500" Width="250">
     <Grid>
         <StackPanel Margin="10">
-            <Label FontWeight="Bold">Agrega ingredientes a tu pizza</Label>
-            <CheckBox Name="cbTodos" IsThreeState="True" Checked="cb_TodosHaCambiado" Unchecked="cb_TodosHaCambiado">Todos</CheckBox>
-            <StackPanel Margin="10">
-                <CheckBox Name="cbChile" Checked="cb_SimpleHaCambiado" Unchecked="cb_SimpleHaCambiado">
-                    <TextBlock>Chile <Run Foreground="Red" FontWeight="Bold">Picante</Run></TextBlock>
-                </CheckBox>
-                <CheckBox Name="cbChampis" Checked="cb_SimpleHaCambiado" Unchecked="cb_SimpleHaCambiado">Champis</CheckBox>
-                <CheckBox Name="cbMozzarela" Checked="cb_SimpleHaCambiado" Unchecked="cb_SimpleHaCambiado">Mozzarela</CheckBox>
-            </StackPanel>
+            <Label FontWeight="Bold" FontSize="20">¿Eres feliz?</Label>
+            <RadioButton VerticalContentAlignment="Center" Margin="5">
+                <WrapPanel>
+                    <Rectangle Fill="Green" Width="16" Height="16"/>
+                    <TextBlock Text="Sí" FontSize="20" Margin="5"/>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton VerticalContentAlignment="Center" Margin="5" Checked="No_Seleccionado">
+                <WrapPanel>
+                    <Rectangle Fill="Red" Width="16" Height="16"/>
+                    <TextBlock Text="No" FontSize="20" Margin="5"/>
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton VerticalContentAlignment="Center" Margin="5">
+                <WrapPanel>
+                    <Rectangle Fill="Blue" Width="16" Height="16"/>
+                    <TextBlock Text="Quizás" FontSize="20" Margin="5"/>
+                </WrapPanel>
+            </RadioButton>
+            <Label FontWeight="Bold">Are you ready?</Label>
+            <RadioButton GroupName="ready">Yes</RadioButton>
+            <RadioButton GroupName="ready">No</RadioButton>
+            <RadioButton GroupName="ready" IsChecked="True">Maybe</RadioButton>
+            <Label FontWeight="Bold">Male or female?</Label>
+            <RadioButton GroupName="sex">Male</RadioButton>
+            <RadioButton GroupName="sex">Female</RadioButton>
+            <RadioButton GroupName="sex" IsChecked="True">Not sure</RadioButton>
+            <Label>Text:</Label>
+            <TextBox Width="200" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <Label>Password:</Label>
+            <PasswordBox Width="200" HorizontalAlignment="Left" Margin="10,0,0,0" PasswordChar="X" MaxLength="6"/>
         </StackPanel>
     </Grid>
 </Window>
