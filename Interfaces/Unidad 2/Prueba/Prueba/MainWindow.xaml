@@ -5,40 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prueba"
         mc:Ignorable="d"
-        Title="Prueba" Height="500" Width="250">
+        Title="Prueba" Height="400" Width="800">
     <Grid>
-        <StackPanel Margin="10">
-            <Label FontWeight="Bold" FontSize="20">¿Eres feliz?</Label>
-            <RadioButton VerticalContentAlignment="Center" Margin="5">
-                <WrapPanel>
-                    <Rectangle Fill="Green" Width="16" Height="16"/>
-                    <TextBlock Text="Sí" FontSize="20" Margin="5"/>
-                </WrapPanel>
-            </RadioButton>
-            <RadioButton VerticalContentAlignment="Center" Margin="5" Checked="No_Seleccionado">
-                <WrapPanel>
-                    <Rectangle Fill="Red" Width="16" Height="16"/>
-                    <TextBlock Text="No" FontSize="20" Margin="5"/>
-                </WrapPanel>
-            </RadioButton>
-            <RadioButton VerticalContentAlignment="Center" Margin="5">
-                <WrapPanel>
-                    <Rectangle Fill="Blue" Width="16" Height="16"/>
-                    <TextBlock Text="Quizás" FontSize="20" Margin="5"/>
-                </WrapPanel>
-            </RadioButton>
-            <Label FontWeight="Bold">Are you ready?</Label>
-            <RadioButton GroupName="ready">Yes</RadioButton>
-            <RadioButton GroupName="ready">No</RadioButton>
-            <RadioButton GroupName="ready" IsChecked="True">Maybe</RadioButton>
-            <Label FontWeight="Bold">Male or female?</Label>
-            <RadioButton GroupName="sex">Male</RadioButton>
-            <RadioButton GroupName="sex">Female</RadioButton>
-            <RadioButton GroupName="sex" IsChecked="True">Not sure</RadioButton>
-            <Label>Text:</Label>
-            <TextBox Width="200" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-            <Label>Password:</Label>
-            <PasswordBox Width="200" HorizontalAlignment="Left" Margin="10,0,0,0" PasswordChar="X" MaxLength="6"/>
+        <Button Height="100" Width="200" Content="Hola mundo" Background="PaleVioletRed">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="FontSize" Value="30"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <StackPanel>
+            <TextBox Name="MiTextBox" Width="100" Margin="50" Text="{Binding ElementName=MiSlider, Path=Background, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Slider IsSnapToTickEnabled="True" Name="MiSlider" Minimum="0" Maximum="100" Background="Aqua"/>
         </StackPanel>
+        <Button Content="¡Haz clic aquí!" FontSize="{Binding TamañoTexto}" Width="200" Height="100" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Button_Click"/>
     </Grid>
 </Window>
