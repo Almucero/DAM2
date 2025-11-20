@@ -1,0 +1,36 @@
+﻿<Window x:Class="Ejercicio5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ejercicio 5" Height="400" Width="600">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <ListBox Name="lstEstudiantes" Grid.Column="0" DisplayMemberPath="Nombre" SelectionChanged="lstEstudiantes_SelectionChanged">
+            <ListBox.Resources>
+                <CollectionViewSource x:Key="cvsEstudiantes" Source="{Binding Estudiantes}">
+                    <CollectionViewSource.GroupDescriptions>
+                        <PropertyGroupDescription PropertyName="Curso" />
+                    </CollectionViewSource.GroupDescriptions>
+                </CollectionViewSource>
+            </ListBox.Resources>
+            <ListBox.ItemsSource>
+                <Binding Source="{StaticResource cvsEstudiantes}" />
+            </ListBox.ItemsSource>
+            <ListBox.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock FontWeight="Bold" FontSize="14" Text="{Binding Name}" />
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </ListBox.GroupStyle>
+        </ListBox>
+        <StackPanel Grid.Column="1" Margin="10">
+            <TextBlock Text="Detalles del estudiante" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+            <TextBlock x:Name="txtDetalles" TextWrapping="Wrap" FontSize="14"/>
+        </StackPanel>
+    </Grid>
+</Window>

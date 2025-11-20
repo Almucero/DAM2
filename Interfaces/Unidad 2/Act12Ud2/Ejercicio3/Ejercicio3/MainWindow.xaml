@@ -1,0 +1,22 @@
+﻿<Window x:Class="Ejercicio3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="400">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <TextBox Name="textoUsuarioTextBox" Text="{Binding TextoUsuario, UpdateSourceTrigger=Explicit, Mode=TwoWay}" Width="200" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Button Content="{Binding TextoUsuario}" Click="Button_Click" Width="200" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+    <!--Ejercicio 3: Enlace de datos TwoWay con TextBox y Button Crea un enlace entre un TextBox y una propiedad de dependencia. 
+    El contenido del TextBox se reflejará en un Button. 
+    1. Define una propiedad de dependencia llamada TextoUsuario. 
+    2. Usa esta propiedad para mostrar y modificar el contenido en un TextBox. 
+    3. Usa esta misma propiedad para cambiar dinámicamente el contenido de un Button. 
+    4. Englóbalo todo en un StackPanel. Comportamiento: cuando escribas en el TextBox, al pulsar el botón, 
+    deberá igualarse el contenido del botón a lo que se haya escrito en el TextBox. -->
+</Window>

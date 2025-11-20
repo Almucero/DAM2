@@ -1,0 +1,20 @@
+﻿<Window x:Class="Ejercicio2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="300">
+    <Grid>
+        <StackPanel Margin="10" VerticalAlignment="Center">
+            <TextBox Name="MiTextBox" Height="50" Width="100"/>
+            <Button Content="Cambiar Fondo" Height="50" Width="100" Click="CambiarFondo_Click" />
+        </StackPanel>
+    </Grid>
+    <!--Ejercicio 2: Aplicar propiedades de dependencia con plantillas para cambiar dinámicamente el diseño de un control. 
+    1. Diseña una ventana con un TextBox y un botón. 
+    2. Configura una propiedad de dependencia llamada ColorDeFondoTexto que permita cambiar el color de fondo del TextBox cuando el botón es presionado. 
+    3. Crea la propiedad ColorDeFondoTexto que haga uso de la clase Brush así: public Brush ColorDeFondoTexto{…} 
+    4. Usa un estilo en XAML que aplique dinámicamente esta propiedad con triggers. -->
+</Window>

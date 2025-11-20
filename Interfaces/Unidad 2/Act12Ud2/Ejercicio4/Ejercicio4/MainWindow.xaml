@@ -1,0 +1,17 @@
+﻿<Window x:Class="Ejercicio4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="400">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <TextBox Name="textoUsuarioTextBox" Text="{Binding TextoUsuario, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="200" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Button Content="{Binding TextoUsuario}" Click="Button_Click" Width="200" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+    <!--Ejercicio 4: Modifica el ejercicio anterior para que se cambie automáticamente el contenido del botón al escribir en el TextBox, 
+        para ello recurre a la propiedad: UpdateSourceTrigger. -->
+</Window>

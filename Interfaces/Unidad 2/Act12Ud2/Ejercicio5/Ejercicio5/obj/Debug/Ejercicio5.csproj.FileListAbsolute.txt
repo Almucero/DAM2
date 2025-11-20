@@ -1,0 +1,15 @@
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act12Ud2\Ejercicio5\Ejercicio5\bin\Debug\Ejercicio5.exe.config
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act12Ud2\Ejercicio5\Ejercicio5\bin\Debug\Ejercicio5.exe
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act12Ud2\Ejercicio5\Ejercicio5\bin\Debug\Ejercicio5.pdb
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act12Ud2\Ejercicio5\Ejercicio5\obj\Debug\Ejercicio5.csproj.AssemblyReference.cache
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act12Ud2\Ejercicio5\Ejercicio5\obj\Debug\MainWindow.baml
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act12Ud2\Ejercicio5\Ejercicio5\obj\Debug\MainWindow.g.cs
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act12Ud2\Ejercicio5\Ejercicio5\obj\Debug\App.g.cs
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act12Ud2\Ejercicio5\Ejercicio5\obj\Debug\Ejercicio5_MarkupCompile.cache
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act12Ud2\Ejercicio5\Ejercicio5\obj\Debug\Ejercicio5.g.resources
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act12Ud2\Ejercicio5\Ejercicio5\obj\Debug\Ejercicio5.Properties.Resources.resources
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act12Ud2\Ejercicio5\Ejercicio5\obj\Debug\Ejercicio5.csproj.GenerateResource.cache
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act12Ud2\Ejercicio5\Ejercicio5\obj\Debug\Ejercicio5.csproj.CoreCompileInputs.cache
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act12Ud2\Ejercicio5\Ejercicio5\obj\Debug\Ejercicio5.exe
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act12Ud2\Ejercicio5\Ejercicio5\obj\Debug\Ejercicio5.pdb
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 2\Act12Ud2\Ejercicio5\Ejercicio5\obj\Debug\Ejercicio5.exe.config
