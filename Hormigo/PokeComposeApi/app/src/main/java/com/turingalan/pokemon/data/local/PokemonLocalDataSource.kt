@@ -41,4 +41,8 @@ class PokemonLocalDataSource @Inject constructor(
         }
         return Result.failure(RuntimeException())
     }
+
+    override suspend fun isError() {
+        _pokemonFlow.emit(Result.failure((RuntimeException())))
+    }
 }

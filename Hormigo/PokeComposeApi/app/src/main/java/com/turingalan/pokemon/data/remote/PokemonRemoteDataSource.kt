@@ -33,21 +33,25 @@ class PokemonRemoteDataSource @Inject constructor(
 
     override suspend fun readAll(): Result<List<Pokemon>> {
         //TODO REMOVE CODIGO MALO
-        val response = api.readAll(limit = 20, offset = 0)
-        val finalList = mutableListOf<Pokemon>()
-        return if (response.isSuccessful) {
-            val body = response.body()!!
-            for (result in body.results) {
-                val remotePokemon = readOne(name = result.name)
-                remotePokemon?.let {
-                    finalList.add(it)
+        try {
+            val response = api.readAll(limit = 40, offset = 0)
+            val finalList = mutableListOf<Pokemon>()
+            return if (response.isSuccessful) {
+                val body = response.body()!!
+                for (result in body.results) {
+                    val remotePokemon = readOne(name = result.name)
+                    remotePokemon?.let {
+                        finalList.add(it)
+                    }
                 }
+                Result.success(finalList)
+            } else {
+                val status = response.code() //tipo de error
+                Result.failure(RuntimeException())
             }
-            Result.success(finalList)
         }
-        else {
-            val status = response.code() //tipo de error
-            Result.failure(RuntimeException())
+        catch (ex: Exception) {
+            return Result.failure(ex)
         }
     }
 
@@ -70,6 +74,10 @@ class PokemonRemoteDataSource @Inject constructor(
         else {
             Result.failure(RuntimeException())
         }
+    }
+
+    override suspend fun isError() {
+        TODO("Not yet implemented")
     }
 }
 

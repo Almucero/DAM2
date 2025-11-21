@@ -45,7 +45,7 @@ fun PokemonListScreen(
             PokemonList(modifier, uiState, onShowDetail)
         }
         is ListUiState.Error -> {
-            PokemonError()
+            PokemonError(modifier)
         }
     }
 }

@@ -33,5 +33,8 @@ class PokemonRepositoryImpl @Inject constructor(
         if (resultRemotePokemon.isSuccess) {
             localDataSource.addAll(resultRemotePokemon.getOrNull()!!)
         }
+        else {
+            localDataSource.isError()
+        }
     }
 }
