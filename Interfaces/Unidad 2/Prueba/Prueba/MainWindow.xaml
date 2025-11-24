@@ -7,21 +7,49 @@
         mc:Ignorable="d"
         Title="Prueba" Height="400" Width="800">
     <Grid>
-        <Button Height="100" Width="200" Content="Hola mundo" Background="PaleVioletRed">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="FontSize" Value="30"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
+        <!--Definimos las 2 columnas dentro del grid-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <!--Creamos el ListBox para agrupar los encuentros-->
+        <ListBox Name="lbJuego" Grid.Column="0" HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="2">
+                        <!--Creamos las 5 columnas dentro de este grid-->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock HorizontalAlignment="Center" Grid.Column="0" Text="{Binding Eq1}"></TextBlock>
+                        <TextBlock HorizontalAlignment="Center" Grid.Column="1" Text="{Binding Puntaje1}"></TextBlock>
+                        <TextBlock HorizontalAlignment="Center" Grid.Column="2" Text="{Binding Puntaje2}"></TextBlock>
+                        <TextBlock HorizontalAlignment="Center" Grid.Column="3" Text="{Binding Eq2}"></TextBlock>
+                        <ProgressBar Grid.Column="4" Minimum="0" Maximum="90" Value="{Binding Progreso}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Grid.Column="1" Click="Button_Click">
+            <TextBlock Text="MÁS INFORMACIÓN" TextWrapping="Wrap" TextAlignment="Center"/>
         </Button>
         <StackPanel>
-            <TextBox Name="MiTextBox" Width="100" Margin="50" Text="{Binding ElementName=MiSlider, Path=Background, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-            <Slider IsSnapToTickEnabled="True" Name="MiSlider" Minimum="0" Maximum="100" Background="Aqua"/>
+            <ComboBox Name="ComboBoxColores">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Rectangle Fill="{Binding Name}" Width="32" Height="32" Margin="5"/>
+                            <TextBlock Text="{Binding Name}" FontSize="32"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
         </StackPanel>
-        <Button Content="¡Haz clic aquí!" FontSize="{Binding TamañoTexto}" Width="200" Height="100" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Button_Click"/>
+        <Button Width="150" Height="100" Content="Pulsa aquí" ToolTip="Estás sobre el botón" Click="Button_Click_1"/>
+        <TextBox Width="100" ToolTip="Introduzca su edad" HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center" Margin="0,265,0,0">Edad</TextBox>
     </Grid>
 </Window>
