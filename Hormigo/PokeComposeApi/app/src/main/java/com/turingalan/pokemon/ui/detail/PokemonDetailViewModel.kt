@@ -35,6 +35,7 @@ class PokemonDetailViewModel @Inject constructor(
             val pokemonId = route.id
             val pokemon = pokemonRepository.readOne(pokemonId)
 
+            //TODO
             pokemon?.let {
                 _uiState.value = pokemon.getOrNull()!!.toDetailUiState()
             }

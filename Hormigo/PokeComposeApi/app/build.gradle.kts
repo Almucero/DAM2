@@ -44,6 +44,11 @@ android {
 }
 
 dependencies {
+    //Room
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+
     //Coil
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)

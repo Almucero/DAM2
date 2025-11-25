@@ -31,6 +31,25 @@ class PokemonRemoteDataSource @Inject constructor(
         )
     }
 
+//    override fun observe(): Flow<Result<List<Pokemon>>> {
+//        return flow {
+//            emit(Result.success(listOf<Pokemon>()))
+//            val finalList = mutableListOf<Pokemon>()
+//            val limit = 20
+//            val offset = 20
+//            var thereAreMoreResults = false
+//            do {
+//                try {
+//                    val response = api.readAll(limit, offset)
+//                    if (response.isSuccessful) {
+//                        val body =
+//                    }
+//                }
+//                catch ()
+//            } while (!thereAreMoreResults)
+//        }
+//    }
+
     override suspend fun readAll(): Result<List<Pokemon>> {
         //TODO REMOVE CODIGO MALO
         try {
