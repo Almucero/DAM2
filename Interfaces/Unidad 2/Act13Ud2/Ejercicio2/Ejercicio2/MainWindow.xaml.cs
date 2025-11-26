@@ -24,5 +24,28 @@ namespace Ejercicio2
         {
             InitializeComponent();
         }
+
+        private string ObtenerCategoria()
+        {
+            if (cmbCategoria.SelectedItem is ComboBoxItem item)
+                return item.Content.ToString();
+
+            return "Ninguna categoría seleccionada";
+        }
+
+        private void Accion1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Has realizado Acción 1 en la {ObtenerCategoria()}");
+        }
+
+        private void Accion2_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Has realizado Acción 2 en la {ObtenerCategoria()}");
+        }
+
+        private void Accion3_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Has realizado Acción 3 en la {ObtenerCategoria()}");
+        }
     }
 }

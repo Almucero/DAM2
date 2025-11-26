@@ -6,7 +6,30 @@
         xmlns:local="clr-namespace:Ejercicio2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel Margin="10" HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 40">
+            <TextBlock Text="Selecciona una categoría:" VerticalAlignment="Center" Margin="0 0 10 0"/>
+            <ComboBox Name="cmbCategoria" Width="150">
+                <ComboBoxItem Content="Categoría A"/>
+                <ComboBoxItem Content="Categoría B"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Acción 1" Width="100" Click="Accion1_Click">
+                <Button.ToolTip>
+                    <ToolTip Content="Ejecuta la acción 1"/>
+                </Button.ToolTip>
+            </Button>
+            <Button Content="Acción 2" Width="100" Click="Accion2_Click">
+                <Button.ToolTip>
+                    <ToolTip Content="Ejecuta la acción 2"/>
+                </Button.ToolTip>
+            </Button>
+            <Button Content="Acción 3" Width="100" Click="Accion3_Click">
+                <Button.ToolTip>
+                    <ToolTip Content="Ejecuta la acción 3"/>
+                </Button.ToolTip>
+            </Button>
+        </StackPanel>
+    </StackPanel>
 </Window>
