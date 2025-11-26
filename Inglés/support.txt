@@ -1,7 +1,0 @@
-rosario
-
-Monitor shows no signal
-
-change to hdmi or dp cable
-
-fotos
