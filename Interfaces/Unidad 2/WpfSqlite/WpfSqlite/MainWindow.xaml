@@ -1,0 +1,90 @@
+﻿<Window x:Class="WpfSqlite.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfSqlite"
+        mc:Ignorable="d"
+        Title="Gestión Zoo (SQLite)" Height="520" Width="900" MinHeight="420" MinWidth="720">
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2.2*" />
+            <ColumnDefinition Width="2.2*" />
+            <ColumnDefinition Width="2.6*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <!-- encabezados -->
+            <RowDefinition Height="Auto" />
+            <!-- listas grandes -->
+            <RowDefinition Height="*" />
+            <!-- TextBox (debajo de las dos primeras columnas) -->
+            <RowDefinition Height="Auto" />
+            <!-- paneles de botones (una columna por columna) -->
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Encabezados -->
+        <Label Content="Lista de Zoos" Grid.Row="0" Grid.Column="0" FontWeight="Bold" Margin="2"/>
+        <Label Content="Lista de animales asociados" Grid.Row="0" Grid.Column="1" FontWeight="Bold" Margin="2" HorizontalAlignment="Center"/>
+        <Label Content="Lista de Animales" Grid.Row="0" Grid.Column="2" FontWeight="Bold" Margin="2" HorizontalAlignment="Right"/>
+
+        <!-- ListBoxes (filas grandes) -->
+        <ListBox Name="ListaZoos"
+                 Grid.Row="1" Grid.Column="0"
+                 SelectionChanged="ListaZoos_SelectionChanged"
+                 Margin="5"/>
+
+        <ListBox Name="ListaAnimalesAsociados"
+                 Grid.Row="1" Grid.Column="1"
+                 Margin="5"/>
+
+        <ListBox Name="ListaAnimales"
+                 Grid.Row="1" Grid.Column="2"
+                 SelectionChanged="ListaAnimales_SelectionChanged"
+                 Margin="5"/>
+
+        <!-- TextBox debajo de las dos primeras columnas -->
+        <TextBox Name="miTextBox"
+                 Grid.Row="2"
+                 Grid.Column="0"
+                 Grid.ColumnSpan="2"
+                 Margin="5"
+                 Height="30"
+                 FontSize="16"/>
+
+        <!-- Paneles de botones: una columna por cada columna de listas -->
+        <!-- Botones columna izquierda (bajo ListaZoos) -->
+        <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Vertical" Margin="5" HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button Content="Eliminar Zoo" Width="110" Margin="5" Click="EliminarZoo_Click"/>
+                <Button Content="Quitar Animal" Width="110" Margin="5" Click="QuitarAnimalDelZoo_Click"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button Content="Agregar Zoo" Width="110" Margin="5" Click="AgregarZoo_Click"/>
+                <Button Content="Agregar Animal al Zoo" Width="160" Margin="5" Click="AgregarAnimalZoo_Click"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button Content="Actualizar Zoo" Width="120" Margin="5" Click="ActualizarZoo_Click"/>
+                <Button Content="Actualizar Animal" Width="120" Margin="5" Click="ActualizarAnimal_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Botones columna central (bajo ListaAnimalesAsociados) -->
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Vertical" Margin="5" HorizontalAlignment="Center">
+            <Button Content="Agregar Animal" Width="120" Margin="5" Click="AgregarAnimal_Click"/>
+            <Button Content="Eliminar Animal" Width="120" Margin="5" Click="EliminarAnimal_Click"/>
+        </StackPanel>
+
+        <!-- Botones columna derecha (bajo ListaAnimales) -->
+        <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+            <!-- en la foto hay un botón grande centrado bajo la lista derecha -->
+            <Button Content="Agregar animal al zoo" Width="160" Margin="5" Click="AgregarAnimalZoo_Click"/>
+            <Button Content="Eliminar animal" Width="130" Margin="5" Click="EliminarAnimal_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
