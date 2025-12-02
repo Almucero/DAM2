@@ -11,6 +11,8 @@ import kotlinx.coroutines.flow.Flow
 interface PokemonDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(pokemon: PokemonEntity)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(pokemonList: List<PokemonEntity>)
     @Delete
     suspend fun delete(pokemon: PokemonEntity): Int
     @Query("SELECT * FROM pokemon")

@@ -9,6 +9,7 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
@@ -18,11 +19,8 @@ class PokemonLocalDataSource @Inject constructor(
 ): PokemonDataSource {
     override suspend fun addAll(pokemonList: List<Pokemon>) {
         val mutex = Mutex()
-        pokemonList.forEach { pokemon ->
-            val entity = pokemon.toEntity()
-            withContext(Dispatchers.IO) {
-                pokemonDao.insert(entity)
-            }
+        mutex.withLock {
+            pokemonDao.insert(pokemonList = List<PokemonEntity>)
         }
     }
 
