@@ -23,7 +23,11 @@ class PokemonRepositoryImpl @Inject constructor(
 
     override fun observe(): Flow<Result<List<Pokemon>>> {
         scope.launch {
-            refresh()
+            remoteDataSource.observe().collect { result ->
+                if (result.isSuccess) {
+                    localDataSource.addAll(pokemonList = result.getOrNull()!!)
+                }
+            }
         }
         return localDataSource.observe()
     }
@@ -33,8 +37,5 @@ class PokemonRepositoryImpl @Inject constructor(
         if (resultRemotePokemon.isSuccess) {
             localDataSource.addAll(resultRemotePokemon.getOrNull()!!)
         }
-//        else {
-//            localDataSource.isError()
-//        }
     }
 }

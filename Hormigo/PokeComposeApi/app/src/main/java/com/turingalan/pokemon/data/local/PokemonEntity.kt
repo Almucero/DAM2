@@ -22,6 +22,8 @@ fun Pokemon.toEntity(): PokemonEntity {
     )
 }
 
+fun List<Pokemon>.toEntity():List<PokemonEntity> = this.map(Pokemon::toEntity)
+
 fun PokemonEntity.toModel(): Pokemon {
     return Pokemon(
         id = this.id,

@@ -36,18 +36,25 @@ class PokemonRemoteDataSource @Inject constructor(
 //            emit(Result.success(listOf<Pokemon>()))
 //            val finalList = mutableListOf<Pokemon>()
 //            val limit = 20
-//            val offset = 20
+//            var offset = 20
 //            var thereAreMoreResults = false
 //            do {
 //                try {
 //                    val response = api.readAll(limit, offset)
 //                    if (response.isSuccessful) {
-//                        val body =
+//                        val body = response.body()
+//                        offset += limit
 //                    }
 //                }
-//                catch ()
-//            } while (!thereAreMoreResults)
-//        }
+//                catch (ex: Exception) {
+//                    emit(Result.failure(ex))
+//                }
+//            } while (thereAreMoreResults)
+//        }.shareIn(
+//            scope = scope,
+//            started = SharingStarted.WhileSubscribed(5_000L),
+//            replay = 1
+//        )
 //    }
 
     override suspend fun readAll(): Result<List<Pokemon>> {
