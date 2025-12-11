@@ -1,0 +1,6 @@
+﻿<UserControl x:Class="Ejercicio3.Controls.NumericInput"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="root">
+    <TextBox Text="{Binding Valor, ElementName=root, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaxLength="{Binding MaxLength, ElementName=root}" />
+</UserControl>

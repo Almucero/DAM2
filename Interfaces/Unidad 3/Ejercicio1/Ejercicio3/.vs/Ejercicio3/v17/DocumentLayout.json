@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{21FF9892-D689-49C4-ACCA-40063E78EC1E}|Ejercicio3\\Ejercicio3.csproj|c:\\users\\ajimmun901\\desktop\\dam2\\interfaces\\unidad 3\\ejercicio1\\ejercicio3\\ejercicio3\\numericinput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21FF9892-D689-49C4-ACCA-40063E78EC1E}|Ejercicio3\\Ejercicio3.csproj|solutionrelative:ejercicio3\\numericinput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21FF9892-D689-49C4-ACCA-40063E78EC1E}|Ejercicio3\\Ejercicio3.csproj|c:\\users\\ajimmun901\\desktop\\dam2\\interfaces\\unidad 3\\ejercicio1\\ejercicio3\\ejercicio3\\numericinput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21FF9892-D689-49C4-ACCA-40063E78EC1E}|Ejercicio3\\Ejercicio3.csproj|solutionrelative:ejercicio3\\numericinput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21FF9892-D689-49C4-ACCA-40063E78EC1E}|Ejercicio3\\Ejercicio3.csproj|c:\\users\\ajimmun901\\desktop\\dam2\\interfaces\\unidad 3\\ejercicio1\\ejercicio3\\ejercicio3\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{21FF9892-D689-49C4-ACCA-40063E78EC1E}|Ejercicio3\\Ejercicio3.csproj|solutionrelative:ejercicio3\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21FF9892-D689-49C4-ACCA-40063E78EC1E}|Ejercicio3\\Ejercicio3.csproj|c:\\users\\ajimmun901\\desktop\\dam2\\interfaces\\unidad 3\\ejercicio1\\ejercicio3\\ejercicio3\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21FF9892-D689-49C4-ACCA-40063E78EC1E}|Ejercicio3\\Ejercicio3.csproj|solutionrelative:ejercicio3\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NumericInput.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio3\\Ejercicio3\\NumericInput.xaml.cs",
+              "RelativeDocumentMoniker": "Ejercicio3\\NumericInput.xaml.cs",
+              "ToolTip": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio3\\Ejercicio3\\NumericInput.xaml.cs",
+              "RelativeToolTip": "Ejercicio3\\NumericInput.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T11:15:05.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NumericInput.xaml",
+              "DocumentMoniker": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio3\\Ejercicio3\\NumericInput.xaml",
+              "RelativeDocumentMoniker": "Ejercicio3\\NumericInput.xaml",
+              "ToolTip": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio3\\Ejercicio3\\NumericInput.xaml",
+              "RelativeToolTip": "Ejercicio3\\NumericInput.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-11T11:14:56.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio3\\Ejercicio3\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Ejercicio3\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio3\\Ejercicio3\\MainWindow.xaml",
+              "RelativeToolTip": "Ejercicio3\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-11T11:14:06.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio3\\Ejercicio3\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Ejercicio3\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio3\\Ejercicio3\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Ejercicio3\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T11:14:05.724Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
