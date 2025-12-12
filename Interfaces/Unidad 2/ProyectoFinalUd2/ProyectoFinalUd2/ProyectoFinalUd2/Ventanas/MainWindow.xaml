@@ -1,0 +1,208 @@
+﻿<Window x:Class="ProyectoFinalUd2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoFinalUd2"
+        mc:Ignorable="d"
+        Title="Proyecto Final Unidad 2" Height="650" Width="1000"
+        MinHeight="500" MinWidth="800"
+        FontFamily="Segoe UI">
+    <Window.Resources>
+        <!--
+        A lo largo de este aarchivo se van ha definir muchos estilos aparentemente innecesarios, 
+        se ponen ya que en mi pc todo se ve negro por defecto (por programas instalados), 
+        y por ende no lo veo como otro lo veria
+        -->
+        <local:ColorToLighterConverter x:Key="ColorConverter"/>
+        <Style TargetType="TextBox">
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="0,5,0,10"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="#CCCCCC"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Margin" Value="0,5"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" CornerRadius="5" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background" 
+                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Background, 
+                                                Converter={StaticResource ColorConverter}, ConverterParameter=0.1}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background" 
+                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Background, 
+                                                Converter={StaticResource ColorConverter}, ConverterParameter=-0.1}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#F0F4F8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="320"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.ColumnSpan="3" Background="#2C3E50" BorderBrush="#1C2833" BorderThickness="0,0,0,3">
+            <TextBlock Text="🛍️ Sistema de Inventario - Proyecto Final Ud 2" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" Margin="20,0" Foreground="White"/>
+        </Border>
+        <!--Categorías-->
+        <Border Grid.Row="1" Grid.Column="0" Margin="10,15,5,15" Background="White" CornerRadius="8" Padding="10">
+            <DockPanel>
+                <TextBlock Text="📁 Categorías" DockPanel.Dock="Top" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,10" Foreground="#34495E"/>
+                <ListBox Name="lstCategorias" DisplayMemberPath="Nombre" SelectedValuePath="Id" SelectionChanged="lstCategorias_SelectionChanged" FontSize="14" BorderThickness="0" Background="White" Foreground="#333333">
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Foreground" Value="#333333"/>
+                            <Setter Property="Padding" Value="8,5"/>
+                            <Setter Property="Margin" Value="0,1"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListBoxItem">
+                                        <Border Name="Bd" 
+                                                Background="{TemplateBinding Background}" 
+                                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                                Padding="{TemplateBinding Padding}" 
+                                                SnapsToDevicePixels="true"
+                                                CornerRadius="4">
+                                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsSelected" Value="true">
+                                                <Setter TargetName="Bd" Property="Background" Value="#2980B9"/>
+                                                <Setter Property="Foreground" Value="White"/>
+                                            </Trigger>
+                                            <MultiTrigger>
+                                                <MultiTrigger.Conditions>
+                                                    <Condition Property="IsSelected" Value="true"/>
+                                                    <Condition Property="Selector.IsSelectionActive" Value="false"/>
+                                                </MultiTrigger.Conditions>
+                                                <Setter TargetName="Bd" Property="Background" Value="#2980B9"/>
+                                                <Setter Property="Foreground" Value="White"/>
+                                            </MultiTrigger>
+                                            <Trigger Property="IsMouseOver" Value="true">
+                                                <Setter TargetName="Bd" Property="Background" Value="#EBF5FB"/>
+                                                <Setter Property="Foreground" Value="Black"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                </ListBox>
+            </DockPanel>
+        </Border>
+        <!--Productos-->
+        <Border Grid.Row="1" Grid.Column="1" Margin="5,15" Background="White" CornerRadius="8" Padding="10">
+            <DockPanel>
+                <TextBlock Text="👕 Productos Asociados" DockPanel.Dock="Top" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,10" Foreground="#34495E"/>
+
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="🔍 Filtrar:" VerticalAlignment="Center" Margin="0,0,5,0" FontWeight="Normal" Foreground="Black"/>
+                    <TextBox Name="txtBuscar" Width="250" Padding="5" TextChanged="txtBuscar_TextChanged" Background="#F8F8F8" Foreground="Black"/>
+                </StackPanel>
+                <DataGrid Name="gridProductos" AutoGenerateColumns="False" IsReadOnly="True" 
+                          SelectionChanged="gridProductos_SelectionChanged" FontSize="13" 
+                          AlternatingRowBackground="#F0F4F8" 
+                          RowBackground="White"
+                          Foreground="#333333"
+                          Background="White"
+                          BorderThickness="0" 
+                          GridLinesVisibility="None"
+                          HeadersVisibility="Column">
+                    <DataGrid.Resources>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Foreground" Value="#333333"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="#2980B9"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                        <Style TargetType="DataGridRow">
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Foreground" Value="#333333"/>
+                        </Style>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="#ECF0F1"/>
+                            <Setter Property="Foreground" Value="#2C3E50"/>
+                            <Setter Property="FontWeight" Value="SemiBold"/>
+                            <Setter Property="Padding" Value="10,5"/>
+                            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                            <Setter Property="BorderBrush" Value="#BDC3C7"/>
+                        </Style>
+                    </DataGrid.Resources>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="40"/>
+                        <DataGridTextColumn Header="Producto" Binding="{Binding Nombre}" Width="*"/>
+                        <DataGridTextColumn Header="Precio" Binding="{Binding Precio, StringFormat=C2}" Width="100"/>
+                        <DataGridTextColumn Header="Stock" Binding="{Binding Stock}" Width="60"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+        </Border>
+        <!--Panel CRUD-->
+        <Border Grid.Row="1" Grid.Column="2" Margin="5,15,10,15" Background="#E3F2FD" CornerRadius="8" Padding="20">
+            <StackPanel>
+                <TextBlock Text="✍️ Zona de Edición" FontSize="20" FontWeight="Bold" Margin="0,0,0,20" Foreground="#1565C0"/>
+                <TextBlock Text="Nombre del Producto:" FontWeight="SemiBold" Foreground="Black"/>
+                <TextBox Name="txtNombre" Tag="Nombre" Background="White"/>
+                <TextBlock Text="Precio (€):" FontWeight="SemiBold" Foreground="Black"/>
+                <TextBox Name="txtPrecio" Tag="Precio" Background="White" TextChanged="NumericTextBox_TextChanged"/>
+                <TextBlock Text="Stock:" FontWeight="SemiBold" Foreground="Black"/>
+                <TextBox Name="txtStock" Tag="Stock" Background="White" TextChanged="NumericTextBox_TextChanged"/>
+                <StackPanel Margin="0,30,0,0">
+                    <!--Guardar-->
+                    <Button Name="btnGuardar" Background="#2ECC71" Click="btnGuardar_Click" ToolTip="Guarda el producto actual en la base de datos">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE74E;" FontFamily="Segoe MDL2 Assets" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Guardar" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    <!--Eliminar-->
+                    <Button Name="btnEliminar" Background="#E74C3C" Click="btnEliminar_Click" ToolTip="Borra permanentemente el producto seleccionado">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE74D;" FontFamily="Segoe MDL2 Assets" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Eliminar" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    <!--Limpiaer-->
+                    <Button Name="btnLimpiar" Background="#3498DB" Click="btnLimpiar_Click" ToolTip="Limpia el formulario para crear nuevo">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE710;" FontFamily="Segoe MDL2 Assets" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Limpiar" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
