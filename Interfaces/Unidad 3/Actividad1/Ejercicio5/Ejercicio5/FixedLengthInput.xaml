@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Ejercicio5.Controls.FixedLengthInput"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="root">
+    <StackPanel>
+        <TextBlock Text="{Binding LongitudMáxima, ElementName=root, StringFormat=Máx: {0} caracteres}" FontSize="11" Foreground="Gray" Margin="3"/>
+        <Grid>
+            <TextBox Text="{Binding Valor, ElementName=root, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaxLength="{Binding LongitudMáxima, ElementName=root}" />
+            <TextBlock Text="{Binding Placeholder, ElementName=root}" Foreground="Gray" Margin="2" IsHitTestVisible="False">
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Valor, ElementName=root}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+        </Grid>
+    </StackPanel>
+</UserControl>

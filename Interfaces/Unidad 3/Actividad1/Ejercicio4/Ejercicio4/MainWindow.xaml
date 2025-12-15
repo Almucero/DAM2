@@ -6,8 +6,11 @@
         xmlns:local="clr-namespace:Ejercicio4"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        xmlns:controls="clr-namespace:Ejercicio1.Controls">
+        xmlns:controls="clr-namespace:Ejercicio4.Controls">
     <Grid>
-        
+        <StackPanel Orientation="Vertical">
+            <controls:AlertIndicator MensajePrincipal="Conexión OK" AlertaActiva="False" MensajeAdvertencia="Error de red." />
+            <controls:AlertIndicator MensajePrincipal="Procesando Datos" AlertaActiva="True" MensajeAdvertencia="Alta latencia." />
+        </StackPanel>
     </Grid>
 </Window>

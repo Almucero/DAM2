@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{05ABFF0B-962D-4ED0-9B3C-9574E2304E99}|Ejercicio6\\Ejercicio6.csproj|d:\\dam2\\interfaces\\unidad 3\\ejercicio1\\ejercicio6\\ejercicio6\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{05ABFF0B-962D-4ED0-9B3C-9574E2304E99}|Ejercicio6\\Ejercicio6.csproj|solutionrelative:ejercicio6\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05ABFF0B-962D-4ED0-9B3C-9574E2304E99}|Ejercicio6\\Ejercicio6.csproj|d:\\dam2\\interfaces\\unidad 3\\ejercicio1\\ejercicio6\\ejercicio6\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05ABFF0B-962D-4ED0-9B3C-9574E2304E99}|Ejercicio6\\Ejercicio6.csproj|solutionrelative:ejercicio6\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05ABFF0B-962D-4ED0-9B3C-9574E2304E99}|Ejercicio6\\Ejercicio6.csproj|d:\\dam2\\interfaces\\unidad 3\\ejercicio1\\ejercicio6\\ejercicio6\\coordinatedisplay.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05ABFF0B-962D-4ED0-9B3C-9574E2304E99}|Ejercicio6\\Ejercicio6.csproj|solutionrelative:ejercicio6\\coordinatedisplay.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05ABFF0B-962D-4ED0-9B3C-9574E2304E99}|Ejercicio6\\Ejercicio6.csproj|d:\\dam2\\interfaces\\unidad 3\\ejercicio1\\ejercicio6\\ejercicio6\\coordinatedisplay.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{05ABFF0B-962D-4ED0-9B3C-9574E2304E99}|Ejercicio6\\Ejercicio6.csproj|solutionrelative:ejercicio6\\coordinatedisplay.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CoordinateDisplay.xaml.cs",
+              "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio6\\Ejercicio6\\CoordinateDisplay.xaml.cs",
+              "RelativeDocumentMoniker": "Ejercicio6\\CoordinateDisplay.xaml.cs",
+              "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio6\\Ejercicio6\\CoordinateDisplay.xaml.cs",
+              "RelativeToolTip": "Ejercicio6\\CoordinateDisplay.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T19:18:38.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CoordinateDisplay.xaml",
+              "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio6\\Ejercicio6\\CoordinateDisplay.xaml",
+              "RelativeDocumentMoniker": "Ejercicio6\\CoordinateDisplay.xaml",
+              "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio6\\Ejercicio6\\CoordinateDisplay.xaml",
+              "RelativeToolTip": "Ejercicio6\\CoordinateDisplay.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-13T19:18:36.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio6\\Ejercicio6\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Ejercicio6\\MainWindow.xaml",
+              "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio6\\Ejercicio6\\MainWindow.xaml",
+              "RelativeToolTip": "Ejercicio6\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-13T19:15:22.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio6\\Ejercicio6\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Ejercicio6\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 3\\Ejercicio1\\Ejercicio6\\Ejercicio6\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Ejercicio6\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T19:15:21.796Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

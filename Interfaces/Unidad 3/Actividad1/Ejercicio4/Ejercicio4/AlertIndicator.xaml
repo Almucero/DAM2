@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ﻿<UserControl x:Class="Ejercicio4.AlertIndicator"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -10,3 +11,18 @@
             
     </Grid>
 </UserControl>
+=======
+﻿<UserControl x:Class="Ejercicio4.Controls.AlertIndicator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="root">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibility"/>
+    </UserControl.Resources>
+    <StackPanel>
+        <TextBlock Text="{Binding MensajePrincipal, ElementName=root}" FontWeight="Bold" FontSize="14"/>
+        <TextBlock Text="{Binding MensajeAdvertencia, ElementName=root}" Foreground="Red" Visibility="{Binding AlertaActiva, ElementName=root, Converter={StaticResource BoolToVisibility}}"/>
+    </StackPanel>
+</UserControl>
+
+>>>>>>> Stashed changes
