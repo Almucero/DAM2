@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,8 @@ namespace Ejercicio4
         {
             InitializeComponent();
 =======
+=======
+>>>>>>> Stashed changes
 ﻿using System.Windows;
 using System.Windows.Controls;
 
@@ -53,6 +56,9 @@ namespace Ejercicio4.Controls
         {
             get => (string)GetValue(MensajeAdvertenciaProperty);
             set => SetValue(MensajeAdvertenciaProperty, value);
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
     }

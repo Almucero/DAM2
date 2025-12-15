@@ -1,6 +1,10 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 // Updated by XamlIntelliSenseFileGenerator 13/12/2025 20:14:02
 #pragma checksum "..\..\FixedLengthInput.xaml" "{8829d00f-11b8-4213-878b-770e8597ac16}" "3A18956E583BB97E9C1AF77F7948FD9F8459AA099F482BDA1D6F351DBD6EFA47"
+=======
+﻿#pragma checksum "..\..\NumericInput.xaml" "{8829d00f-11b8-4213-878b-770e8597ac16}" "D34C18A1F124540DE3BB88B8FF552804588BACAB07FFB67A82A9140C7CB0FC68"
+>>>>>>> Stashed changes
 =======
 ﻿#pragma checksum "..\..\NumericInput.xaml" "{8829d00f-11b8-4213-878b-770e8597ac16}" "D34C18A1F124540DE3BB88B8FF552804588BACAB07FFB67A82A9140C7CB0FC68"
 >>>>>>> Stashed changes
@@ -37,6 +41,7 @@ using System.Windows.Shell;
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 namespace Ejercicio5.Controls
 {
 
@@ -53,6 +58,8 @@ namespace Ejercicio5.Controls
         private bool _contentLoaded;
 
 =======
+=======
+>>>>>>> Stashed changes
 namespace Ejercicio3.Controls {
     
     
@@ -71,12 +78,16 @@ namespace Ejercicio3.Controls {
         
         private bool _contentLoaded;
         
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         /// <summary>
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
         public void InitializeComponent()
         {
@@ -95,6 +106,8 @@ namespace Ejercicio3.Controls {
         }
 
 =======
+=======
+>>>>>>> Stashed changes
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
@@ -109,6 +122,9 @@ namespace Ejercicio3.Controls {
             #line hidden
         }
         
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
@@ -116,6 +132,7 @@ namespace Ejercicio3.Controls {
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
         void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target)
         {
@@ -129,6 +146,8 @@ namespace Ejercicio3.Controls {
         }
         internal System.Windows.Controls.UserControl root;
 =======
+=======
+>>>>>>> Stashed changes
         void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {
             switch (connectionId)
             {
@@ -138,6 +157,9 @@ namespace Ejercicio3.Controls {
             }
             this._contentLoaded = true;
         }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 }
