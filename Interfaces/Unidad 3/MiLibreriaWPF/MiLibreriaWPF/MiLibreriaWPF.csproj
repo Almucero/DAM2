@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="MiLibreriaWPF">
+      <HintPath>bin\Debug\net8.0-windows\MiLibreriaWPF.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
