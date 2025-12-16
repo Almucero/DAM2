@@ -18,15 +18,3 @@ interface PokemonApi {
     @GET("/api/v2/pokemon/{name}")
     suspend fun readOne(@Path("name") name: String): Response<PokemonRemote>
 }
-//
-//interface PokemonBigApi: PlacesApi, PokemonApi {
-//
-//}
-//
-//interface PlacesApi {
-//    @GET("/api/v2/place")
-//    suspend fun getAll():String
-//
-//}
-//
-//val big: PokemonBigApi

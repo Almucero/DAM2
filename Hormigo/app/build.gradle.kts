@@ -8,12 +8,14 @@ plugins {
 }
 
 android {
-    namespace = "com.turingalan.pokemon"
-    compileSdk = 36
+    namespace = "com.gamesage.marvel"
+    compileSdk {
+        version = release(36)
+    }
 
     defaultConfig {
-        applicationId = "com.turingalan.pokemon"
-        minSdk = 34
+        applicationId = "com.gamesage.marvel"
+        minSdk = 24
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -31,28 +33,27 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
-    }
-
-    buildFeatures {
-        compose = true
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
+        jvmTarget = "11"
         freeCompilerArgs = listOf("-XXLanguage:+PropertyParamAnnotationDefaultTargetMode")
+    }
+    buildFeatures {
+        compose = true
     }
 }
 
 dependencies {
     //Room
     implementation(libs.androidx.room.runtime)
-    ksp(libs.androidx.room.compiler) // Changed from annotationProcessor to ksp
+    ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
 
     //Coil
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
-
     //Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
@@ -77,6 +78,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.material.icons.extended)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
