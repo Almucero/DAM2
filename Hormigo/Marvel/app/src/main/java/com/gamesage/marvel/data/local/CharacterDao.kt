@@ -1,0 +1,27 @@
+package com.gamesage.marvel.data.local
+
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import androidx.room.Update
+import kotlinx.coroutines.flow.Flow
+
+@Dao
+interface CharacterDao {
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(character: CharacterEntity): Long
+    @Update
+    suspend fun update(character: CharacterEntity): Int
+    @Delete
+    suspend fun deleteOne(character: CharacterEntity): Int
+    @Query("DELETE FROM character")
+    suspend fun deleteAll(): Int
+    @Query("SELECT * FROM character")
+    suspend fun getAll(): List<CharacterEntity>
+    @Query("SELECT * FROM character")
+    fun observeAll(): Flow<List<CharacterEntity>>
+    @Query("SELECT * FROM character WHERE id= :id")
+    suspend fun readCharacterById(id: Long): CharacterEntity?
+}
