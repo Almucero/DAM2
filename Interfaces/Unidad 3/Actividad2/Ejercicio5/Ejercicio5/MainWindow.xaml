@@ -1,0 +1,33 @@
+﻿<Window x:Class="Ejercicio5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Ejercicio5" 
+        xmlns:mis="http://miscontroles.com"
+        Title="Ejercicio 5: Triggers y Acciones" Height="450" Width="800"
+        x:Name="VentanaPrincipal">
+    <Window.Resources>
+        <local:MayorQueConverter x:Key="FiltroMayorQue"/>
+    </Window.Resources>
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Pulsa el botón para subir puntuación (+10)" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding Puntuacion}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="10"/>
+            <mis:BotonRedondo x:Name="btnPuntuacion" Content="PUNTUAR" Width="120" Height="120" Click="btnPuntuacion_Click">
+                <mis:BotonRedondo.Style>
+                    <Style TargetType="{x:Type mis:BotonRedondo}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Puntuacion, 
+                                         RelativeSource={RelativeSource AncestorType=Window},
+                                         Converter={StaticResource FiltroMayorQue}, 
+                                         ConverterParameter=75}" 
+                                         Value="True">
+                                <Setter Property="Foreground" Value="Green"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </mis:BotonRedondo.Style>
+            </mis:BotonRedondo>
+        </StackPanel>
+    </Grid>
+</Window>

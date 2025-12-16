@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="MiLibreriaWPF.TarjetaInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="100" Width="200">
+            <Border Background="LightBlue" CornerRadius="10" BorderBrush="Navy" BorderThickness="2">
+                <TextBlock Text="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+            </Border>
+</UserControl>
