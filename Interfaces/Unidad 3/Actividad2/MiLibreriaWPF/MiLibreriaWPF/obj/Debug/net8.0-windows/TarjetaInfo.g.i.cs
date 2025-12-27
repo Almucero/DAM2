@@ -52,7 +52,7 @@ namespace MiLibreriaWPF {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MiLibreriaWPF;component/tarjetainfo.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MiLibreriaWPF;V1.0.0.0;component/tarjetainfo.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\TarjetaInfo.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

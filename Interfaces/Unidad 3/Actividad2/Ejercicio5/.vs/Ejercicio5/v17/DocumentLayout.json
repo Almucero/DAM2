@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\Ejercicio5\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9E96AF68-4305-4AB3-8017-9F878C871679}|Ejercicio5\\Ejercicio5.csproj|d:\\dam2\\interfaces\\unidad 3\\actividad2\\ejercicio5\\ejercicio5\\ejercicio5.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{9E96AF68-4305-4AB3-8017-9F878C871679}|Ejercicio5\\Ejercicio5.csproj|solutionrelative:ejercicio5\\ejercicio5.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9E96AF68-4305-4AB3-8017-9F878C871679}|Ejercicio5\\Ejercicio5.csproj|d:\\dam2\\interfaces\\unidad 3\\actividad2\\ejercicio5\\ejercicio5\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{9E96AF68-4305-4AB3-8017-9F878C871679}|Ejercicio5\\Ejercicio5.csproj|solutionrelative:ejercicio5\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -23,6 +27,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Ejercicio5",
+              "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\Ejercicio5\\Ejercicio5\\Ejercicio5.csproj",
+              "RelativeDocumentMoniker": "Ejercicio5\\Ejercicio5.csproj",
+              "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\Ejercicio5\\Ejercicio5\\Ejercicio5.csproj",
+              "RelativeToolTip": "Ejercicio5\\Ejercicio5.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-27T19:55:59.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\Ejercicio5\\Ejercicio5\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Ejercicio5\\MainWindow.xaml",
@@ -34,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\Ejercicio5\\Ejercicio5\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Ejercicio5\\MainWindow.xaml.cs",
@@ -42,8 +58,7 @@
               "RelativeToolTip": "Ejercicio5\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T22:18:15.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T22:18:15.665Z"
             }
           ]
         }

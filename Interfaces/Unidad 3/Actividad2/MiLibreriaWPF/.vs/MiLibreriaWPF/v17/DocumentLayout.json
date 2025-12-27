@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\MiLibreriaWPF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|d:\\dam2\\interfaces\\unidad 3\\actividad2\\milibreriawpf\\milibreriawpf\\botonredondo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|solutionrelative:milibreriawpf\\botonredondo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|d:\\dam2\\interfaces\\unidad 3\\actividad2\\milibreriawpf\\milibreriawpf\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|solutionrelative:milibreriawpf\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|d:\\dam2\\interfaces\\unidad 3\\actividad2\\milibreriawpf\\milibreriawpf\\tarjetainfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|solutionrelative:milibreriawpf\\tarjetainfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|d:\\dam2\\interfaces\\unidad 3\\actividad2\\milibreriawpf\\milibreriawpf\\themes\\generic.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|solutionrelative:milibreriawpf\\themes\\generic.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|d:\\dam2\\interfaces\\unidad 3\\actividad2\\milibreriawpf\\milibreriawpf\\tarjetainfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|solutionrelative:milibreriawpf\\tarjetainfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|d:\\dam2\\interfaces\\unidad 3\\actividad2\\milibreriawpf\\milibreriawpf\\botonredondo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|solutionrelative:milibreriawpf\\botonredondo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|d:\\dam2\\interfaces\\unidad 3\\actividad2\\milibreriawpf\\milibreriawpf\\tarjetainfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|solutionrelative:milibreriawpf\\tarjetainfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|d:\\dam2\\interfaces\\unidad 3\\actividad2\\milibreriawpf\\milibreriawpf\\tarjetainfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|solutionrelative:milibreriawpf\\tarjetainfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|d:\\dam2\\interfaces\\unidad 3\\actividad2\\milibreriawpf\\milibreriawpf\\milibreriawpf.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|d:\\dam2\\interfaces\\unidad 3\\actividad2\\milibreriawpf\\milibreriawpf\\togglecolorbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|solutionrelative:milibreriawpf\\togglecolorbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|d:\\dam2\\interfaces\\unidad 3\\actividad2\\milibreriawpf\\milibreriawpf\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|solutionrelative:milibreriawpf\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AA2B08A3-E36D-41A5-B0E3-03814FE358EE}|MiLibreriaWPF\\MiLibreriaWPF.csproj|d:\\dam2\\interfaces\\unidad 3\\actividad2\\milibreriawpf\\milibreriawpf\\campodetextodp.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "TarjetaInfo.xaml.cs",
               "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\MiLibreriaWPF\\MiLibreriaWPF\\TarjetaInfo.xaml.cs",
               "RelativeDocumentMoniker": "MiLibreriaWPF\\TarjetaInfo.xaml.cs",
@@ -63,19 +63,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "TarjetaInfo.xaml",
               "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\MiLibreriaWPF\\MiLibreriaWPF\\TarjetaInfo.xaml",
               "RelativeDocumentMoniker": "MiLibreriaWPF\\TarjetaInfo.xaml",
               "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\MiLibreriaWPF\\MiLibreriaWPF\\TarjetaInfo.xaml",
               "RelativeToolTip": "MiLibreriaWPF\\TarjetaInfo.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-16T22:02:46.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T22:02:46.368Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ToggleColorButton.cs",
               "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\MiLibreriaWPF\\MiLibreriaWPF\\ToggleColorButton.cs",
               "RelativeDocumentMoniker": "MiLibreriaWPF\\ToggleColorButton.cs",
@@ -83,12 +82,11 @@
               "RelativeToolTip": "MiLibreriaWPF\\ToggleColorButton.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T21:49:44.185Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T21:49:44.185Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\MiLibreriaWPF\\MiLibreriaWPF\\Properties\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "MiLibreriaWPF\\Properties\\AssemblyInfo.cs",
@@ -101,32 +99,30 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Generic.xaml",
               "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\MiLibreriaWPF\\MiLibreriaWPF\\Themes\\Generic.xaml",
               "RelativeDocumentMoniker": "MiLibreriaWPF\\Themes\\Generic.xaml",
               "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\MiLibreriaWPF\\MiLibreriaWPF\\Themes\\Generic.xaml",
               "RelativeToolTip": "MiLibreriaWPF\\Themes\\Generic.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-16T21:24:23.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T21:24:23.111Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MiLibreriaWPF",
+              "DocumentIndex": 5,
+              "Title": "MiLibreriaWPF.csproj",
               "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\MiLibreriaWPF\\MiLibreriaWPF\\MiLibreriaWPF.csproj",
               "RelativeDocumentMoniker": "MiLibreriaWPF\\MiLibreriaWPF.csproj",
               "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\MiLibreriaWPF\\MiLibreriaWPF\\MiLibreriaWPF.csproj",
               "RelativeToolTip": "MiLibreriaWPF\\MiLibreriaWPF.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-16T21:22:40.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T21:22:40.832Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "BotonRedondo.cs",
               "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\MiLibreriaWPF\\MiLibreriaWPF\\BotonRedondo.cs",
               "RelativeDocumentMoniker": "MiLibreriaWPF\\BotonRedondo.cs",
@@ -134,8 +130,7 @@
               "RelativeToolTip": "MiLibreriaWPF\\BotonRedondo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T21:23:12.472Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T21:23:12.472Z"
             },
             {
               "$type": "Document",
@@ -147,8 +142,7 @@
               "RelativeToolTip": "MiLibreriaWPF\\CampoDeTextoDP.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T20:20:39.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T20:20:39.393Z"
             },
             {
               "$type": "Document",
@@ -159,8 +153,7 @@
               "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 3\\Actividad2\\MiLibreriaWPF\\MiLibreriaWPF\\CampoDeTextoDP.xaml",
               "RelativeToolTip": "MiLibreriaWPF\\CampoDeTextoDP.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-16T20:20:37.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T20:20:37.648Z"
             }
           ]
         }

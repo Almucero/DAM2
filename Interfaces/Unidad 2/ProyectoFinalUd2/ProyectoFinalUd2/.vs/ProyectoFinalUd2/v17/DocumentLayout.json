@@ -1,17 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\",
+  "WorkspaceRootPath": "D:\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|c:\\users\\ajimmun901\\desktop\\dam2\\interfaces\\unidad 2\\proyectofinalud2\\proyectofinalud2\\proyectofinalud2\\ventanas\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|d:\\dam2\\interfaces\\unidad 2\\proyectofinalud2\\proyectofinalud2\\proyectofinalud2\\ventanas\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|solutionrelative:proyectofinalud2\\ventanas\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|d:\\dam2\\interfaces\\unidad 2\\proyectofinalud2\\proyectofinalud2\\proyectofinalud2\\ventanas\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|solutionrelative:proyectofinalud2\\ventanas\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\proyectofinalud2\\database\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|D:\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\proyectofinalud2\\database\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|solutionrelative:proyectofinalud2\\database\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\proyectofinalud2\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|D:\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\proyectofinalud2\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|solutionrelative:proyectofinalud2\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -27,10 +31,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\ProyectoFinalUd2\\Ventanas\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ProyectoFinalUd2\\Ventanas\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\ProyectoFinalUd2\\Ventanas\\MainWindow.xaml.cs",
+              "RelativeToolTip": "ProyectoFinalUd2\\Ventanas\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T19:41:18.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\ProyectoFinalUd2\\Ventanas\\MainWindow.xaml",
+              "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\ProyectoFinalUd2\\Ventanas\\MainWindow.xaml",
               "RelativeDocumentMoniker": "ProyectoFinalUd2\\Ventanas\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\ProyectoFinalUd2\\Ventanas\\MainWindow.xaml",
+              "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\ProyectoFinalUd2\\Ventanas\\MainWindow.xaml",
               "RelativeToolTip": "ProyectoFinalUd2\\Ventanas\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-12-17T08:39:57.965Z",
@@ -38,11 +55,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DatabaseHelper.cs",
-              "DocumentMoniker": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\ProyectoFinalUd2\\Database\\DatabaseHelper.cs",
+              "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\ProyectoFinalUd2\\Database\\DatabaseHelper.cs",
               "RelativeDocumentMoniker": "ProyectoFinalUd2\\Database\\DatabaseHelper.cs",
-              "ToolTip": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\ProyectoFinalUd2\\Database\\DatabaseHelper.cs",
+              "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\ProyectoFinalUd2\\Database\\DatabaseHelper.cs",
               "RelativeToolTip": "ProyectoFinalUd2\\Database\\DatabaseHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -50,11 +67,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\ProyectoFinalUd2\\Models\\Categoria.cs",
+              "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\ProyectoFinalUd2\\Models\\Categoria.cs",
               "RelativeDocumentMoniker": "ProyectoFinalUd2\\Models\\Categoria.cs",
-              "ToolTip": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\ProyectoFinalUd2\\Models\\Categoria.cs",
+              "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 2\\ProyectoFinalUd2\\ProyectoFinalUd2\\ProyectoFinalUd2\\Models\\Categoria.cs",
               "RelativeToolTip": "ProyectoFinalUd2\\Models\\Categoria.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
