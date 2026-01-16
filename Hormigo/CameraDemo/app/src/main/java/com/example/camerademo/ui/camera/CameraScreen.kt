@@ -1,8 +1,9 @@
-package com.example.camerademo
+package com.example.camerademo.ui.camera
 
 import android.Manifest
 import android.annotation.SuppressLint
 import androidx.camera.compose.CameraXViewfinder
+import androidx.camera.core.ImageCapture
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -23,9 +24,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.example.camerademo.ui.camera.CameraViewModel
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.isGranted
 import com.google.accompanist.permissions.rememberPermissionState
@@ -35,7 +38,8 @@ import com.google.accompanist.permissions.rememberPermissionState
 @Composable
 fun CameraScreen(
     modifier: Modifier = Modifier,
-    viewModel: CameraViewModel
+    viewModel: CameraViewModel = hiltViewModel(),
+    onShowImage: (String) -> Unit
 ) {
     val context = LocalContext.current
 

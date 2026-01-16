@@ -1,19 +1,16 @@
-package com.example.camerademo
+package com.example.camerademo.ui.camera
 
 import android.content.ContentValues
 import android.content.Context
 import android.provider.MediaStore
 import android.widget.Toast
 import androidx.camera.core.CameraSelector
-import androidx.camera.core.CameraSelector.DEFAULT_BACK_CAMERA
-import androidx.camera.core.CameraSelector.DEFAULT_FRONT_CAMERA
 import androidx.camera.core.ImageCapture
 import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.core.SurfaceRequest
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.lifecycle.awaitInstance
-import androidx.compose.foundation.Image
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModel
@@ -29,7 +26,7 @@ class CameraViewModel(
     val surfaceRequest: StateFlow<SurfaceRequest?>
         get() = _surfaceRequest.asStateFlow()
 
-    private val _cameraSelector = MutableStateFlow(DEFAULT_BACK_CAMERA)
+    private val _cameraSelector = MutableStateFlow(CameraSelector.DEFAULT_BACK_CAMERA)
     val cameraSelector: StateFlow<CameraSelector>
         get() = _cameraSelector.asStateFlow()
 
@@ -67,10 +64,10 @@ class CameraViewModel(
     }
 
     fun switchCamera() {
-        _cameraSelector.value = if (_cameraSelector.value == DEFAULT_BACK_CAMERA) {
-            DEFAULT_FRONT_CAMERA
+        _cameraSelector.value = if (_cameraSelector.value == CameraSelector.DEFAULT_BACK_CAMERA) {
+            CameraSelector.DEFAULT_FRONT_CAMERA
         } else {
-            DEFAULT_BACK_CAMERA
+            CameraSelector.DEFAULT_BACK_CAMERA
         }
     }
 
@@ -79,7 +76,7 @@ class CameraViewModel(
         lifecycleOwner: LifecycleOwner,
         cameraSelector: CameraSelector
     ) {
-        val processCameraProvider = ProcessCameraProvider.awaitInstance(context)
+        val processCameraProvider = ProcessCameraProvider.Companion.awaitInstance(context)
         processCameraProvider.bindToLifecycle(
             lifecycleOwner = lifecycleOwner,
             cameraSelector,
