@@ -4,6 +4,7 @@ import android.Manifest
 import android.annotation.SuppressLint
 import androidx.camera.compose.CameraXViewfinder
 import androidx.camera.core.ImageCapture
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -14,6 +15,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Cameraswitch
 import androidx.compose.material.icons.filled.Circle
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
@@ -42,10 +44,7 @@ fun CameraScreen(
     onShowImage: (String) -> Unit
 ) {
     val context = LocalContext.current
-
-    val cameraPermissionState = rememberPermissionState(
-        Manifest.permission.CAMERA
-    )
+    val cameraPermissionState = rememberPermissionState(Manifest.permission.CAMERA)
 
     if (cameraPermissionState.status.isGranted) {
         Box(modifier = modifier.fillMaxSize()) {
@@ -53,7 +52,11 @@ fun CameraScreen(
             CameraControls(
                 modifier = modifier.align(Alignment.BottomCenter).padding(bottom = 32.dp),
                 onSwitchCamera = { viewModel.switchCamera() },
-                onCaptureImage = { viewModel.takePicture(context) },
+                onCaptureImage = {
+                    viewModel.takePicture(context) {
+                        onShowImage(it.toString())
+                    }
+                },
             )
         }
     }

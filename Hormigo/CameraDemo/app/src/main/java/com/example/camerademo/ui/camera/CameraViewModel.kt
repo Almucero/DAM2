@@ -2,6 +2,7 @@ package com.example.camerademo.ui.camera
 
 import android.content.ContentValues
 import android.content.Context
+import android.net.Uri
 import android.provider.MediaStore
 import android.widget.Toast
 import androidx.camera.core.CameraSelector
@@ -18,6 +19,9 @@ import kotlinx.coroutines.awaitCancellation
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import java.io.File
+import java.io.FileInputStream
+import java.io.OutputStream
 
 class CameraViewModel(
 
@@ -38,29 +42,46 @@ class CameraViewModel(
         }
     }
 
-    fun takePicture(context: Context) {
-        val contentValues = ContentValues().apply {
-            put(MediaStore.MediaColumns.DISPLAY_NAME, "img_${System.currentTimeMillis()}" )
-            put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg")
-        }
-        val outputOptions = ImageCapture.OutputFileOptions.Builder(
-            context.contentResolver,
-            MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-            contentValues
-        ).build()
+    fun takePicture(context: Context, onImageCaptured: (Uri) -> Unit) {
+        val photoFile = File(context.cacheDir, "temp_image_${System.currentTimeMillis()}.jpg")
+        val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
 
         imageCapture.takePicture(
             outputOptions,
             ContextCompat.getMainExecutor(context),
             object : ImageCapture.OnImageSavedCallback {
                 override fun onImageSaved(output: ImageCapture.OutputFileResults) {
-                    Toast.makeText(context, "Foto Guardada", Toast.LENGTH_SHORT).show()
+                    onImageCaptured(Uri.fromFile(photoFile))
                 }
                 override fun onError(exc: ImageCaptureException) {
-                    Toast.makeText(context, "Error: ${exc.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Error al capturar: ${exc.message}", Toast.LENGTH_SHORT).show()
                 }
             }
         )
+    }
+
+    fun saveToGallery(context: Context, tempUri: Uri) {
+        val contentValues = ContentValues().apply {
+            put(MediaStore.MediaColumns.DISPLAY_NAME, "img_${System.currentTimeMillis()}.jpg")
+            put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg")
+            put(MediaStore.MediaColumns.RELATIVE_PATH, "Pictures/CameraDemo")
+        }
+        val resolver = context.contentResolver
+        val uri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
+        if (uri != null) {
+            try {
+                val inputStream = FileInputStream(File(tempUri.path!!))
+                val outputStream: OutputStream? = resolver.openOutputStream(uri)
+                inputStream.use { input ->
+                    outputStream?.use { output ->
+                        input.copyTo(output)
+                    }
+                }
+                Toast.makeText(context, "Foto guardada en galería", Toast.LENGTH_SHORT).show()
+            } catch (e: Exception) {
+                Toast.makeText(context, "Error al guardar: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     fun switchCamera() {

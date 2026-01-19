@@ -1,0 +1,41 @@
+D:\DAM2\Interfaces\Unidad 3\ProyectoFinal\LibreriaVisualFinal\LibreriaVisualFinal\bin\Debug\LibreriaVisualFinal.dll
+D:\DAM2\Interfaces\Unidad 3\ProyectoFinal\LibreriaVisualFinal\LibreriaVisualFinal\bin\Debug\LibreriaVisualFinal.pdb
+D:\DAM2\Interfaces\Unidad 3\ProyectoFinal\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal.csproj.AssemblyReference.cache
+D:\DAM2\Interfaces\Unidad 3\ProyectoFinal\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\Controls\VisorProgreso.baml
+D:\DAM2\Interfaces\Unidad 3\ProyectoFinal\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\Controls\VisorProgreso.g.cs
+D:\DAM2\Interfaces\Unidad 3\ProyectoFinal\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\DAM2\Interfaces\Unidad 3\ProyectoFinal\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal_MarkupCompile.cache
+D:\DAM2\Interfaces\Unidad 3\ProyectoFinal\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal_MarkupCompile.lref
+D:\DAM2\Interfaces\Unidad 3\ProyectoFinal\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\Themes\Generic.baml
+D:\DAM2\Interfaces\Unidad 3\ProyectoFinal\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal.g.resources
+D:\DAM2\Interfaces\Unidad 3\ProyectoFinal\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal.csproj.CoreCompileInputs.cache
+D:\DAM2\Interfaces\Unidad 3\ProyectoFinal\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal.dll
+D:\DAM2\Interfaces\Unidad 3\ProyectoFinal\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal.pdb
+D:\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\bin\Debug\LibreriaVisualFinal.xml
+D:\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\bin\Debug\LibreriaVisualFinal.dll
+D:\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\bin\Debug\LibreriaVisualFinal.pdb
+D:\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal.csproj.AssemblyReference.cache
+D:\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\Controls\VisorProgreso.baml
+D:\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\Controls\VisorProgreso.g.cs
+D:\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal_MarkupCompile.cache
+D:\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal_MarkupCompile.lref
+D:\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\Themes\Generic.baml
+D:\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal.g.resources
+D:\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal.csproj.CoreCompileInputs.cache
+D:\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal.dll
+D:\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal.pdb
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\bin\Debug\LibreriaVisualFinal.xml
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\bin\Debug\LibreriaVisualFinal.dll
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\bin\Debug\LibreriaVisualFinal.pdb
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal.csproj.AssemblyReference.cache
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\Controls\VisorProgreso.baml
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\Controls\VisorProgreso.g.cs
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal_MarkupCompile.cache
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal_MarkupCompile.lref
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\Themes\Generic.baml
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal.g.resources
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal.csproj.CoreCompileInputs.cache
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal.dll
+C:\Users\ajimmun901\Desktop\DAM2\Interfaces\Unidad 6\Tarea 3\LibreriaVisualFinal\LibreriaVisualFinal\obj\Debug\LibreriaVisualFinal.pdb

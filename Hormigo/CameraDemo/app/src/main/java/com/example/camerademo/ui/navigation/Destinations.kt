@@ -5,6 +5,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
+import androidx.navigation.toRoute
 import com.example.camerademo.ui.camera.CameraScreen
 import com.example.camerademo.ui.image.ImageScreen
 import kotlinx.serialization.Serializable
@@ -13,7 +14,6 @@ import kotlinx.serialization.Serializable
 sealed class Destinations(val route: String) {
     @Serializable
     data object Camera: Destinations("camera")
-    
     @Serializable
     data class Image(val imageUri: String): Destinations("image")
 }
@@ -23,12 +23,18 @@ fun NavController.navigateToImage(imageUri: String) {
 }
 
 fun NavGraphBuilder.imageDestination(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onAccept: (String) -> Unit,
+    onCancel: () -> Unit
 ) {
     composable<Destinations.Image> {
         backStackEntry ->
+        val destination: Destinations.Image = backStackEntry.toRoute()
         ImageScreen(
-            modifier = modifier
+            imageUri = destination.imageUri,
+            modifier = modifier,
+            onAccept = { onAccept(destination.imageUri) },
+            onCancel = onCancel
         )
     }
 }
