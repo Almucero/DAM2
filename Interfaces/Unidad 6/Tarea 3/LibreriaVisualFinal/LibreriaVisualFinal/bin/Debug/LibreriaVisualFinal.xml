@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LibreriaVisualFinal</name>
+    </assembly>
+    <members>
+        <member name="T:LibreriaVisualFinal.Controls.BotonVisual">
+            <summary>
+            Botón personalizado que cambia su color de fondo aleatoriamente al ser presionado.
+            Hereda toda la funcionalidad estándar de un Button de WPF.
+            </summary>
+        </member>
+        <member name="M:LibreriaVisualFinal.Controls.BotonVisual.OnApplyTemplate">
+            <summary>
+            Se invoca cuando se aplica la plantilla al control.
+            Configura los manejadores de eventos necesarios para la funcionalidad visual.
+            </summary>
+        </member>
+        <member name="M:LibreriaVisualFinal.Controls.BotonVisual.BotonVisual_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Maneja el evento Click para generar un color RGB aleatorio y aplicarlo al fondo.
+            </summary>
+            <param name="sender">El objeto que envía el evento.</param>
+            <param name="e">Argumentos del evento enrutado.</param>
+        </member>
+        <member name="T:LibreriaVisualFinal.Controls.VisorProgreso">
+            <summary>
+            Control de usuario que visualiza el estado de una acción mediante un mensaje de texto y una barra de progreso.
+            </summary>
+            <summary>
+            VisorProgreso
+            </summary>
+        </member>
+        <member name="M:LibreriaVisualFinal.Controls.VisorProgreso.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:LibreriaVisualFinal.Controls.VisorProgreso"/>.
+            </summary>
+        </member>
+        <member name="F:LibreriaVisualFinal.Controls.VisorProgreso.MensajeAccionProperty">
+            <summary>
+            Identifica la propiedad de dependencia <see cref="P:LibreriaVisualFinal.Controls.VisorProgreso.MensajeAccion"/>.
+            </summary>
+        </member>
+        <member name="P:LibreriaVisualFinal.Controls.VisorProgreso.MensajeAccion">
+            <summary>
+            Obtiene o establece el texto descriptivo de la acción actual.
+            </summary>
+            <value>
+            Cadena de texto que describe lo que está ocurriendo (ej: "Procesando...").
+            </value>
+        </member>
+        <member name="F:LibreriaVisualFinal.Controls.VisorProgreso.ProgresoValorProperty">
+            <summary>
+            Identifica la propiedad de dependencia <see cref="P:LibreriaVisualFinal.Controls.VisorProgreso.ProgresoValor"/>.
+            </summary>
+        </member>
+        <member name="P:LibreriaVisualFinal.Controls.VisorProgreso.ProgresoValor">
+            <summary>
+            Obtiene o establece el porcentaje de completado de la tarea.
+            </summary>
+            <value>
+            Valor numérico de tipo double entre 0 y 100.
+            </value>
+        </member>
+        <member name="M:LibreriaVisualFinal.Controls.VisorProgreso.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>
