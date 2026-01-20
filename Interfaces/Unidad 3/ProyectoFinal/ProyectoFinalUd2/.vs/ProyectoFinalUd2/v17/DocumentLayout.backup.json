@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\ProyectoFinal\\ProyectoFinalUd2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|c:\\users\\ajimmun901\\desktop\\dam2\\interfaces\\unidad 3\\proyectofinal\\proyectofinalud2\\proyectofinalud2\\ventanas\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|solutionrelative:proyectofinalud2\\ventanas\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|c:\\users\\ajimmun901\\desktop\\dam2\\interfaces\\unidad 3\\proyectofinal\\proyectofinalud2\\proyectofinalud2\\ventanas\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|solutionrelative:proyectofinalud2\\ventanas\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\ProyectoFinal\\ProyectoFinalUd2\\proyectofinalud2\\ventanas\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|solutionrelative:proyectofinalud2\\ventanas\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\ProyectoFinal\\ProyectoFinalUd2\\proyectofinalud2\\ventanas\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|solutionrelative:proyectofinalud2\\ventanas\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10F06929-316C-4750-87F0-0DE82B879C31}|ProyectoFinalUd2\\ProyectoFinalUd2.csproj|C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\ProyectoFinal\\ProyectoFinalUd2\\proyectofinalud2\\database\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,31 +26,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\ProyectoFinal\\ProyectoFinalUd2\\ProyectoFinalUd2\\Ventanas\\MainWindow.xaml",
               "RelativeDocumentMoniker": "ProyectoFinalUd2\\Ventanas\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\ProyectoFinal\\ProyectoFinalUd2\\ProyectoFinalUd2\\Ventanas\\MainWindow.xaml",
               "RelativeToolTip": "ProyectoFinalUd2\\Ventanas\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-27T20:08:34.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-27T20:08:34.159Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\ProyectoFinal\\ProyectoFinalUd2\\ProyectoFinalUd2\\Ventanas\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "ProyectoFinalUd2\\Ventanas\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 3\\ProyectoFinal\\ProyectoFinalUd2\\ProyectoFinalUd2\\Ventanas\\MainWindow.xaml.cs",
               "RelativeToolTip": "ProyectoFinalUd2\\Ventanas\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAcAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwCsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T19:41:18.461Z"
+              "WhenOpened": "2025-12-27T19:41:18.461Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

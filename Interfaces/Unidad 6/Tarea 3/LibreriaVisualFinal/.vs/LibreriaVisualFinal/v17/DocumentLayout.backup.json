@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\",
+  "WorkspaceRootPath": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{34CAFE2A-C268-4B46-B260-347EA518D329}|LibreriaVisualFinal\\LibreriaVisualFinal.csproj|D:\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\libreriavisualfinal\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34CAFE2A-C268-4B46-B260-347EA518D329}|LibreriaVisualFinal\\LibreriaVisualFinal.csproj|solutionrelative:libreriavisualfinal\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34CAFE2A-C268-4B46-B260-347EA518D329}|LibreriaVisualFinal\\LibreriaVisualFinal.csproj|d:\\dam2\\interfaces\\unidad 6\\tarea 3\\libreriavisualfinal\\libreriavisualfinal\\controls\\visorprogreso.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{34CAFE2A-C268-4B46-B260-347EA518D329}|LibreriaVisualFinal\\LibreriaVisualFinal.csproj|solutionrelative:libreriavisualfinal\\controls\\visorprogreso.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34CAFE2A-C268-4B46-B260-347EA518D329}|LibreriaVisualFinal\\LibreriaVisualFinal.csproj|D:\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\libreriavisualfinal\\controls\\visorprogreso.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{34CAFE2A-C268-4B46-B260-347EA518D329}|LibreriaVisualFinal\\LibreriaVisualFinal.csproj|c:\\users\\ajimmun901\\desktop\\dam2\\interfaces\\unidad 6\\tarea 3\\libreriavisualfinal\\libreriavisualfinal\\controls\\visorprogreso.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34CAFE2A-C268-4B46-B260-347EA518D329}|LibreriaVisualFinal\\LibreriaVisualFinal.csproj|solutionrelative:libreriavisualfinal\\controls\\visorprogreso.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34CAFE2A-C268-4B46-B260-347EA518D329}|LibreriaVisualFinal\\LibreriaVisualFinal.csproj|D:\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\libreriavisualfinal\\controls\\botonvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{34CAFE2A-C268-4B46-B260-347EA518D329}|LibreriaVisualFinal\\LibreriaVisualFinal.csproj|C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\libreriavisualfinal\\controls\\botonvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34CAFE2A-C268-4B46-B260-347EA518D329}|LibreriaVisualFinal\\LibreriaVisualFinal.csproj|solutionrelative:libreriavisualfinal\\controls\\botonvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34CAFE2A-C268-4B46-B260-347EA518D329}|LibreriaVisualFinal\\LibreriaVisualFinal.csproj|C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\libreriavisualfinal\\controls\\visorprogreso.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{34CAFE2A-C268-4B46-B260-347EA518D329}|LibreriaVisualFinal\\LibreriaVisualFinal.csproj|solutionrelative:libreriavisualfinal\\controls\\visorprogreso.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34CAFE2A-C268-4B46-B260-347EA518D329}|LibreriaVisualFinal\\LibreriaVisualFinal.csproj|C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\libreriavisualfinal\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34CAFE2A-C268-4B46-B260-347EA518D329}|LibreriaVisualFinal\\LibreriaVisualFinal.csproj|solutionrelative:libreriavisualfinal\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +26,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Properties\\AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Properties\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "LibreriaVisualFinal\\Properties\\AssemblyInfo.cs",
-              "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Properties\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Properties\\AssemblyInfo.cs",
               "RelativeToolTip": "LibreriaVisualFinal\\Properties\\AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T20:05:17.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-27T20:05:17.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "BotonVisual.cs",
-              "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Controls\\BotonVisual.cs",
+              "DocumentMoniker": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Controls\\BotonVisual.cs",
               "RelativeDocumentMoniker": "LibreriaVisualFinal\\Controls\\BotonVisual.cs",
-              "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Controls\\BotonVisual.cs",
+              "ToolTip": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Controls\\BotonVisual.cs",
               "RelativeToolTip": "LibreriaVisualFinal\\Controls\\BotonVisual.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T20:04:36.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-27T20:04:36.224Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "VisorProgreso.xaml.cs",
-              "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Controls\\VisorProgreso.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Controls\\VisorProgreso.xaml.cs",
               "RelativeDocumentMoniker": "LibreriaVisualFinal\\Controls\\VisorProgreso.xaml.cs",
-              "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Controls\\VisorProgreso.xaml.cs",
+              "ToolTip": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Controls\\VisorProgreso.xaml.cs",
               "RelativeToolTip": "LibreriaVisualFinal\\Controls\\VisorProgreso.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-27T20:02:36.942Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "VisorProgreso.xaml",
-              "DocumentMoniker": "D:\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Controls\\VisorProgreso.xaml",
+              "DocumentMoniker": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Controls\\VisorProgreso.xaml",
               "RelativeDocumentMoniker": "LibreriaVisualFinal\\Controls\\VisorProgreso.xaml",
-              "ToolTip": "D:\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Controls\\VisorProgreso.xaml",
+              "ToolTip": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 6\\Tarea 3\\LibreriaVisualFinal\\LibreriaVisualFinal\\Controls\\VisorProgreso.xaml",
               "RelativeToolTip": "LibreriaVisualFinal\\Controls\\VisorProgreso.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-27T20:02:22.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-27T20:02:22.056Z"
             }
           ]
         }
