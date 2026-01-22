@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 8\\Calculadora\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5715035F-4829-4F11-8794-518C2527E270}|UnitTestProject\\UnitTestProject.csproj|c:\\users\\ajimmun901\\desktop\\dam2\\interfaces\\unidad 8\\calculadora\\unittestproject\\test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5715035F-4829-4F11-8794-518C2527E270}|UnitTestProject\\UnitTestProject.csproj|solutionrelative:unittestproject\\test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF40F61D-A7EF-45B8-89C6-93FA0552E338}|Calculadora\\Calculadora.csproj|c:\\users\\ajimmun901\\desktop\\dam2\\interfaces\\unidad 8\\calculadora\\calculadora\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF40F61D-A7EF-45B8-89C6-93FA0552E338}|Calculadora\\Calculadora.csproj|solutionrelative:calculadora\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Test1.cs",
+              "DocumentMoniker": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 8\\Calculadora\\UnitTestProject\\Test1.cs",
+              "RelativeDocumentMoniker": "UnitTestProject\\Test1.cs",
+              "ToolTip": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 8\\Calculadora\\UnitTestProject\\Test1.cs",
+              "RelativeToolTip": "UnitTestProject\\Test1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T09:38:13.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 8\\Calculadora\\Calculadora\\Class1.cs",
+              "RelativeDocumentMoniker": "Calculadora\\Class1.cs",
+              "ToolTip": "C:\\Users\\ajimmun901\\Desktop\\DAM2\\Interfaces\\Unidad 8\\Calculadora\\Calculadora\\Class1.cs",
+              "RelativeToolTip": "Calculadora\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T09:32:53.536Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
